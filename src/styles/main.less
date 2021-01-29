@@ -1,0 +1,86 @@
+@green: rgb(36, 161, 72);
+@yellow: rgb(253, 209, 58);
+@orange: rgb(255, 131, 43);
+@red: rgb(218, 30, 40);
+@warmblue: rgb(120, 169, 255);
+@text-light-blue: #4389db;
+@text-purple: #cc99cd;
+@text-red: #cc0000;
+@text-green: #7ec699;
+@text-orange: #f08d49;
+@text-yellow: rgb(230, 216, 116);
+@text-grey: #999999;
+
+.green {
+  color: @text-green;
+}
+.purple {
+  color: @text-purple;
+}
+.grey {
+  color: @text-grey;
+}
+.orange {
+  color: @text-orange;
+}
+.blue {
+  color: @text-light-blue;
+}
+.yellow {
+  color: @text-yellow;
+}
+
+#root {
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  padding: 10px;
+  font-size: 40px;
+  margin: 20px;
+}
+
+h3 {
+  padding: 10px;
+  font-size: 32px;
+  margin: 30px;
+}
+
+div {
+  padding: 10px;
+  margin: 30px;
+  font-size: 16px;
+}
+
+body {
+  margin: 0px;
+  padding: 20px;
+  font-family: monospace;
+}
+
+.examples {
+  max-width: 800px;
+  background-color: #282c34;
+  color: #f4f4f4;
+  line-height: 24px;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 14px;
+}
+
+.pageHeader {
+  height: calc(100% + 40px);
+  background-color: @warmblue;
+  color: black;
+  width: calc(100% + 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-bottom: 1px solid #393939;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
