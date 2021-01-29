@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React from "react";
 import { hot } from "react-hot-loader";
 import "./styles/main.less";
 import BoxModel from "./classes/boxModel";
