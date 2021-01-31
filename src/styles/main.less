@@ -55,7 +55,8 @@ h4 {
   margin: 30px;
 }
 
-div {
+div,
+table {
   padding: 10px;
   margin: 20px 30px 20px 30px;
   font-size: 16px;
@@ -158,4 +159,24 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+table {
+  width: 100%;
+
+  tr {
+    text-align: center;
+    line-height: 24px;
+    td {
+      border-bottom: 1px dotted @text-grey;
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(@text-yellow, 0.2);
+  }
+}
+
+.nr_idents1 {
+  padding-left: 15px;
 }
