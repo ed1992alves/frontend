@@ -65,4 +65,324 @@
   height: 200px;
   border: solid 10px @yellow;
   text-align: center;
+  padding: 0px;
+
+  .son {
+    width: 100%;
+    border: 10px solid rgb(91, 109, 205);
+    margin: 40px 0px 0px 0px;
+    height: 40px;
+    padding: 5px;
+    line-height: 40px;
+
+    &.content {
+      box-sizing: content-box;
+    }
+
+    &.border {
+      box-sizing: border-box;
+      line-height: 10px;
+    }
+  }
+}
+
+#father_display {
+  min-height: 50px;
+  background-color: rgba(@text-yellow, 0.4);
+  border-radius: 2px;
+  overflow-y: scroll;
+
+  div {
+    padding: 5px;
+    margin: 0px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+
+    &.block {
+      display: block;
+    }
+
+    &.inline {
+      display: inline;
+    }
+
+    &.inlineblock {
+      display: inline-block;
+    }
+  }
+
+  &.flex {
+    min-height: 50px;
+    max-width: 800px;
+    background-color: rgba(@text-purple, 0.4);
+    border-radius: 2px;
+    display: flex;
+    margin-bottom: 10px;
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.row {
+      flex-direction: row;
+    }
+
+    &.row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    &.column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    &.nowrap {
+      flex-wrap: nowrap;
+    }
+
+    &.wrap {
+      flex-wrap: wrap;
+    }
+
+    &.wrap-reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+    &.justify.flex-start {
+      justify-content: flex-start;
+    }
+
+    &.justify.flex-end {
+      justify-content: flex-end;
+    }
+
+    &.space-between {
+      justify-content: space-between;
+    }
+
+    &.space-around {
+      justify-content: space-around;
+    }
+
+    &.justify.center {
+      justify-content: center;
+    }
+    &.space-evenly {
+      justify-content: space-evenly;
+    }
+
+    .flex-grow {
+      flex-grow: 4;
+    }
+
+    &.align {
+      justify-content: space-around;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding: 20px;
+
+        img {
+          margin-top: 10px;
+        }
+      }
+
+      &.center {
+        align-items: center;
+      }
+
+      &.strech {
+        align-items: strech;
+      }
+
+      &.flex-start {
+        align-items: flex-start;
+      }
+
+      &.flex-end {
+        align-items: flex-end;
+      }
+
+      &.baseline {
+        align-items: baseline;
+      }
+
+      #chewbacca {
+        width: 160px;
+        height: 160px;
+        img {
+          margin-top: 40px;
+        }
+      }
+    }
+
+    &.align-self {
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        padding: 20px;
+      }
+
+      #chewbacca {
+        width: 200px;
+        height: 200px;
+      }
+      &.auto {
+        #leia {
+          align-self: auto;
+        }
+      }
+
+      &.flex-start {
+        #leia {
+          align-self: flex-start;
+        }
+      }
+      &.flex-end {
+        #leia {
+          align-self: flex-end;
+        }
+      }
+      &.center {
+        #leia {
+          align-self: center;
+        }
+      }
+      &.baseline {
+        #leia {
+          align-self: baseline;
+        }
+      }
+      &.strech {
+        #leia {
+          align-self: strech;
+        }
+      }
+    }
+  }
+
+  &.order {
+    #leia {
+      order: 2;
+    }
+    #chewbacca {
+      order: 3;
+    }
+  }
+
+  &.order1 {
+    #vader {
+      order: 1;
+    }
+  }
+
+  &.order2 {
+    #vader {
+      order: 2;
+    }
+  }
+
+  &.order3 {
+    #vader {
+      order: 3;
+    }
+  }
+
+  &.order4 {
+    #vader {
+      order: 4;
+    }
+  }
+}
+
+.document {
+  width: 600px;
+  height: 500px;
+  border: 1px dashed @text-orange;
+  border-radius: 2px;
+  margin: 20px auto;
+  position: relative;
+
+  #red_child {
+    width: calc(100% - 20px);
+    height: 100px;
+    margin: 10px auto;
+    border: 1px double @text-red;
+    border-radius: 2px;
+    position: relative;
+    text-align: center;
+    line-height: 90px;
+    color: @red;
+    background-color: rgba(@text-red, 0.1);
+  }
+
+  #blue_child {
+    width: calc(100% - 140px);
+    height: 100px;
+    margin: auto;
+    border: 1px double @warmblue;
+    border-radius: 2px;
+    position: static;
+    text-align: center;
+    line-height: 90px;
+    color: @text-light-blue;
+    background-color: rgba(@warmblue, 0.1);
+  }
+
+  &.absolute {
+    #blue_child {
+      position: absolute;
+    }
+  }
+
+  &.relative {
+    #blue_child {
+      position: relative;
+    }
+  }
+
+  &.top {
+    #blue_child {
+      top: 100px;
+    }
+  }
+
+  &.left {
+    #blue_child {
+      left: 60px;
+    }
+  }
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+#vader {
+  background-color: @red;
+}
+
+#leia {
+  background-color: @text-green;
+}
+
+#chewbacca {
+  background-color: @text-orange;
+}
+
+#c3po {
+  background-color: @text-yellow;
+}
+
+#bounty {
+  background-color: @text-light-blue;
 }
