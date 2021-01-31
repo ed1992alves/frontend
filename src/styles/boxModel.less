@@ -60,7 +60,7 @@
   }
 }
 
-#father {
+div#father {
   width: 220px;
   height: 200px;
   border: solid 10px @yellow;
@@ -394,10 +394,75 @@ img {
   border-radius: 2px;
   margin: 20px auto;
   position: relative;
+  padding: 20px;
+  line-height: 40px;
+
+  *:not(#root) {
+    margin: 0px;
+    padding: 10px 0px;
+  }
 
   &.next_child {
     div > p {
       background-color: rgba(@text-yellow, 0.4);
     }
+  }
+
+  &.first-brother {
+    div + p {
+      background-color: rgba(@text-yellow, 0.4);
+    }
+  }
+
+  &.all-brothers {
+    div ~ p {
+      background-color: rgba(@text-yellow, 0.4);
+    }
+  }
+
+  &.atribute {
+    a[target] {
+      background-color: rgba(@text-yellow, 0.4);
+    }
+  }
+
+  &.beforeafter {
+    p::after {
+      content: " - after";
+      background-color: rgba(@text-orange, 0.4);
+      padding: 10px;
+    }
+
+    p::before {
+      content: " - before";
+      background-color: @text-orange;
+      background-color: rgba(@text-green, 0.4);
+      padding: 10px;
+    }
+  }
+
+  &.child {
+    div > p:first-child {
+      background-color: rgba(@yellow, 0.4);
+    }
+
+    div > p:last-child {
+      background-color: rgba(@red, 0.4);
+    }
+
+    div > p:nth-child(4n) {
+      background-color: rgba(@orange, 0.4);
+    }
+  }
+}
+.hidden {
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover + .hidden {
+    opacity: 1;
   }
 }

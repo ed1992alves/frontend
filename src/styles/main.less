@@ -52,10 +52,10 @@ h3 {
 h4 {
   padding: 10px;
   font-size: 24px;
-  margin: 30px;
+  margin: 20px 30px 20px 30px;
 }
 
-div,
+div:not(#root),
 table {
   padding: 10px;
   margin: 20px 30px 20px 30px;
@@ -84,19 +84,16 @@ body {
   font-size: 14px;
 }
 
-.pageHeader {
+div.pageHeader:not(#root) {
   height: 100%;
   background-color: @warmblue;
   color: black;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: calc(100% + 20px);
+  position: relative;
+  left: -20px;
+  top: -20px;
+  margin: 0px 0px 40px 0px;
   border-bottom: 1px solid #393939;
-  padding: 20px;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  margin-left: -20px;
 
   h2 {
     border: 0px;
@@ -162,13 +159,16 @@ input:checked + .slider:before {
 }
 
 table {
-  width: 100%;
+  width: calc(100% - 60px);
 
   tr {
     text-align: center;
     line-height: 24px;
     td {
       border-bottom: 1px dotted @text-grey;
+      a {
+        text-decoration: none;
+      }
     }
   }
 
