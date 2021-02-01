@@ -144,7 +144,7 @@ const BoxModel = () => {
           name="display"
         ></input>
         <Text.Orange>display: </Text.Orange>
-        <Text.Blue>box;</Text.Blue>
+        <Text.Blue>block;</Text.Blue>
         <br></br>
         <input
           type="radio"
@@ -703,13 +703,13 @@ const BoxModel = () => {
                 <td>Selects all elements with class="example"</td>
             </tr>
             <tr>
-                <td>.class1.class2</td>
-                <td>.name1.name2</td>
+                <td>.class1 .class2</td>
+                <td>.name1 .name2</td>
                 <td>Selects all elements with name2 that is a descendant of an element with name1</td>
             </tr>
             <tr>
-                <td>.class1 .class2</td>
-                <td>.name1 .name2</td>
+                <td>.class1.class2</td>
+                <td>.name1.name2</td>
                 <td>Selects all elements with both name1 and name2 set within its class attribute</td>
             </tr>
             <tr>
@@ -857,7 +857,7 @@ const BoxModel = () => {
         <h4 id="element~element">element ~ element</h4>
 
         <div class="examples">
-            <Text.Orange> {'div + p {'} </Text.Orange>
+            <Text.Orange> {'div ~ p {'} </Text.Orange>
             <Text.Purple>backround-color:</Text.Purple><Text.Green>yellow</Text.Green>
             <Text.Orange> {'}'} </Text.Orange>
             <p>
@@ -1010,7 +1010,7 @@ const BoxModel = () => {
         <h2>Specificity</h2>
         <div>
         How does the browser define the degree of selector priorities? <br>
-        </br> It's simple: it punctuates the selector according to its structure. Each element, class, id, etc. is worth specific points. The punctuation is added in a simple structure that starts with zeros (0), like this: 0,0,0,0. The structure is composed of four numbers, the more the number is on the left, the more specific and the more strength it has over other selectors. 
+        </br> It's simple: it punctuates the selector according to its structure. Each element, class, id, etc... is worth specific points. The punctuation is added in a simple structure that starts with zeros (0), like this: 0,0,0,0. The structure is composed of four numbers, the more a number is on the left, the more specific and the more strength it has over other selectors. 
         <br></br>See the table below:
         </div>
 
@@ -1037,13 +1037,13 @@ const BoxModel = () => {
             </tr>
             <tr>
                 <td>div.menu a:hover</td>
-                <td>0,0,2,2</td>
-                <td>Two elements, two points in the first square. Another class and a pseudo-class, plus two points in the second box.</td>
+                <td class="hidden">0,0,2,2</td>
+                <td class="hidden">Two elements, two points in the first square. Another class and a pseudo-class, plus two points in the second box.</td>
             </tr>
             <tr>
                 <td>#content p</td>
-                <td class="hidden">0,1,0,1</td>
-                <td class="hidden"> An ID is equivalent to a point in the third box. Another element, which is equivalent to a point in the first square.</td>
+                <td >0,1,0,1</td>
+                <td > An ID is equivalent to a point in the third box. Another element, which is equivalent to a point in the first square.</td>
             </tr>
             <tr>
                 <td>article#content p</td>
@@ -1066,6 +1066,7 @@ const BoxModel = () => {
         <h3>And when is there the same score?</h3>
         <div>
             The tiebreaker in this case is: <b>who came last wins.</b></div>
+
        
     </>
   );
