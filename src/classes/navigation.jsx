@@ -3,12 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const navigation = ({ currentPage }) => {
-  console.log(classOrder.length, currentPage);
   const previousPage = currentPage > 0 && classOrder[currentPage - 1];
   const followingPage =
     classOrder.length > currentPage && classOrder[currentPage + 1];
-
-  console.log(classOrder.length > currentPage, followingPage);
 
   return (
     <>

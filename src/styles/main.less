@@ -1,12 +1,5 @@
 @import "colors";
 
-.boxes() {
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  line-height: 24px;
-  padding: 30px;
-}
-
 #root {
   margin: 0px;
   padding: 0px;
@@ -94,7 +87,7 @@ div:not(#root) {
     position: relative;
     left: -20px;
     top: -20px;
-    margin: 0px 0px 40px 0px;
+    margin: 0px;
     border-bottom: 1px solid #393939;
 
     h2 {
@@ -184,14 +177,14 @@ table {
   padding-left: 15px;
 }
 
-.navigation {
+.navigation:not(#root) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0px;
 
   div:not(#root) {
     text-align: center;
-    margin-bottom: 30px;
 
     background-color: rgba(@yellow, 0.4);
     color: black;

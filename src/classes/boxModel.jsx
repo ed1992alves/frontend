@@ -67,59 +67,59 @@ const BoxModel = ({ nr }) => {
       </div>
 
       <h3>Box Sizing Property</h3>
+      <div>
+        <ul>
+          <li>
+            <b>content-box</b> gives you the default CSS box-sizing behavior. If
+            you set an element's width to 100 pixels, then the element's content
+            box will be 100 pixels wide, and the width of any border or padding
+            will be added to the final rendered width, making the element wider
+            than 100px.{" "}
+          </li>
+          <li>
+            <b>border-box</b> tells the browser to account for any border and
+            padding in the values you specify for an element's width and height.
+            If you set an element's width to 100 pixels, that 100 pixels will
+            include any border or padding you added, and the content box will
+            shrink to absorb that extra width. This typically makes it much
+            easier to size elements.
+          </li>
+        </ul>
+        <div class="examples">
+          <input
+            type="radio"
+            onClick={() => setBoxSizing("content")}
+            name="box-sizing"
+            value="content"
+          ></input>
+          <Text.Orange>box-sizing: </Text.Orange>
+          <Text.Blue>content-box;</Text.Blue>
+          <br></br>
+          <input
+            type="radio"
+            onClick={() => setBoxSizing("border")}
+            name="box-sizing"
+            value="border"
+          ></input>
+          <Text.Orange>box-sizing: </Text.Orange>
+          <Text.Blue>border-box</Text.Blue>
+          <br></br>
+          <Text.Orange>border: </Text.Orange>
+          <Text.Blue>solid #5B6DCD 10px;</Text.Blue>
+          <br></br>
+          <Text.Orange>padding: </Text.Orange>
+          <Text.Blue>5px;</Text.Blue>
+          <br></br>
+          <Text.Orange>width: </Text.Orange>
+          <Text.Blue>100%;</Text.Blue>
+          <br></br>
+        </div>
 
-      <ul>
-        <li>
-          <b>content-box</b> gives you the default CSS box-sizing behavior. If
-          you set an element's width to 100 pixels, then the element's content
-          box will be 100 pixels wide, and the width of any border or padding
-          will be added to the final rendered width, making the element wider
-          than 100px.{" "}
-        </li>
-        <li>
-          <b>border-box</b> tells the browser to account for any border and
-          padding in the values you specify for an element's width and height.
-          If you set an element's width to 100 pixels, that 100 pixels will
-          include any border or padding you added, and the content box will
-          shrink to absorb that extra width. This typically makes it much easier
-          to size elements.
-        </li>
-      </ul>
-
-      <div class="examples">
-        <input
-          type="radio"
-          onClick={() => setBoxSizing("content")}
-          name="box-sizing"
-          value="content"
-        ></input>
-        <Text.Orange>box-sizing: </Text.Orange>
-        <Text.Blue>content-box;</Text.Blue>
-        <br></br>
-        <input
-          type="radio"
-          onClick={() => setBoxSizing("border")}
-          name="box-sizing"
-          value="border"
-        ></input>
-        <Text.Orange>box-sizing: </Text.Orange>
-        <Text.Blue>border-box</Text.Blue>
-        <br></br>
-        <Text.Orange>border: </Text.Orange>
-        <Text.Blue>solid #5B6DCD 10px;</Text.Blue>
-        <br></br>
-        <Text.Orange>padding: </Text.Orange>
-        <Text.Blue>5px;</Text.Blue>
-        <br></br>
-        <Text.Orange>width: </Text.Orange>
-        <Text.Blue>100%;</Text.Blue>
-        <br></br>
-      </div>
-
-      <div id="father">
-        {" "}
-        PARENT CONTAINER
-        <div class={`son ${boxSizing}`}> CHILD CONTAINER</div>
+        <div id="father">
+          {" "}
+          PARENT CONTAINER
+          <div class={`son ${boxSizing}`}> CHILD CONTAINER</div>
+        </div>
       </div>
 
       <h2>Display Property</h2>
