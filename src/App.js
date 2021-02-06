@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const MainPage = () => (
   <>
     <div class="pageHeader">
-      <h2> All Classes </h2>
+      <h1> All Classes </h1>
     </div>
     {classOrder.map(lesson => (
       <>
@@ -26,7 +26,7 @@ const App = () => {
           <MainPage />
         </Route>
         {classOrder.map((lesson, key) => (
-          <Route exact path={lesson.path}>
+          <Route key={key} exact path={lesson.path}>
             <lesson.component nr={key} />
           </Route>
         ))}

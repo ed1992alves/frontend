@@ -2,21 +2,35 @@
 
 #root {
   margin: 0px;
-  padding: 0px;
+  padding: 100px 0px 0px 0px;
+}
+
+h1 {
+  font-weight: 600;
+  padding: 10px;
+  margin: 0px;
 }
 
 h2 {
-  padding: 10px;
-  font-size: 40px;
-  margin: 20px;
-  border-top: 1px dotted black;
-  border-bottom: 1px dotted black;
+  border-bottom: 1px solid rgba(@text-light-blue, 0.4);
+  margin: 40px 20px 10px 20px;
+  background-image: linear-gradient(rgba(@text-light-blue, 0.2), white);
+  font-size: 32px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+div.navigation {
+  + h2 {
+    margin-top: 20px;
+  }
 }
 
 h3 {
   padding: 10px;
-  font-size: 32px;
-  margin: 30px;
+  font-size: 28px;
+  margin: 20px 30px;
 }
 
 h4 {
@@ -28,7 +42,7 @@ h4 {
 div:not(#root),
 table {
   padding: 10px;
-  margin: 20px 30px 20px 30px;
+  margin: 20px 40px 20px 40px;
   font-size: 16px;
 
   h4 {
@@ -46,7 +60,7 @@ body {
 div:not(#root) {
   &.examples {
     max-width: 100%;
-    background-color: #282c34;
+    background-color: @solarized-green;
     color: #f4f4f4;
     .boxes();
 
@@ -78,19 +92,26 @@ div:not(#root) {
       cursor: pointer;
     }
   }
+  &.exercise {
+    background-color: rgba(@text-grey, 0.1);
+    .boxes();
+  }
 
   &.pageHeader {
-    height: 100%;
-    background-color: @warmblue;
+    .boxes();
+    background-color: white;
+    background-image: linear-gradient(rgba(@text-light-blue, 0.4), white);
     color: black;
     width: calc(100% + 20px);
     position: relative;
     left: -20px;
     top: -20px;
-    margin: 0px;
-    border-bottom: 1px solid #393939;
+    margin: 20px 0px;
+    border-bottom: 1px solid rgba(@text-light-blue, 0.4);
+    position: fixed;
+    z-index: 1;
 
-    h2 {
+    h1 {
       border: 0px;
     }
   }
@@ -157,11 +178,30 @@ input:checked + .slider:before {
 table {
   width: calc(100% - 60px);
 
+  thead {
+    tr {
+      background-color: rgba(@solarized-green, 1);
+      color: white;
+
+      th {
+        padding: 6px;
+        line-height: 24px;
+        border-radius: 4px;
+      }
+    }
+  }
+
   tr {
     text-align: center;
     line-height: 24px;
+
+    a {
+      underline: none;
+      color: (@text-light-blue);
+    }
     td {
-      border-bottom: 1px dotted @text-grey;
+      border-radius: 4px;
+      padding: 6px;
       a {
         text-decoration: none;
       }
@@ -169,12 +209,17 @@ table {
   }
 
   tr:nth-child(even) {
-    background-color: rgba(@text-yellow, 0.2);
+    background-color: rgba(@solarized-green, 0.4);
+    color: white;
   }
 }
 
 .nr_idents1 {
   padding-left: 15px;
+}
+
+.nr_idents2 {
+  padding-left: 30px;
 }
 
 .navigation:not(#root) {
@@ -212,5 +257,15 @@ table {
     &:not(.empty):hover {
       background-color: rgba(@yellow);
     }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .flex-column:not(#root) {
+    margin: 0px 20px;
   }
 }

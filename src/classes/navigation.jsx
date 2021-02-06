@@ -9,19 +9,19 @@ const navigation = ({ currentPage }) => {
 
   return (
     <>
-      <div class="pageHeader">
-        <h2>{`${currentPage + 1}. ${classOrder[currentPage].title}`}</h2>
+      <div className="pageHeader">
+        <h1>{`${currentPage + 1}. ${classOrder[currentPage].title}`}</h1>
       </div>{" "}
-      <div class="navigation">
+      <div className="navigation">
         {previousPage ? (
-          <div class="previous-container">
-            <Link to={previousPage.path} class="previous">
+          <div className="previous-container">
+            <Link to={previousPage.path} className="previous">
               {" "}
               {`<< ${previousPage.title}`}
             </Link>
           </div>
         ) : (
-          <div class="empty">
+          <div className="empty">
             {" "}
             <a
               target="_blank"
@@ -31,21 +31,21 @@ const navigation = ({ currentPage }) => {
             </a>
           </div>
         )}
-        <div class="previous-container">
-          <Link to="/" class="previous">
+        <div className="previous-container">
+          <Link to="/" className="previous">
             {" "}
             {"Menu"}
           </Link>
         </div>
         {followingPage ? (
-          <div class="previous-container">
-            <Link to={followingPage.path} class="previous">
+          <div className="previous-container">
+            <Link to={followingPage.path} className="previous">
               {" "}
               {`${followingPage.title} >>`}
             </Link>
           </div>
         ) : (
-          <div class="empty">
+          <div className="empty">
             <a
               target="_blank"
               href="https://github.com/mindera-school/class-of-2020"
