@@ -53,7 +53,7 @@ table {
 
 body {
   margin: 0px;
-  padding: 20px;
+  padding: 45px;
   font-family: monospace;
 }
 
@@ -272,4 +272,22 @@ table {
 
 #anchor {
   scroll-margin-top: 100px;
+}
+
+#mindera-icon {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  img {
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    transition: 2s linear background-color;
+    &:hover {
+      background-color: rgba(@text-red, 0.5);
+    }
+  }
 }

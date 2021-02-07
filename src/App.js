@@ -20,9 +20,10 @@ const MainPage = () => (
 
 const App = () => {
   useEffect(() => {
-    window.addEventListener("hashchange", () =>
-      window.scrollTo(window.scrollX, window.scrollY - 120)
-    );
+    window.scrollTo(window.scrollX, 0);
+    window.addEventListener("hashchange", e => {
+      window.scrollTo(window.scrollX, window.scrollY - 120);
+    });
   }, []);
 
   return (

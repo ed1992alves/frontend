@@ -1,6 +1,7 @@
 import classOrder from "./classOrder";
 import React from "react";
 import { Link } from "react-router-dom";
+import minder from "../styles/images/minder.svg";
 
 const navigation = ({ currentPage }) => {
   const previousPage = currentPage > 0 && classOrder[currentPage - 1];
@@ -55,6 +56,10 @@ const navigation = ({ currentPage }) => {
           </div>
         )}
       </div>
+      <a href="#" id="mindera-icon">
+        {" "}
+        <img src={minder} />
+      </a>
     </>
   );
 };

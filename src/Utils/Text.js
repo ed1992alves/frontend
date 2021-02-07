@@ -22,4 +22,12 @@ export const Yellow = props => (
   <Text colour="yellow" {...props} content={props.children}></Text>
 );
 
+export const Red = props => (
+  <Text colour="red" {...props} content={props.children}></Text>
+);
+
+export const Pink = props => (
+  <Text colour="pink" {...props} content={props.children}></Text>
+);
+
 export const Black = props => <Text {...props} content={props.children}></Text>;

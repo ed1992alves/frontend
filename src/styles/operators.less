@@ -1,3 +1,67 @@
+@import "colors";
+
 a {
   text-decoration: none;
+}
+
+div.examples {
+  &#comparision,
+  &#and,
+  &#or,
+  &#not {
+    background-color: rgba(@text-green, 0.8);
+
+    p {
+      cursor: pointer;
+      display: flex;
+      width: 100%;
+      margin: 0px;
+      padding: 20px;
+
+      &:hover {
+        color: black;
+
+        .comment {
+          display: block;
+        }
+
+        .operator {
+          display: none;
+        }
+      }
+
+      div {
+        padding: 0px 10px;
+        margin: 0px;
+
+        &.comment {
+          display: none;
+        }
+
+        &.operator {
+          display: block;
+        }
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .false,
+    .true {
+      max-width: 180px;
+    }
+    .false {
+      &:hover {
+        color: @text-red;
+      }
+    }
+
+    .true {
+      &:hover {
+        color: @solarized-green;
+      }
+    }
+  }
 }
