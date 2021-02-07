@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { hot } from "react-hot-loader";
 import "./styles/main.less";
 import classOrder from "./classes/classOrder";
@@ -19,6 +19,12 @@ const MainPage = () => (
 );
 
 const App = () => {
+  useEffect(() => {
+    window.addEventListener("hashchange", () =>
+      window.scrollTo(window.scrollX, window.scrollY - 120)
+    );
+  }, []);
+
   return (
     <Router>
       <Switch>
