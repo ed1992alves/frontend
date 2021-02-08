@@ -1021,7 +1021,7 @@ const BoxModel = ({ nr }) => {
         <br></br>
       </div>
 
-      <h4 id="beforeafter">::before & :: after </h4>
+      <h4 id="beforeafter">::before & ::after </h4>
 
       <div class="examples">
         <Text.Orange> {"p::"} </Text.Orange>
@@ -1047,7 +1047,7 @@ const BoxModel = ({ nr }) => {
       <h4 id="firstlastnth">:first-child & :last-child & :nth-child </h4>
 
       <div class="examples">
-        <Text.Orange> {"div p::firsth-child"} </Text.Orange> {"{"}
+        <Text.Orange> {"div p::first-child"} </Text.Orange> {"{"}
         <Text.Purple>background-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
         <Text.Orange> {"}"} </Text.Orange>
@@ -1191,7 +1191,7 @@ const BoxModel = ({ nr }) => {
           </li>
           <li>
             {" "}
-            When we have the! Important value declared in the CSS code value
+            When we have the !Important value declared in the CSS code value
           </li>
         </ol>
       </div>

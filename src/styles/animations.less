@@ -96,7 +96,7 @@ div:not(#root).loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid @text-light-blue;
-  width: 50px;
+  min-width: 50px;
   height: 50px;
   transition: transform 2s, border-top 2s;
   transform: rotate(0deg);
@@ -258,7 +258,7 @@ div:not(#root).loader {
 
 .exercise div#square {
   position: relative;
-  animation: swing 2s alternate infinite;
+  animation: swing 2s linear alternate infinite;
   width: 25px;
   height: 25px;
   margin: auto;

@@ -186,7 +186,7 @@ const Animations = ({ nr }) => {
           <br></br>
           <Text.Blue nr_idents={1}>transition: </Text.Blue>{" "}
           <Text.Orange>
-            transform 3s {speed} 1s, border-top 3s {speed} 1s;
+            transform 3s ease 1s, border-top 3s ease 1s;
           </Text.Orange>
           <br></br>
           <Text.Blue nr_idents={1}>transform: </Text.Blue>{" "}
