@@ -254,7 +254,7 @@ const Operators = ({ nr }) => {
       </div>
 
       <div className="examples">
-        <Text.Red>var</Text.Red> foo<Text.Blue> = true</Text.Blue>; <br></br>
+        <Text.Red>let</Text.Red> foo<Text.Blue> = true</Text.Blue>; <br></br>
         <Text.Red>if</Text.Red> (<Text.Orange>foo</Text.Orange>) {"{"} <br></br>
         <Text.Red nr_idents={1}>var </Text.Red>bar <Text.Blue> = </Text.Blue>{" "}
         foo * 2; <br></br>
@@ -263,8 +263,8 @@ const Operators = ({ nr }) => {
         <Text.Black nr_idents={1}>console.log(bar)</Text.Black>;<br></br>
         {"}"}
         <br></br>
-        <Text.Black>console.log(bar)</Text.Black>{" "}
-        <Text.Grey> // ReferenceError</Text.Grey>;
+        <Text.Black className="hover">console.log(bar); </Text.Black>{" "}
+        <Text.Grey> // ReferenceError</Text.Grey>
       </div>
 
       <div>
@@ -299,10 +299,10 @@ const Operators = ({ nr }) => {
         <br></br>
         {"}"}
         <br></br>
-        <Text.Black>console.log(a)</Text.Black> <Text.Grey>// 3</Text.Grey>{" "}
-        <br></br>
-        <Text.Black>console.log(b)</Text.Black>;
-        <Text.Grey> // ReferenceError</Text.Grey>;
+        <Text.Black className="hover">console.log(a);</Text.Black>{" "}
+        <Text.Grey>// 3</Text.Grey> <br></br>
+        <Text.Black className="hover">console.log(b)</Text.Black>;
+        <Text.Grey> // ReferenceError</Text.Grey>
       </div>
       <h2>Hoisting</h2>
       <div>
@@ -314,7 +314,8 @@ const Operators = ({ nr }) => {
       </div>
       <div class="examples">
         a <Text.Blue>= 2</Text.Blue>;<br></br> <Text.Red>var</Text.Red> a;{" "}
-        <br></br>console.log( a );
+        <br></br> <Text.Black className="hover">console.log( a );</Text.Black>
+        <Text.Grey> // 2</Text.Grey>
       </div>
       <div>
         Many developers would expect <b>undefined</b>, since the <b>var a</b>{" "}
@@ -324,7 +325,8 @@ const Operators = ({ nr }) => {
       </div>
 
       <div class="examples">
-        console.log( a ); <br></br>
+        <Text.Black className="hover">console.log( a );</Text.Black>{" "}
+        <Text.Grey>// undefined</Text.Grey> <br></br>
         <Text.Red>var</Text.Red> a <Text.Blue> = 2</Text.Blue>;
       </div>
       <div>
@@ -375,6 +377,152 @@ const Operators = ({ nr }) => {
           Closure is when a function is able to remember and access its lexical
           scope even when that function is executing outside its lexical scope.
         </b>
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}{" "}
+        <br></br>
+        <Text.Red nr_idents={1}>var</Text.Red> a <Text.Blue> = </Text.Blue>
+        2; <br></br>
+        <Text.Red nr_idents={1}>function</Text.Red>{" "}
+        <Text.Purple>bar</Text.Purple>() {"{ "}
+        <br></br>
+        <Text.Black nr_idents={2}>console.log(a)</Text.Black> <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black> <br></br>
+        <Text.Purple nr_idents={1} className="hover">
+          bar
+        </Text.Purple>{" "}
+        () <Text.Grey>// 2</Text.Grey>
+        <br></br> {"}"} <p></p>
+        <Text.Purple>foo</Text.Purple>();{" "}
+      </div>
+      <div>
+        Is this "closure"?
+        <p></p>
+        Well, technically... perhaps.
+        <p></p>
+        From a purely academic perspective, what is said of the above snippet is
+        that the function <i>bar() </i> has a closure over the scope of{" "}
+        <i>foo() </i>(and indeed, even over the rest of the scopes it has access
+        to, such as the global scope in our case). Put slightly differently,
+        it's said that
+        <i>bar() </i> closes over the scope of <i>foo() </i>. Why? Because{" "}
+        <i>bar() </i> appears nested inside of <i>foo() </i>. Plain and simple.
+        <p></p>
+        But, closure defined in this way is not directly observable, nor do we
+        see closure exercised in that snippet. We clearly see lexical scope, but
+        closure remains sort of a mysterious shifting shadow behind the code.
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}{" "}
+        <br></br>
+        <Text.Red nr_idents={1}>var</Text.Red> a <Text.Blue> = </Text.Blue>
+        2; <br></br>
+        <Text.Red nr_idents={1}>function</Text.Red>{" "}
+        <Text.Purple>bar</Text.Purple>() {"{ "}
+        <br></br>
+        <Text.Black nr_idents={2}>console.log(a)</Text.Black> <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black> <br></br>
+        <Text.Red nr_idents={1}>return</Text.Red> bar
+        <br></br> {"}"}
+        <p></p>
+        <Text.Red>var</Text.Red> baz <Text.Blue> = </Text.Blue>
+        <Text.Purple>foo</Text.Purple>(); <br></br>
+        <Text.Black className="hover">baz(); </Text.Black>{" "}
+        <Text.Grey>// 2</Text.Grey>
+      </div>
+      <div>
+        The function <i>bar()</i> has lexical scope access to the inner scope of
+        <i> foo()</i>. But then, we take <i>bar()</i>, the function itself, and
+        pass it as a value. In this case, we return the function object itself
+        that bar references.
+        <p></p>
+        After we execute <i>foo()</i>, we assign the value it returned (our
+        inner <i> bar()</i>
+        function) to a variable called <i>baz</i>, and then we actually invoke{" "}
+        <i>baz()</i>, which of course is invoking our inner function{" "}
+        <i>bar()</i>, just by a different identifier reference.
+        <p></p>
+        <i>bar()</i> is executed, for sure. But in this case, it's executed
+        outside of its declared lexical scope.
+        <p></p>
+        After <i>foo()</i> executed, normally we would expect that the entirety
+        of the inner scope of <i>foo()</i> would go away.
+        <p></p>
+        But the "magic" of closures does not let this happen. That inner scope
+        is in fact still "in use", and thus does not go away. Who's using it?
+        <b>
+          {" "}
+          The function <i>bar()</i> itself
+        </b>
+        .<p></p>
+        By virtue of where it was declared, <i>bar()</i> has a lexical scope
+        closure over that inner scope of <i>foo()</i>, which keeps that scope
+        alive for <i>bar() </i>
+        to reference at any later time.
+        <p></p>
+        <b>
+          <i>bar()</i> still has a reference to that scope, and that reference
+          is called closure
+        </b>
+        .
+      </div>
+      <h2>Loops + Closure</h2>
+      <div class="examples">
+        <Text.Red>for</Text.Red> ( <Text.Red>var</Text.Red> i
+        <Text.Blue> = 1</Text.Blue>; {"i<="} <Text.Blue> 5</Text.Blue>; i
+        <Text.Blue> ++</Text.Blue>) {"{"} <br></br>
+        <Text.Purple nr_idents={1}>setTimeout</Text.Purple>({" "}
+        <Text.Red>function</Text.Red> <Text.Purple>timer</Text.Purple>(){"{"}{" "}
+        <br></br>
+        <Text.Black nr_idents={2} className="hover">
+          console.log( i );
+        </Text.Black>{" "}
+        <Text.Grey>// 6,6,6,6,6</Text.Grey>
+        <br></br>
+        <Text.Black nr_idents={1}></Text.Black>
+        {"}"}, i*<Text.Blue>1000</Text.Blue> ); <br></br>
+        {"}"}
+      </div>
+      <div>
+        {" "}
+        The spirit of this code snippet is that we would normally expect for the
+        behavior to be that the numbers "1", "2", .. "5" would be printed out,
+        one at a time, one per second, respectively. In fact, if you run this
+        code, you get "6" printed out 5 times, at the one-second intervals.{" "}
+        <p> </p>
+        The terminating condition of the loop is when i is not {"<=5"}. The
+        first time that's the case is when i is 6. So, the output is reflecting
+        the final value of the i after the loop terminates.
+        <p></p>
+        This actually seems obvious on second glance. The timeout function
+        callbacks are all running well after the completion of the loop.
+        <p></p>
+        What's missing? We need a new closured scope for each iteration of the
+        loop.
+        <p>
+          There's a special behavior defined for <i>let</i> declarations used in
+          the head of a for-loop. This behavior says that the variable will be
+          declared not just once for the loop, <b>but each iteration</b>. And,
+          it will, helpfully, be initialized at each subsequent iteration with
+          the value from the end of the previous iteration.
+        </p>
+      </div>
+
+      <div class="examples">
+        <Text.Red>for</Text.Red> ( <Text.Red>let</Text.Red> i
+        <Text.Blue> = 1</Text.Blue>; {"i<="} <Text.Blue> 5</Text.Blue>; i
+        <Text.Blue> ++</Text.Blue>) {"{"} <br></br>
+        <Text.Purple nr_idents={1}>setTimeout</Text.Purple>({" "}
+        <Text.Red>function</Text.Red> <Text.Purple>timer</Text.Purple>(){"{"}{" "}
+        <br></br>
+        <Text.Black nr_idents={2} className="hover">
+          console.log( i );
+        </Text.Black>{" "}
+        <Text.Grey>// 1,2,3,4,5</Text.Grey>
+        <br></br>
+        <Text.Black nr_idents={1}></Text.Black>
+        {"}"}, i*<Text.Blue>1000</Text.Blue> ); <br></br>
+        {"}"}
       </div>
     </>
   );

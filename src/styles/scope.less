@@ -14,3 +14,16 @@ li {
   font-size: 16px;
   line-height: 1.2;
 }
+
+.hover {
+  cursor: pointer;
+  & + span {
+    display: none;
+  }
+
+  &:hover {
+    & + span {
+      display: initial;
+    }
+  }
+}

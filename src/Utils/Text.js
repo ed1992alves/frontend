@@ -1,7 +1,11 @@
 import React from "react";
-const Text = ({ content, colour, nr_idents }) => {
-  const className = nr_idents ? `${colour} nr_idents${nr_idents}` : colour;
-  return <span className={className}>{content}</span>;
+const Text = ({ content, colour, nr_idents, className }) => {
+  console.log(className);
+  let finalClassName = nr_idents ? `${colour} nr_idents${nr_idents}` : colour;
+  finalClassName = className
+    ? `${finalClassName} ${className}`
+    : finalClassName;
+  return <span className={finalClassName}>{content}</span>;
 };
 export const Grey = props => (
   <Text colour="grey" {...props} content={props.children}></Text>
@@ -30,4 +34,6 @@ export const Pink = props => (
   <Text colour="pink" {...props} content={props.children}></Text>
 );
 
-export const Black = props => <Text {...props} content={props.children}></Text>;
+export const Black = props => (
+  <Text colour="black" {...props} content={props.children}></Text>
+);
