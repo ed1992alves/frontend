@@ -74,31 +74,31 @@ const Operators = ({ nr }) => {
           </li>
         </ul>
         <div className="examples" id="comparision">
-          <p class="false">"0" == null</p>
-          <p class="false">"0" == undefined</p>
-          <p class="true">"0" == false</p>
-          <p class="false">"0" == NaN</p>
-          <p class="true">"0" == 0</p>
-          <p class="false">"0" == ""</p>
+          <p className="false">"0" == null</p>
+          <p className="false">"0" == undefined</p>
+          <p className="true">"0" == false</p>
+          <p className="false">"0" == NaN</p>
+          <p className="true">"0" == 0</p>
+          <p className="false">"0" == ""</p>
           <br></br>
-          <p class="false">false == null</p>
-          <p class="false">false == undefined</p>
-          <p class="true">false == 0</p>
-          <p class="true">false == ""</p>
-          <p class="true">false == []</p>
-          <p class="false">false == {"{}"}</p>
+          <p className="false">false == null</p>
+          <p className="false">false == undefined</p>
+          <p className="true">false == 0</p>
+          <p className="true">false == ""</p>
+          <p className="true">false == []</p>
+          <p className="false">false == {"{}"}</p>
           <br></br>
-          <p class="false">"" == null</p>
-          <p class="false">"" == undefined</p>
-          <p class="false">"" == NaN</p>
-          <p class="true">"" == 0</p>
-          <p class="true">"" == []</p>
-          <p class="false">"" == {"{}"}</p>
+          <p className="false">"" == null</p>
+          <p className="false">"" == undefined</p>
+          <p className="false">"" == NaN</p>
+          <p className="true">"" == 0</p>
+          <p className="true">"" == []</p>
+          <p className="false">"" == {"{}"}</p>
           <br></br>
-          <p class="false">0 == null</p>
-          <p class="false">0 == undefined</p>
-          <p class="true">0 == []</p>
-          <p class="false">0 == {"{}"}</p>
+          <p className="false">0 == null</p>
+          <p className="false">0 == undefined</p>
+          <p className="true">0 == []</p>
+          <p className="false">0 == {"{}"}</p>
         </div>
         <h4>2. not equal (!=)</h4>
         <p></p>
@@ -107,7 +107,7 @@ const Operators = ({ nr }) => {
         <h4>4. greater/ less than (>)</h4>
       </div>
       <h2>3) Arithmetic Operators</h2>
-      <div class="info">
+      <div className="info">
         {" "}
         <h4>Standard:</h4>
         <div>
@@ -117,114 +117,114 @@ const Operators = ({ nr }) => {
         <div>x++</div>
       </div>
       <h2>4) Logical Operators</h2>
-      <div class="info">
+      <div className="info">
         <h4>1. AND</h4>
-        <div class="examples" id="and">
+        <div className="examples" id="and">
           <p>
-            var a1 = <div class="operator">true && true </div>{" "}
-            <div class="comment"> true</div>
+            var a1 = <div className="operator">true && true </div>{" "}
+            <div className="comment"> true</div>
           </p>
           <p>
-            var a2 =<div class="operator"> true && false</div>{" "}
-            <div class="comment"> false</div>
+            var a2 =<div className="operator"> true && false</div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
-            var a3 = <div class="operator">false && true</div>{" "}
-            <div class="comment"> false</div>
+            var a3 = <div className="operator">false && true</div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
-            var a4 = <div class="operator">false && (3 == 4)</div>{" "}
-            <div class="comment"> false</div>
+            var a4 = <div className="operator">false && (3 == 4)</div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
-            var a5 = <div class="operator">'Cat' && 'Dog'</div>{" "}
-            <div class="comment"> 'Dog'</div>
+            var a5 = <div className="operator">'Cat' && 'Dog'</div>{" "}
+            <div className="comment"> 'Dog'</div>
           </p>
           <p>
-            var a6 = <div class="operator">false && 'Cat'</div>{" "}
-            <div class="comment"> false</div>
+            var a6 = <div className="operator">false && 'Cat'</div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
             {" "}
-            var a7 = <div class="operator">'Cat' && false </div>{" "}
-            <div class="comment"> false</div>
+            var a7 = <div className="operator">'Cat' && false </div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
-            var a8 = <div class="operator">[] && 'hey'</div>{" "}
-            <div class="comment"> 'hey'</div>{" "}
+            var a8 = <div className="operator">[] && 'hey'</div>{" "}
+            <div className="comment"> 'hey'</div>{" "}
           </p>
           <p>
-            var a9 = <div class="operator">{"{}"} && 'hey'</div>{" "}
-            <div class="comment"> 'hey'</div>
+            var a9 = <div className="operator">{"{}"} && 'hey'</div>{" "}
+            <div className="comment"> 'hey'</div>
           </p>
         </div>
         <p></p>
         <h4>2. OR</h4>
-        <div class="examples" id="or">
+        <div className="examples" id="or">
           <p>
-            var a1 = <div class="operator">true || true </div>{" "}
-            <div class="comment"> true</div>
+            var a1 = <div className="operator">true || true </div>{" "}
+            <div className="comment"> true</div>
           </p>
           <p>
-            var a2 =<div class="operator"> true || false</div>{" "}
-            <div class="comment"> true</div>
+            var a2 =<div className="operator"> true || false</div>{" "}
+            <div className="comment"> true</div>
           </p>
           <p>
-            var a3 = <div class="operator">false || true</div>{" "}
-            <div class="comment"> true</div>
+            var a3 = <div className="operator">false || true</div>{" "}
+            <div className="comment"> true</div>
           </p>
           <p>
-            var a4 = <div class="operator">false || (3 == 4)</div>{" "}
-            <div class="comment"> false</div>
+            var a4 = <div className="operator">false || (3 == 4)</div>{" "}
+            <div className="comment"> false</div>
           </p>
           <p>
-            var a5 = <div class="operator">'Cat' || 'Dog'</div>{" "}
-            <div class="comment"> 'Cat'</div>
+            var a5 = <div className="operator">'Cat' || 'Dog'</div>{" "}
+            <div className="comment"> 'Cat'</div>
           </p>
           <p>
-            var a6 = <div class="operator">false || 'Cat'</div>{" "}
-            <div class="comment"> 'Cat'</div>
+            var a6 = <div className="operator">false || 'Cat'</div>{" "}
+            <div className="comment"> 'Cat'</div>
           </p>
           <p>
             {" "}
-            var a7 = <div class="operator">'Cat' || false </div>{" "}
-            <div class="comment"> 'Cat'</div>
+            var a7 = <div className="operator">'Cat' || false </div>{" "}
+            <div className="comment"> 'Cat'</div>
           </p>
           <p>
-            var a8 = <div class="operator">[] || 'hey'</div>{" "}
-            <div class="comment"> []</div>{" "}
+            var a8 = <div className="operator">[] || 'hey'</div>{" "}
+            <div className="comment"> []</div>{" "}
           </p>
           <p>
-            var a9 = <div class="operator">{"{}"} || 'hey'</div>{" "}
-            <div class="comment"> {"{}"}</div>
+            var a9 = <div className="operator">{"{}"} || 'hey'</div>{" "}
+            <div className="comment"> {"{}"}</div>
           </p>
         </div>
         <p></p>
         <h4>3. NOT</h4>
-        <div class="examples" id="not">
+        <div className="examples" id="not">
           <p>
             {" "}
-            var n1 = <div class="operator">!true</div>
-            <div class="comment"> false</div>{" "}
+            var n1 = <div className="operator">!true</div>
+            <div className="comment"> false</div>{" "}
           </p>
           <p>
-            var n2 = <div class="operator">!false</div>
-            <div class="comment"> true</div>
+            var n2 = <div className="operator">!false</div>
+            <div className="comment"> true</div>
           </p>
           <p>
-            var n3 = <div class="operator">!'Cat'</div>
-            <div class="comment"> false</div>
+            var n3 = <div className="operator">!'Cat'</div>
+            <div className="comment"> false</div>
           </p>
         </div>
       </div>
       <h2>5) Conditional (ternary) operator</h2>
-      <div class="info">condition ? val1 : val2</div>
-      <div class="exercise">
+      <div className="info">condition ? val1 : val2</div>
+      <div className="exercise">
         Multiplying a given number by eight if it is an even number and by nine
         otherwise.
       </div>
       <h2>6) String Operators</h2>
-      <div class="info">
+      <div className="info">
         <h4>1. Concatenation:</h4>
         <br></br> 'my ' + 'string'
         <p></p>
@@ -232,7 +232,7 @@ const Operators = ({ nr }) => {
         <br></br> {"`My name is ${name}`"}
       </div>
       <h2>7) Unary Operators</h2>
-      <div class="info">
+      <div className="info">
         <h4>Unary plus (+) </h4> <br></br> Tries to convert the operand into a
         number <p></p>
         <h4>Logical Not (!) </h4> <br></br> Converts to boolean value then
@@ -242,12 +242,12 @@ const Operators = ({ nr }) => {
         <h4>typeof</h4> Returns a string which is the type of the operand
       </div>
       <h2>8) Array/Object spread operator </h2>
-      <div class="info">
+      <div className="info">
         {" "}
         Spread syntax can be used when all elements from an object or array need
         to be included in a list of some kind.{" "}
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>let</Text.Purple> numberStore ={" "}
         <Text.Blue>[0, 1, 2]</Text.Blue>; <br></br>
         <Text.Purple>let</Text.Purple> newNumber = <Text.Yellow>12</Text.Yellow>

@@ -51,11 +51,13 @@ h4 {
   margin: 20px 30px 20px 30px;
 }
 
+ul,
 div:not(#root),
 table {
   padding: 10px;
   margin: 20px 40px 20px 40px;
   font-size: 16px;
+  line-height: 1.2;
 
   h4 {
     margin: 0px;
@@ -75,6 +77,10 @@ div:not(#root) {
     background-color: @solarized-green;
     color: #f4f4f4;
     .boxes();
+
+    div {
+      margin: 0px;
+    }
 
     &.with-example {
       display: flex;
@@ -232,6 +238,14 @@ table {
 
 .nr_idents2 {
   padding-left: 30px;
+}
+
+.nr_idents3 {
+  padding-left: 45px;
+}
+
+.nr_idents4 {
+  padding-left: 60px;
 }
 
 .navigation:not(#root) {
