@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/this.less";
 import * as Text from "../Utils/Text";
 import Navigation from "./navigation";
+import { redBright } from "ansi-colors";
 
 const This = ({ nr }) => {
   return (
@@ -567,6 +568,236 @@ const This = ({ nr }) => {
         arrow-function.
         <p></p>Instead of using the four standard this rules, arrow-functions
         adopt the this binding from the enclosing (function or global) scope.
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}
+        <Text.Black nr_idents={1}>return (a) => {"{"}</Text.Black> <br></br>
+        <Text.Grey nr_idents={3}>
+          {" "}
+          {"// this here is lexically adopted from foo()"}{" "}
+        </Text.Grey>{" "}
+        <br></br>
+        <Text.Black nr_idents={3}>
+          console.<Text.Purple>log</Text.Purple>( this.<Text.Blue>a</Text.Blue>{" "}
+          ); <br></br>
+        </Text.Black>
+        <Text.Black nr_idents={2}></Text.Black>
+        {"}"}; <br></br>
+        {"}"}
+        <p></p>
+        <Text.Red>var</Text.Red> obj1 = {"{"}
+        <br></br>
+        <Text.Blue nr_idents={1}>a</Text.Blue>: <Text.Blue>2</Text.Blue>
+        <br></br>
+        {"}"}; <p></p>
+        <Text.Red>var</Text.Red> obj2 = {"{"}
+        <br></br>
+        <Text.Blue nr_idents={1}>a</Text.Blue>: <Text.Blue>3</Text.Blue>
+        <br></br>
+        {"}"}; <p></p>
+        <Text.Red>var</Text.Red> bar <Text.Blue>=</Text.Blue>
+        <Text.Black>
+          foo.
+          <Text.Purple>call</Text.Purple>( obj1 );
+        </Text.Black>
+        <br></br>
+        <Text.Black className="hover">
+          bar.<Text.Purple>call</Text.Purple>( obj2 );
+        </Text.Black>{" "}
+        <Text.Grey>// 2</Text.Grey>
+      </div>
+      <div>
+        The arrow-function created in foo() lexically captures whatever foo()s
+        this is at its call-time. Since foo() was this-bound to obj1, bar (a
+        reference to the returned arrow-function) will also be this-bound to
+        obj1.{" "}
+        <b>
+          The lexical binding of an arrow-function cannot be overridden (even
+          with new!).
+        </b>
+        <p></p>
+        The most common use-case will likely be in the use of callbacks, such as
+        event handlers or timers
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}
+        <br></br>
+        <Text.Purple nr_idents={1}>setTimeout</Text.Purple>(() => {"{"}
+        <br></br>
+        <Text.Black nr_idents={2}>
+          console.<Text.Purple>log</Text.Purple>( this.<Text.Blue>a</Text.Blue>{" "}
+          );{" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>
+          {"}"},<Text.Blue>100</Text.Blue>);
+        </Text.Black>
+        <br></br>
+        {"}"}
+        <p></p>
+        <Text.Red>var</Text.Red> obj = {"{"}
+        <br></br>
+        <Text.Blue nr_idents={1}>a</Text.Blue>: <Text.Blue>2</Text.Blue>
+        <br></br>
+        {"}"}; <p></p>
+        <Text.Red>var</Text.Red> a = <Text.Blue>5</Text.Blue>
+        <p></p>
+        foo.
+        <Text.Black className="hover">
+          <Text.Purple>call</Text.Purple>( obj );
+        </Text.Black>
+        <Text.Grey> // 2</Text.Grey>
+      </div>
+      <div class="examples batatas">
+        var company = {"{"} <br></br>
+        <Text.Black nr_idents={1}>
+          <Text.Blue>name</Text.Blue>: <Text.Green>'Scotch'</Text.Green>,{" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>
+          <Text.Blue>getName</Text.Blue>: <Text.Purple>function</Text.Purple>(){" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>{"{"}</Text.Black> <br></br>
+        <Text.Black nr_idents={2} className="hover">
+          console.<Text.Purple>log</Text.Purple>(this.
+          <Text.Blue>name</Text.Blue>)
+        </Text.Black>{" "}
+        <Text.Grey> // Scotch</Text.Grey>
+        <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black> <br></br>
+        {"}"} <br></br>
+        <Text.Grey>
+          // This way remove the explicit binding added by default
+        </Text.Grey>{" "}
+        <br></br>
+        button.<Text.Purple>addEventListener</Text.Purple>(
+        <Text.Green>'click'</Text.Green>, () => company.
+        <Text.Blue>getName</Text.Blue>() ) <br></br>
+      </div>
+      <div class="exercise">
+        <Text.Red>function</Text.Red> <Text.Purple>getLastName</Text.Purple>()
+        {"{"}
+        <br></br>
+        <Text.Red nr_idents={1}>return</Text.Red> this.
+        <Text.Blue>lastName</Text.Blue>;<br></br>
+        {"}"}
+        <p></p>
+        <Text.Red>const</Text.Red> obj <Text.Blue>=</Text.Blue> {"{"} <br></br>
+        <Text.Blue nr_idents={1}>firstName</Text.Blue>:{" "}
+        <Text.Green>"Augustino"</Text.Green>, <br></br>
+        <Text.Blue nr_idents={1}>lastName</Text.Blue>:{" "}
+        <Text.Green>"Moreira"</Text.Green>, <br></br>
+        <Text.Blue nr_idents={1}>year</Text.Blue>: <Text.Blue>1992</Text.Blue>,{" "}
+        <br></br>
+        <Text.Blue nr_idents={1}>country</Text.Blue>:{" "}
+        <Text.Green>"PT"</Text.Green>, <br></br>
+        <Text.Blue nr_idents={1}>getFirstName</Text.Blue>: () => {"{"} <br></br>
+        <Text.Black nr_idents={2}>
+          <Text.Red>return</Text.Red> this.<Text.Blue>firstName</Text.Blue>;{" "}
+        </Text.Black>{" "}
+        <br></br>
+        <Text.Black nr_idents={1}>
+          {"}"}, <br></br>
+        </Text.Black>
+        <Text.Blue nr_idents={1}>getLastName</Text.Blue>: getLastName, <br></br>
+        <Text.Blue nr_idents={1}>getYear</Text.Blue>:
+        <Text.Red> function</Text.Red>() {"{"} <br></br>
+        <Text.Black nr_idents={2}>
+          <Text.Red>return</Text.Red> this.<Text.Blue>year</Text.Blue>;{" "}
+          <br></br>
+        </Text.Black>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black>, <br></br>
+        <Text.Blue nr_idents={1}>updateYear</Text.Blue>:
+        <Text.Red> function</Text.Red>() {"{"} <br></br>
+        <Text.Black nr_idents={2}>
+          console.log({" "}
+          <Text.Green>
+            {" "}
+            {
+              "`Por favor introduza a idade de ${this.firstName} ${this.lastName}`"
+            }{" "}
+          </Text.Green>
+          ) ; <br></br>
+        </Text.Black>{" "}
+        <Text.Red nr_idents={2}>return</Text.Red> new_year => this.
+        <Text.Blue>year = </Text.Blue>
+        new_year; <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black>, <br></br>
+        <Text.Blue nr_idents={1}>updateCountry</Text.Blue>:{" "}
+        <Text.Red> function</Text.Red>() {"{"} <br></br>
+        <Text.Black nr_idents={2}>
+          console.log({" "}
+          <Text.Green>
+            {" "}
+            {
+              "`Por favor introduza o pais de ${this.firstName} ${this.lastName}`"
+            }{" "}
+          </Text.Green>
+          ) ; <br></br>
+        </Text.Black>{" "}
+        <Text.Red nr_idents={2}>return function</Text.Red> (new_country) {"{"}{" "}
+        <br></br> <Text.Black nr_idents={3}> this. </Text.Black>
+        <Text.Blue>country = </Text.Blue>
+        new_country; <br></br>
+        <Text.Black nr_idents={2}>{"}"}</Text.Black> <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black> <br></br>
+        {"}"}
+        <p></p>
+        <Text.Black className="hover">
+          obj.<Text.Purple>getFirstName</Text.Purple>();
+        </Text.Black>{" "}
+        <Text.Grey>// undefined</Text.Grey>
+        <br></br>
+        <Text.Black className="hover">
+          obj.<Text.Purple>getLastName</Text.Purple>();
+        </Text.Black>{" "}
+        <Text.Grey>// Moreira</Text.Grey>
+        <br></br>
+        <Text.Black className="hover">
+          obj.<Text.Purple>getYear</Text.Purple>();
+        </Text.Black>{" "}
+        <Text.Grey>// 1992</Text.Grey>
+        <p></p>
+        <Text.Black>
+          <Text.Red>const</Text.Red> setYear <Text.Blue> =</Text.Blue> obj.
+          <Text.Purple>updateYear</Text.Purple>()
+        </Text.Black>
+        <Text.Grey>
+          {" "}
+          // Por favor introduza a idade de Augustino Moreira{" "}
+        </Text.Grey>
+        <br></br>
+        <Text.Purple>setYear</Text.Purple>(<Text.Blue>1994</Text.Blue>);{" "}
+        <br></br>
+        <Text.Black className="hover">
+          obj.<Text.Purple>getYear</Text.Purple>();
+        </Text.Black>{" "}
+        <Text.Grey> // 1994</Text.Grey> <br></br>
+        <Text.Black className="hover">
+          window.<Text.Blue>year</Text.Blue>();
+        </Text.Black>{" "}
+        <Text.Grey> // undefined</Text.Grey>
+        <p></p>
+        <Text.Black>
+          <Text.Red>const</Text.Red> setCountry <Text.Blue> =</Text.Blue> obj.
+          <Text.Purple>updateCountry</Text.Purple>()
+        </Text.Black>
+        <Text.Grey>
+          {" "}
+          // Por favor introduza o país de Augustino Moreira{" "}
+        </Text.Grey>
+        <br></br>
+        <Text.Purple>setCountry</Text.Purple>(<Text.Green>'ES'</Text.Green>);{" "}
+        <br></br>
+        <Text.Black className="hover">
+          obj.<Text.Blue>country</Text.Blue>;
+        </Text.Black>{" "}
+        <Text.Grey> // PT</Text.Grey> <br></br>
+        <Text.Black className="hover">
+          window.<Text.Blue>country</Text.Blue>;
+        </Text.Black>{" "}
+        <Text.Grey> // ES</Text.Grey>
       </div>
     </>
   );
