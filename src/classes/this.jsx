@@ -42,7 +42,7 @@ const This = ({ nr }) => {
         get us to the current moment in execution). The call-site we care about
         is in the invocation before the currently executing function.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>function</Text.Red> <Text.Purple>baz</Text.Purple>() {"{"}{" "}
         <br></br>
         <Text.Grey nr_idents={1}>//</Text.Grey>{" "}
@@ -248,7 +248,7 @@ const This = ({ nr }) => {
         passing a function, it's an implicit reference assignment, so the end
         result is the same as the previous snippet.
       </div>
-      <div class="exercise">
+      <div className="exercise">
         <Text.Red>
           var{" "}
           <Text.Black>
@@ -313,7 +313,7 @@ const This = ({ nr }) => {
         <br></br>
         You can explicitly manipulate the call site using call, apply, or bind
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>var</Text.Red> company <Text.Blue>=</Text.Blue> {"{"}
         <br></br>
         <Text.Blue nr_idents={1}>name</Text.Blue>:{" "}
@@ -347,7 +347,7 @@ const This = ({ nr }) => {
         When the function has a parameter, you can just pass it in after the
         context:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>var</Text.Red> company <Text.Blue>=</Text.Blue> {"{"}
         <br></br>
         <Text.Blue nr_idents={1}>name</Text.Blue>:{" "}
@@ -386,7 +386,7 @@ const This = ({ nr }) => {
         The last one is bind. Bind returns a new function that is hard-coded to
         call the original function with the this context set as you specified.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>var</Text.Red> printFunc <Text.Blue>= </Text.Blue>
         printNameAgain.<Text.Purple>aplly</Text.Purple>(company,[
         <Text.Green>'Hi '</Text.Green>, <Text.Green>'!!'</Text.Green>]);
@@ -394,6 +394,180 @@ const This = ({ nr }) => {
         <Text.Purple>printFunc</Text.Purple>();
       </div>
       <h4>4. new Binding</h4>
+      <div>
+        JavaScript has a new operator, and the code pattern to use it looks
+        basically identical to what we see in those class-oriented languages;
+        most developers assume that JavaScript's mechanism is doing something
+        similar. However, there really is no connection to class-oriented
+        functionality implied by new usage in JS.
+        <p></p>
+        First, let's re-define what a "constructor" in JavaScript is. In JS,
+        constructors are just functions that happen to be called with the new
+        operator in front of them. They are not attached to classes, nor are
+        they instantiating a class. They are not even special types of
+        functions. They're just regular functions that are, in essence, hijacked
+        by the use of new in their invocation.
+        <p>
+          When a function is invoked with new in front of it, otherwise known as
+          a constructor call, the following things are done automatically:
+        </p>
+        <li>
+          a brand new object is created (aka, constructed) out of thin air
+        </li>
+        <li>the newly constructed object is [[Prototype]]-linked</li>
+        <li>
+          the newly constructed object is set as the this binding for that
+          function call
+        </li>
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(a){"{"}
+        <br></br>
+        <Text.Black nr_idents={1}></Text.Black>this.<Text.Blue>a</Text.Blue> =
+        a;<br></br>
+        {"}"}
+        <br></br>
+        <Text.Red>var</Text.Red> bar <Text.Blue>=</Text.Blue>{" "}
+        <Text.Red>new</Text.Red> <Text.Purple>foo</Text.Purple>({" "}
+        <Text.Blue>2</Text.Blue> ); <br></br>
+        <Text.Black className="hover">
+          console.<Text.Purple>log</Text.Purple>( bar.<Text.Blue>a</Text.Blue>{" "}
+          );
+        </Text.Black>
+        <Text.Grey> // 2</Text.Grey>
+      </div>
+      <div>
+        By calling foo(..) with new in front of it, we've constructed a new
+        object and set that new object as the this for the call of foo(..)
+      </div>
+      <h3>Order of Precedence</h3>
+      <div>
+        It's essential to note that the rules are applied in order of
+        precedence. Meaning that if two or more of rules are found in the same
+        scenario, there is an order in which they are applied. It's as follows:
+      </div>
+      <li>1. Constructor calls (rule 4)</li>
+      <li>2. Explicit binding</li>
+      <li>3. Implicit binding</li>
+      <li>4. Default binding</li>
+      <div class="exercise">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(something){" "}
+        {"{"} <br></br>
+        this.<Text.Blue>a</Text.Blue> <Text.Blue>=</Text.Blue> something;{" "}
+        <br></br>
+        {"}"} <p></p>
+        <Text.Red>var</Text.Red> obj1 = {"{"} <br></br>
+        <Text.Blue nr_idents={1}>foo</Text.Blue>: foo <br></br>
+        {"}"}; <p></p>
+        <Text.Red>var</Text.Red> obj2 = {"{}"} <p></p>
+        obj1.<Text.Purple>foo</Text.Purple>( <Text.Blue>2</Text.Blue> );
+        <br></br>
+        <Text.Black className="hover">
+          console.<Text.Purple>log</Text.Purple>( obj1.<Text.Blue>a</Text.Blue>{" "}
+          );
+        </Text.Black>
+        <Text.Grey> // 2</Text.Grey> <p></p>
+        obj1.foo.<Text.Purple>call</Text.Purple>( obj2, <Text.Blue>3</Text.Blue>
+        ); <br></br>
+        <Text.Black className="hover">
+          console.log(obj2.<Text.Blue>a</Text.Blue>);
+        </Text.Black>{" "}
+        <Text.Grey> // 3</Text.Grey>
+        <p></p>
+        <Text.Red>var</Text.Red> bar <Text.Blue>=</Text.Blue>{" "}
+        <Text.Red>new</Text.Red> obj1.<Text.Purple>foo</Text.Purple>foo({" "}
+        <Text.Blue>4</Text.Blue> ); <br></br>
+        <Text.Black className="hover">
+          console.<Text.Blue>log</Text.Blue>(obj1.
+          <Text.Blue>a</Text.Blue>);
+        </Text.Black>
+        <Text.Grey> // 2</Text.Grey>
+        <br></br>
+        <Text.Black className="hover">
+          console.<Text.Blue>log</Text.Blue>(bar.<Text.Blue>a</Text.Blue>);
+        </Text.Black>{" "}
+        <Text.Grey>// 4 </Text.Grey>
+        <br></br>
+      </div>
+      <h2>Common Pitfalls: Async Handling</h2>
+      <div>
+        There are a few known pitfalls with the this binding. They are most
+        noticed in async logics that receive callbacks as handlers. These
+        handlers are sometimes bound to a different context making this behave
+        unexpectedly.
+        <p></p>
+      </div>
+      <div className="examples">
+        <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}
+        <br></br>
+        <Text.Purple nr_idents={1}>setTimeout</Text.Purple>(function() {"{"}
+        <br></br>
+        <Text.Black nr_idents={2}>
+          console.<Text.Purple>log</Text.Purple>( this.<Text.Blue>a</Text.Blue>{" "}
+          );{" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>
+          {"}"},<Text.Blue>100</Text.Blue>);
+        </Text.Black>
+        <br></br>
+        {"}"}
+        <p></p>
+        <Text.Red>var</Text.Red> obj = {"{"}
+        <br></br>
+        <Text.Blue nr_idents={1}>a</Text.Blue>: <Text.Blue>2</Text.Blue>
+        <br></br>
+        {"}"}; <p></p>
+        <Text.Red>var</Text.Red> a = <Text.Blue>5</Text.Blue>
+        <p></p>
+        foo.
+        <Text.Black className="hover">
+          <Text.Purple>call</Text.Purple>( obj );
+        </Text.Black>
+        <Text.Grey>// 5</Text.Grey>
+      </div>
+      <div>
+        Event handling is one such situation. Event handlers are callback
+        functions that are passed to events registrations. These callback
+        functions are executed at runtime when the event is triggered. Here is a
+        basic example:
+      </div>
+      <div class="examples batatas">
+        var company = {"{"} <br></br>
+        <Text.Black nr_idents={1}>
+          <Text.Blue>name</Text.Blue>: <Text.Green>'Scotch'</Text.Green>,{" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>
+          <Text.Blue>getName</Text.Blue>: <Text.Purple>function</Text.Purple>(){" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black nr_idents={1}>{"{"}</Text.Black> <br></br>
+        <Text.Black nr_idents={2}>
+          console.<Text.Purple>log</Text.Purple>(this.
+          <Text.Blue>name</Text.Blue>)
+        </Text.Black>{" "}
+        <br></br>
+        <Text.Black nr_idents={1}>{"}"}</Text.Black> <br></br>
+        {"}"} <br></br>
+        <Text.Grey>// This event's handler will throw an error</Text.Grey>{" "}
+        <br></br>
+        button.<Text.Purple>addEventListener</Text.Purple>(
+        <Text.Green>'click'</Text.Green>, company.<Text.Blue>getName</Text.Blue>
+        ) <br></br>
+      </div>
+      <div>
+        The browser needs to give some contextual information about the event.
+        It does this by binding to the this in the function. So you could get
+        details about the event from the keyword:
+      </div>
+      <h2>Lexical this</h2>
+      <div>
+        ES6 introduces a special kind of function that does not use these rules:
+        arrow-function.
+        <p></p>Instead of using the four standard this rules, arrow-functions
+        adopt the this binding from the enclosing (function or global) scope.
+      </div>
     </>
   );
 };

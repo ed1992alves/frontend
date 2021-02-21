@@ -1,6 +1,5 @@
 import React from "react";
 const Text = ({ content, colour, nr_idents, className }) => {
-  console.log(className);
   let finalClassName = nr_idents ? `${colour} nr_idents${nr_idents}` : colour;
   finalClassName = className
     ? `${finalClassName} ${className}`
