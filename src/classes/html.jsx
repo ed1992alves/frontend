@@ -77,7 +77,7 @@ const HTML = ({ nr }) => {
           <Text.Black nr_idents={1}>{"</section>"}</Text.Black> <br></br>
           <Text.Black nr_idents={0}>{"<footer></footer>"}</Text.Black>
         </div>
-        <div class="info">
+        <div className="info">
           <Text.Black nr_idents={0}>{"<div id='header' ></div>"}</Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={1}>
@@ -134,7 +134,7 @@ const HTML = ({ nr }) => {
         </ol>
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>{"<section>"}</Text.Purple> <br></br>
         <Text.Yellow nr_idents={1}>{"<p>Top Stories</p>"}</Text.Yellow>{" "}
         <br></br>
@@ -232,7 +232,7 @@ const HTML = ({ nr }) => {
           "Before HTML5, our menus were created with <ul>’s and <li>’s. Now, together with these, we can separate our menu items with a <nav>, for navigation between your pages. "
         }
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>{"<nav>"}</Text.Purple> <br></br>
         <Text.Red nr_idents={1}>{"<ul>"}</Text.Red> <br></br>
         <Text.Orange nr_idents={2}>
@@ -265,7 +265,7 @@ const HTML = ({ nr }) => {
         }
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Blue>{"<figure>"}</Text.Blue> <br></br>
         <Text.Orange nr_idents={1}>
           {
@@ -286,7 +286,7 @@ const HTML = ({ nr }) => {
         Website traffic is a number of people who come to your site through
         various channels
       </div>
-      <div class="info">
+      <div className="info">
         <ol>
           <li>
             <Text.Green>
@@ -415,7 +415,7 @@ const HTML = ({ nr }) => {
         quantity of website traffic to a website or a web page from search
         engines
       </div>
-      <div class="info">
+      <div className="info">
         <ol>
           <li>
             <Text.Green>
@@ -547,7 +547,7 @@ const HTML = ({ nr }) => {
             one of these URLs separately.
             <p></p> To solve this problem, you can use the canonical tag to
             specify which URL Google should pay attention to above all others.
-            <div class="info">
+            <div className="info">
               {"<link rel='canonical' href='http://www.example.com'/>"}
             </div>
           </li>
