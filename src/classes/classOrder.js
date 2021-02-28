@@ -4,8 +4,10 @@ import Operators from "./operators";
 import Types from "./types";
 import Scope from "./scope";
 import This from "./this";
+import HTML from "./html";
 
 const classOrder = [
+  { path: "/html", title: "HTML Semantic and SEO", component: HTML },
   { path: "/css", title: "CSS basics", component: BoxModel },
   { path: "/animations", title: "Animations", component: Animations },
   {

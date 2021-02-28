@@ -1,0 +1,58 @@
+@import "colors";
+
+.infoWithExample:not(#root).info {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  position: relative;
+
+  div:not(#root) {
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 20px;
+    background-color: rgba(@text-purple, 0.4);
+    .boxes();
+    align-self: stretch;
+
+    &.greenBackground {
+      background-color: @solarized-green;
+      div {
+        white-space: nowrap;
+        overflow: scroll;
+        flex-direction: column;
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+}
+
+.minderaTags,
+.paid,
+.facebookAdds {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: auto;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.imageWrapper {
+  display: flex;
+}
