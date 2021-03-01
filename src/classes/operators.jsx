@@ -37,7 +37,7 @@ const Operators = ({ nr }) => {
         </Text.Black>{" "}
         <Text.Grey>// [30,40,50]</Text.Grey>
         <p></p>(<Text.Orange>{"{a, b, ...rest}"}</Text.Orange> =
-        <Text.Green> {"  {a: 10, b: 20, c: 30, d: 40}"}</Text.Green>);
+        <Text.Green> {"  {a: 10, b: 20, c: 30, d: 40}"}</Text.Green>); <br></br>
         <Text.Black>
           console.log(<Text.Orange>a</Text.Orange>);{" "}
         </Text.Black>{" "}
