@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "../styles/this.less";
 import * as Text from "../Utils/Text";
 import Navigation from "./navigation";
-import { redBright } from "ansi-colors";
 
 const This = ({ nr }) => {
   return (
-    <>
+    <div id="this">
       <Navigation currentPage={nr}></Navigation>
       <h2>This</h2>
       <div>
@@ -799,7 +798,7 @@ const This = ({ nr }) => {
         </Text.Black>{" "}
         <Text.Grey> // ES</Text.Grey>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,24 +1,26 @@
 @import "colors";
 
-.hover {
-  cursor: pointer;
-  & + span {
-    display: none;
-  }
+#this {
+  h4 {
+    border-bottom: 1px solid rgba(@text-yellow, 0.6);
+    border-radius: 4px;
+    margin: 0px 50px;
 
-  &:hover {
-    & + span {
-      display: initial;
+    & ~ div:not(#root) {
+      margin: 20px 60px;
     }
   }
-}
 
-h4 {
-  border-bottom: 1px solid rgba(@text-yellow, 0.6);
-  border-radius: 4px;
-  margin: 0px 50px;
-}
+  .hover {
+    cursor: pointer;
+    & + span {
+      display: none;
+    }
 
-h4 ~ div:not(#root) {
-  margin: 20px 60px;
+    &:hover {
+      & + span {
+        display: initial;
+      }
+    }
+  }
 }

@@ -154,7 +154,6 @@ const Types = ({ nr }) => {
         a; <Text.Grey>// undefined</Text.Grey>
         <br></br>
         b; <Text.Grey>// null</Text.Grey>
-        <Text.Grey>//null</Text.Grey>
       </div>
     </>
   );
