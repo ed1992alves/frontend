@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/html.less";
 import * as Text from "../Utils/Text";
 import Navigation from "./navigation";
-import { PokemonCard } from "../exercises/pokemon";
+import { PokemonCard } from "../components/pokemon";
 
 const FetchApi = ({ nr }) => {
   return (
