@@ -17,61 +17,61 @@ export const Card = props => {
   const defaultMessage = "...";
   const { normal, hidden } = ability;
   return (
-    <div class={`card u-full-width ${type}`} data-testid="card">
-      <div class="imageWrapper">
-        <img src={imageSrc} class="pokemon-image" />
+    <div className={`card u-full-width ${type}`} data-testid="card">
+      <div className="imageWrapper">
+        <img src={imageSrc} className="pokemon-image" />
       </div>
-      <div class="textWrapper">
-        <div class="pokemon-type">{type || defaultMessage}</div>
-        <div class="pokemon-name">{name || defaultMessage}</div>
+      <div className="textWrapper">
+        <div className="pokemon-type">{type || defaultMessage}</div>
+        <div className="pokemon-name">{name || defaultMessage}</div>
 
-        <div class="pokemon-info">
-          <div class="pokemon-column">HP:</div>{" "}
-          <div class="pokemon-value">{hp}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">HP:</div>{" "}
+          <div className="pokemon-value">{hp}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Attack:</div>{" "}
-          <div class="pokemon-value">{attack}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Attack:</div>{" "}
+          <div className="pokemon-value">{attack}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Defense:</div>{" "}
-          <div class="pokemon-value">{defense}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Defense:</div>{" "}
+          <div className="pokemon-value">{defense}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Special Attack:</div>{" "}
-          <div class="pokemon-value">{specialAttack}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Special Attack:</div>{" "}
+          <div className="pokemon-value">{specialAttack}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Special Defense:</div>{" "}
-          <div class="pokemon-value">{specialDefense}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Special Defense:</div>{" "}
+          <div className="pokemon-value">{specialDefense}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Speed:</div>{" "}
-          <div class="pokemon-value">{`${speed} m/s`}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Speed:</div>{" "}
+          <div className="pokemon-value">{`${speed} m/s`}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="pokemon-column">Height:</div>{" "}
-          <div class="pokemon-value">{`${height} feets`}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Height:</div>{" "}
+          <div className="pokemon-value">{`${height} feets`}</div>
         </div>
 
-        <div class="pokemon-info">
-          <div class="pokemon-column">Weight:</div>{" "}
-          <div class="pokemon-value">{`${weight} pounds`}</div>
+        <div className="pokemon-info">
+          <div className="pokemon-column">Weight:</div>{" "}
+          <div className="pokemon-value">{`${weight} pounds`}</div>
         </div>
-        <div class="pokemon-info">
-          <div class="column">
-            <div class="pokemon-column">Ability:</div>
+        <div className="pokemon-info">
+          <div className="column">
+            <div className="pokemon-column">Ability:</div>
             <div
-              class="pokemon-value"
+              className="pokemon-value"
               onClick={() => callbackAbility("Normal")}
             >
               {normal}
             </div>
           </div>
-          <div class="column">
-            <div class="pokemon-column">Hidden Ability:</div>
+          <div className="column">
+            <div className="pokemon-column">Hidden Ability:</div>
             <div
-              class="pokemon-value"
+              className="pokemon-value"
               onClick={() => callbackAbility("Hidden")}
             >
               {hidden ? hidden : "--"}

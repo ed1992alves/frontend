@@ -19,7 +19,7 @@ const FetchApi = ({ nr }) => {
         <Text.Orange>fetch</Text.Orange>(
         <Text.Green>'http://example.com/movies.json'</Text.Green>)<br></br>
         <Text.Black className="nr_idents1">
-          .<Text.Orange>then</Text.Orange>.((response) => {"{"}
+          .<Text.Orange>then</Text.Orange>((response) => {"{"}
         </Text.Black>{" "}
         <br></br>
         <Text.Black className="nr_idents2">
@@ -80,6 +80,21 @@ const FetchApi = ({ nr }) => {
         whether it is successful or not.
         <p></p>A Promise is an object representing the eventual completion or
         failure of an asynchronous operation.
+        <p></p>
+        <b> Promise states: </b> <p></p>
+        <Text.Orange>
+          <b>pending: </b>
+        </Text.Orange>
+        initial state, neither fulfilled nor rejected.
+        <br></br>
+        <Text.Green>
+          <b>fulfilled: </b>
+        </Text.Green>
+        meaning that the operation was completed successfully.<br></br>
+        <Text.Red>
+          <b>rejected: </b>
+        </Text.Red>
+        meaning that the operation failed.
       </div>
 
       <h2>Promise.prototype.then()</h2>
@@ -87,7 +102,7 @@ const FetchApi = ({ nr }) => {
         The then() method returns a Promise. It takes up to two arguments:
         callback functions for the success and failure cases of the Promise.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Black>
           <Text.Blue>var</Text.Blue> p1 = <Text.Blue>new</Text.Blue>{" "}
           <Text.Orange>Promise</Text.Orange>
@@ -125,7 +140,7 @@ const FetchApi = ({ nr }) => {
         chain
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Black>
           <Text.Blue>var</Text.Blue> p2 = <Text.Blue>new</Text.Blue>{" "}
           <Text.Orange>Promise</Text.Orange>
@@ -171,7 +186,7 @@ const FetchApi = ({ nr }) => {
         iterable contains no promises or when the iterable contains promises
         that have been fulfilled and non-promises that have been returned.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Black>
           <Text.Blue>const</Text.Blue> promise1 = Promise.
           <Text.Orange>resolve</Text.Orange>(<Text.Purple>3</Text.Purple>);
@@ -210,7 +225,7 @@ const FetchApi = ({ nr }) => {
       </div>
 
       <h2>Fetch with Hooks</h2>
-      <div class="examples">
+      <div className="examples">
         <Text.Black>
           <Text.Blue>const</Text.Blue> [hasError, setErrors] ={" "}
           <Text.Orange>useState</Text.Orange>(<Text.Green>false</Text.Green>);
@@ -261,7 +276,7 @@ const FetchApi = ({ nr }) => {
         <br></br>
         <Text.Black>{"}"});</Text.Black>
       </div>
-      <div class="info center">
+      <div className="info center">
         <PokemonCard></PokemonCard>
       </div>
     </>

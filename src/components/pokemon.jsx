@@ -87,7 +87,6 @@ export const PokemonCard = () => {
       .then(async res => res.json())
       .then(async res => {
         setPokemonState({ ...pokemonState, [selectedPokemon]: res });
-        fetchAbility(res.abilities);
       })
       .catch(error => console.log(error));
   }
@@ -107,13 +106,11 @@ export const PokemonCard = () => {
         selected={pokemonList[0]}
         callback={item => {
           setSelectedPokemon(item);
-          setAbility({ ...abilityState, type: "Normal" });
         }}
       ></Dropdown>
       <Card
         name={pokemonState[selectedPokemon]?.name}
         imageSrc={imageSrcSelector(selectedPokemon)}
-        callbackAbility={item => setAbility({ ...abilityState, type: item })}
         info={{
           speed: getType("speed"),
           specialDefense: getType("specialDefense"),
