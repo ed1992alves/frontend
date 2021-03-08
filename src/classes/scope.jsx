@@ -601,6 +601,8 @@ const Operators = ({ nr }) => {
           <li className="incorrect">a= 1 b= 11</li>
           <li className="incorrect">a= 20 b= 11</li>
           <li className="incorrect">a= 21 b= 10</li>
+          <li className="incorrect">a= 20 b= 12</li>
+          <li className="incorrect">a= 21 b= 12</li>
         </ol>
         <br></br>
         B) X() invoked the second time
@@ -611,6 +613,8 @@ const Operators = ({ nr }) => {
           <li className="incorrect">a= 1 b= 11</li>
           <li className="correct">a= 20 b= 11</li>
           <li className="incorrect">a= 21 b= 10</li>
+          <li className="incorrect">a= 20 b= 12</li>
+          <li className="incorrect">a= 21 b= 12</li>
         </ol>
         <br></br>
         C) Y() invoked the first time
@@ -618,9 +622,11 @@ const Operators = ({ nr }) => {
           <li className="correct">a= 20 b= 10</li>
           <li className="incorrect">a= 20 b= 0</li>
           <li className="incorrect">a= 0 b= 0</li>
-          <li className="incorrect">a= 1 b= 11</li>
+          <li className="incorrect">a= 20 b= 11</li>
           <li className="incorrect">a= 20 b= 11</li>
           <li className="incorrect">a= 21 b= 10</li>
+          <li className="incorrect">a= 20 b= 12</li>
+          <li className="incorrect">a= 21 b= 12</li>
         </ol>
       </div>
     </>

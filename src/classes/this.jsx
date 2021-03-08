@@ -238,7 +238,7 @@ const This = ({ nr }) => {
         <Text.Purple className="hover">
           doFoo
           <Text.Black>
-            (obj.<Text.Blue>foo</Text.Blue>())
+            (obj.<Text.Blue>foo</Text.Blue>)
           </Text.Black>
         </Text.Purple>
         <Text.Grey> // Oops, global!</Text.Grey>
