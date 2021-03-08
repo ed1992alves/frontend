@@ -102,6 +102,12 @@ div:not(#root) {
   }
 
   &.info {
+    &.center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     align-items: flex-start;
     background-color: rgba(@warmblue, 0.1);
     .boxes();
@@ -117,6 +123,18 @@ div:not(#root) {
   &.exercise {
     background-color: rgba(@text-grey, 0.1);
     .boxes();
+
+    .correct,
+    .incorrect {
+      cursor: pointer;
+    }
+
+    .correct:hover {
+      color: @text-green;
+    }
+    .incorrect:hover {
+      color: @text-red;
+    }
   }
 
   &.pageHeader {
@@ -131,7 +149,7 @@ div:not(#root) {
     margin: 20px 0px;
     border-bottom: 1px solid rgba(@text-light-blue, 0.4);
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
     h1 {
       border: 0px;

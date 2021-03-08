@@ -524,6 +524,105 @@ const Operators = ({ nr }) => {
         {"}"}, i*<Text.Blue>1000</Text.Blue> ); <br></br>
         {"}"}
       </div>
+
+      <div class="exercise">
+        <Text.Black>
+          <Text.Purple>function</Text.Purple> <Text.Orange>outer</Text.Orange>(){" "}
+          {" {"}
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple nr_idents={1}>var</Text.Purple> b ={" "}
+          <Text.Green>10</Text.Green>;
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple nr_idents={1}>var</Text.Purple> c ={" "}
+          <Text.Green>100</Text.Green>;
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple nr_idents={1}>function</Text.Purple>{" "}
+          <Text.Orange>inner</Text.Orange>() {" {"}
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple nr_idents={2}>var</Text.Purple> a ={" "}
+          <Text.Green>20</Text.Green>;
+        </Text.Black>
+        <br></br>
+        <Text.Black className="nr_idents2">
+          {" "}
+          console.log("a= " + a + " b= " + b);{" "}
+        </Text.Black>
+        <br></br>
+        <Text.Black className="nr_idents2">a++;</Text.Black>
+        <br></br>
+        <Text.Black className="nr_idents2">b++;</Text.Black>
+        <br></br>
+        <Text.Black className="nr_idents1">{"}"}</Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple nr_idents={1}>return inner;</Text.Purple>
+        </Text.Black>
+        <br></br>
+        <Text.Black>{"}"}</Text.Black>
+        <p></p>
+        <Text.Black>
+          <Text.Purple>var</Text.Purple> X = <Text.Orange>outer</Text.Orange>();{" "}
+          <Text.Grey>// outer() invoked the first time</Text.Grey>
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Purple>var</Text.Purple> Y = <Text.Orange>outer</Text.Orange>();{" "}
+          <Text.Grey>// outer() invoked the second time</Text.Grey>
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Orange>X</Text.Orange>();{" "}
+          <Text.Grey>// X() invoked the first time </Text.Grey>
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Orange>X</Text.Orange>();{" "}
+          <Text.Grey>// X() invoked the second time </Text.Grey>
+        </Text.Black>
+        <br></br>
+        <Text.Black>
+          <Text.Orange>Y</Text.Orange>();{" "}
+          <Text.Grey>// Y() invoked the first time </Text.Grey>
+        </Text.Black>
+        <p></p>
+        A) X() invoked the first time
+        <ol>
+          <li className="correct">a= 20 b= 10</li>
+          <li className="incorrect">a= 20 b= 0</li>
+          <li className="incorrect">a= 0 b= 0</li>
+          <li className="incorrect">a= 1 b= 11</li>
+          <li className="incorrect">a= 20 b= 11</li>
+          <li className="incorrect">a= 21 b= 10</li>
+        </ol>
+        <br></br>
+        B) X() invoked the second time
+        <ol>
+          <li className="incorrect">a= 20 b= 10</li>
+          <li className="incorrect">a= 20 b= 0</li>
+          <li className="incorrect">a= 0 b= 0</li>
+          <li className="incorrect">a= 1 b= 11</li>
+          <li className="correct">a= 20 b= 11</li>
+          <li className="incorrect">a= 21 b= 10</li>
+        </ol>
+        <br></br>
+        C) Y() invoked the first time
+        <ol>
+          <li className="correct">a= 20 b= 10</li>
+          <li className="incorrect">a= 20 b= 0</li>
+          <li className="incorrect">a= 0 b= 0</li>
+          <li className="incorrect">a= 1 b= 11</li>
+          <li className="incorrect">a= 20 b= 11</li>
+          <li className="incorrect">a= 21 b= 10</li>
+        </ol>
+      </div>
     </>
   );
 };

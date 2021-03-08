@@ -388,8 +388,8 @@ const This = ({ nr }) => {
       </div>
       <div className="examples">
         <Text.Red>var</Text.Red> printFunc <Text.Blue>= </Text.Blue>
-        printNameAgain.<Text.Purple>aplly</Text.Purple>(company,[
-        <Text.Green>'Hi '</Text.Green>, <Text.Green>'!!'</Text.Green>]);
+        printNameAgain.<Text.Purple>bind</Text.Purple>(company,
+        <Text.Green>'Hi '</Text.Green>, <Text.Green>'!!'</Text.Green>);
         <br></br>
         <Text.Purple>printFunc</Text.Purple>();
       </div>
@@ -453,8 +453,8 @@ const This = ({ nr }) => {
       <div class="exercise">
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(something){" "}
         {"{"} <br></br>
-        this.<Text.Blue>a</Text.Blue> <Text.Blue>=</Text.Blue> something;{" "}
-        <br></br>
+        <Text.Black nr_idents={1}></Text.Black>this.<Text.Blue>a</Text.Blue>{" "}
+        <Text.Blue>=</Text.Blue> something; <br></br>
         {"}"} <p></p>
         <Text.Red>var</Text.Red> obj1 = {"{"} <br></br>
         <Text.Blue nr_idents={1}>foo</Text.Blue>: foo <br></br>
@@ -475,7 +475,7 @@ const This = ({ nr }) => {
         <Text.Grey> // 3</Text.Grey>
         <p></p>
         <Text.Red>var</Text.Red> bar <Text.Blue>=</Text.Blue>{" "}
-        <Text.Red>new</Text.Red> obj1.<Text.Purple>foo</Text.Purple>foo({" "}
+        <Text.Red>new</Text.Red> obj1.<Text.Purple>foo</Text.Purple>({" "}
         <Text.Blue>4</Text.Blue> ); <br></br>
         <Text.Black className="hover">
           console.<Text.Blue>log</Text.Blue>(obj1.

@@ -5,6 +5,7 @@ import Types from "./types";
 import Scope from "./scope";
 import This from "./this";
 import HTML from "./html";
+import FetchApi from "./fetch";
 
 const classOrder = [
   { path: "/html", title: "HTML Semantic and SEO", component: HTML },
@@ -17,7 +18,8 @@ const classOrder = [
   },
   { path: "/operators", title: "Javascript Operators", component: Operators },
   { path: "/scopes", title: "Scope & Closures", component: Scope },
-  { path: "/this", title: "Binding (This)", component: This }
+  { path: "/this", title: "Binding (This)", component: This },
+  { path: "/fetch", title: "Fetch API", component: FetchApi }
 ];
 
 export default classOrder;
