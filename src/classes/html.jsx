@@ -65,7 +65,7 @@ const HTML = ({ nr }) => {
         <div className="info">
           <Text.Black nr_idents={0}>{"<header></header>"}</Text.Black> <br></br>
           <Text.Black nr_idents={1}>{"<section>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>{"<article"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>{"<article>"}</Text.Black> <br></br>
           <Text.Black nr_idents={3}>{"<figure>"}</Text.Black> <br></br>
           <Text.Black nr_idents={4}>{"<img>"}</Text.Black> <br></br>
           <Text.Black nr_idents={4}>
@@ -73,7 +73,7 @@ const HTML = ({ nr }) => {
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={3}>{"</figure>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>{"</article"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>{"</article>"}</Text.Black> <br></br>
           <Text.Black nr_idents={1}>{"</section>"}</Text.Black> <br></br>
           <Text.Black nr_idents={0}>{"<footer></footer>"}</Text.Black>
         </div>
@@ -81,15 +81,15 @@ const HTML = ({ nr }) => {
           <Text.Black nr_idents={0}>{"<div id='header' ></div>"}</Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={1}>
-            {"<div class='section' ></div>"}
+            {"<div class='section' >"}
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={2}>
-            {"<div class='article' ></div>"}
+            {"<div class='article' >"}
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={3}>
-            {"<div class='figure' ></div>"}
+            {"<div class='figure' >"}
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={4}>{"<img>"}</Text.Black> <br></br>
@@ -98,9 +98,9 @@ const HTML = ({ nr }) => {
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={3}>{"</div>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>{"</div"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>{"</div>"}</Text.Black> <br></br>
           <Text.Black nr_idents={1}>{"</div>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={0}>{"<div id 'footer'></div>"}</Text.Black>
+          <Text.Black nr_idents={0}>{"<div id='footer'></div>"}</Text.Black>
         </div>
       </div>
       <div>

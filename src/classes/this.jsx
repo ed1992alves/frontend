@@ -134,7 +134,7 @@ const This = ({ nr }) => {
         <Text.Blue nr_idents={1}>foo</Text.Blue>: foo
         <br></br>
         {"}"} <p></p>
-        <Text.Purple className="hover">foo</Text.Purple>();
+        <Text.Purple className="hover">obj.foo</Text.Purple>();
         <Text.Grey>// 2</Text.Grey>
       </div>
       <div>
