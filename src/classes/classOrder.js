@@ -6,6 +6,7 @@ import Scope from "./scope";
 import This from "./this";
 import HTML from "./html";
 import FetchApi from "./fetch";
+import ReactClass from "./react";
 
 const classOrder = [
   { path: "/html", title: "HTML Semantic and SEO", component: HTML },
@@ -19,7 +20,8 @@ const classOrder = [
   { path: "/operators", title: "Javascript Operators", component: Operators },
   { path: "/scopes", title: "Scope & Closures", component: Scope },
   { path: "/this", title: "Binding (This)", component: This },
-  { path: "/fetch", title: "Fetch API", component: FetchApi }
+  { path: "/fetch", title: "Fetch API", component: FetchApi },
+  { path: "/react", title: "React", component: ReactClass }
 ];
 
 export default classOrder;
