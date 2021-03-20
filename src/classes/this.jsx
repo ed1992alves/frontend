@@ -736,7 +736,7 @@ const This = ({ nr }) => {
           ) ; <br></br>
         </Text.Black>{" "}
         <Text.Red nr_idents={2}>return function</Text.Red> (new_country) {"{"}{" "}
-        <br></br> <Text.Black nr_idents={3}> this. </Text.Black>
+        <br></br> <Text.Black nr_idents={3}> this.</Text.Black>
         <Text.Blue>country = </Text.Blue>
         new_country; <br></br>
         <Text.Black nr_idents={2}>{"}"}</Text.Black> <br></br>
