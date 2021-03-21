@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="1137.285" viewBox="0 0 1200 1137.285">
+  <defs>
+    <clipPath id="clip-Tab2">
+      <rect width="1200" height="1137.285"/>
+    </clipPath>
+  </defs>
+  <g id="Tab2" clip-path="url(#clip-Tab2)">
+    <rect width="1200" height="1137.285" fill="#f9f9f9"/>
+    <g id="Group_2337" data-name="Group 2337" transform="translate(-220 -81)">
+      <g id="Group_2316" data-name="Group 2316" transform="translate(250 1005)">
+        <rect id="Rectangle_1315" data-name="Rectangle 1315" width="940" height="58" transform="translate(0)" fill="#d1d2d3"/>
+      </g>
+      <g id="Group_7338" data-name="Group 7338" transform="translate(250 1093)">
+        <rect id="Rectangle_1315-2" data-name="Rectangle 1315" width="940" height="58" transform="translate(0)" fill="#d1d2d3"/>
+      </g>
+      <g id="Group_2320" data-name="Group 2320" transform="translate(200 -19)">
+        <rect id="Rectangle_1295" data-name="Rectangle 1295" width="358" height="280" transform="translate(50 100)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1305" data-name="Rectangle 1305" width="552" height="280" transform="translate(50 424)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1315-3" data-name="Rectangle 1315" width="939.871" height="216" transform="translate(50 748)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1296" data-name="Rectangle 1296" width="298" height="32" transform="translate(439.892 100)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1302" data-name="Rectangle 1302" width="262" height="32" transform="translate(826 100)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1310" data-name="Rectangle 1310" width="307" height="32" transform="translate(632 424)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1297" data-name="Rectangle 1297" width="318" height="32" transform="translate(438 162)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1301" data-name="Rectangle 1301" width="298" height="32" transform="translate(826 162)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1311" data-name="Rectangle 1311" width="287" height="32" transform="translate(632 486)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1298" data-name="Rectangle 1298" width="306" height="32" transform="translate(439.147 224)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1300" data-name="Rectangle 1300" width="318" height="32" transform="translate(826 224)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1312" data-name="Rectangle 1312" width="307" height="32" transform="translate(632 548)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1313" data-name="Rectangle 1313" width="287" height="32" transform="translate(632 610)" fill="#d1d2d3"/>
+        <rect id="Rectangle_1314" data-name="Rectangle 1314" width="298" height="32" transform="translate(632 672)" fill="#d1d2d3"/>
+      </g>
+    </g>
+  </g>
+</svg>

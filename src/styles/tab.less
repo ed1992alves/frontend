@@ -1,0 +1,47 @@
+#tab {
+  background-color: white;
+
+  div:not(#root) {
+    padding: 0px;
+    margin: 0px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cliques {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabWrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+
+    .tabElement:not(#root) {
+      height: 52px;
+      line-height: 52px;
+      width: auto;
+      min-width: 70px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border: 0;
+      border-top: 1px solid #414141;
+      background: transparent;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .selected-object {
+      position: absolute;
+      top: 0;
+      content: "";
+      height: 4px;
+      background-color: #414141;
+      transition: left 0.5s linear, width 0.5s linear;
+    }
+  }
+}

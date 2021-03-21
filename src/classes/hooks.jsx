@@ -7,8 +7,10 @@ import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 import { Dropdown } from "../components/dropdown";
 import { Avatar } from "../components/avatar";
+import { TabExample } from "../components/tabExample";
 
 const options = ["option1", "option2", "option3"];
+let pokemonSelected;
 
 const ReactHooks = ({ nr }) => {
   const [optionSelected, setOptionSelected] = useState(options[0]);
@@ -213,10 +215,14 @@ const ReactHooks = ({ nr }) => {
           name="pokemon"
           items={options}
           selected={optionSelected}
+          clickOutside={true}
           callback={item => {
             setOptionSelected(item);
           }}
         ></Dropdown>
+      </div>
+      <div className="info center">
+        <TabExample></TabExample>
       </div>
       <h3> useReducer</h3>
       <div className="examples">
