@@ -33,7 +33,7 @@ const BoxModel = ({ nr }) => {
         element. It consists of: margins, borders, padding, and the actual
         content. The image below illustrates the box model:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange>width: </Text.Orange>
         <Text.Blue>300px;</Text.Blue>
         <br></br>
@@ -49,19 +49,19 @@ const BoxModel = ({ nr }) => {
       </div>
 
       <div id="boxModel">
-        <div id="margin" class="square">
+        <div id="margin" className="square">
           {" "}
           MARGIN{" "}
         </div>
-        <div id="border" class="square">
+        <div id="border" className="square">
           {" "}
           BORDER{" "}
         </div>
-        <div id="padding" class="square">
+        <div id="padding" className="square">
           {" "}
           PADDING{" "}
         </div>
-        <div id="content" class="square">
+        <div id="content" className="square">
           CONTENT{" "}
         </div>
       </div>
@@ -85,7 +85,7 @@ const BoxModel = ({ nr }) => {
             easier to size elements.
           </li>
         </ul>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setBoxSizing("content")}
@@ -118,7 +118,7 @@ const BoxModel = ({ nr }) => {
         <div id="father">
           {" "}
           PARENT CONTAINER
-          <div class={`son ${boxSizing}`}> CHILD CONTAINER</div>
+          <div className={`son ${boxSizing}`}> CHILD CONTAINER</div>
         </div>
       </div>
 
@@ -136,7 +136,7 @@ const BoxModel = ({ nr }) => {
         <br></br> <b>HTML: span, img </b>
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <input
           type="radio"
           onClick={() => setDisplay("box")}
@@ -164,14 +164,14 @@ const BoxModel = ({ nr }) => {
       </div>
 
       <div id="father_display">
-        <div id="vader" class={display}>
+        <div id="vader" className={display}>
           <img src={vader} />{" "}
         </div>
-        <div id="leia" class={display}>
+        <div id="leia" className={display}>
           {" "}
           <img src={leia} />
         </div>
-        <div id="chewbacca" class={display}>
+        <div id="chewbacca" className={display}>
           {" "}
           <img src={chewbacca} />
         </div>
@@ -185,7 +185,7 @@ const BoxModel = ({ nr }) => {
         <b>flex-direction: </b> This establishes the main-axis, thus defining
         the direction flex items are placed in the flex container.
         <br></br>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setFlexDirection("row")}
@@ -215,7 +215,7 @@ const BoxModel = ({ nr }) => {
           <Text.Green>column-reverse </Text.Green>
           <br></br>
         </div>
-        <div id="father_display" class={`flex ${flexDirection}`}>
+        <div id="father_display" className={`flex ${flexDirection}`}>
           <div id="vader">
             <img src={vader} />{" "}
           </div>
@@ -232,7 +232,7 @@ const BoxModel = ({ nr }) => {
         line. You can change that and allow the items to wrap as needed with
         this property.
         <br></br>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setWrap("nowrap")}
@@ -255,7 +255,7 @@ const BoxModel = ({ nr }) => {
           <Text.Green>wrap-reverse </Text.Green>
           <br></br>
         </div>
-        <div id="father_display" class={`flex ${wrap}`}>
+        <div id="father_display" className={`flex ${wrap}`}>
           <div id="vader">
             <img src={vader} />{" "}
           </div>
@@ -338,7 +338,7 @@ const BoxModel = ({ nr }) => {
         maximum size. It also exerts some control over the alignment of items
         when they overflow the line.
         <br></br>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setJustifyContent("flex-start")}
@@ -382,7 +382,7 @@ const BoxModel = ({ nr }) => {
           <Text.Green>center </Text.Green>
           <br></br>
         </div>
-        <div id="father_display" class={`flex justify ${justifyContent}`}>
+        <div id="father_display" className={`flex justify ${justifyContent}`}>
           <div id="vader">
             <img src={vader} />{" "}
           </div>
@@ -406,7 +406,7 @@ const BoxModel = ({ nr }) => {
         are laid out along the cross axis on the current line. Think of it as
         the justify-content version for the cross-axis (perpendicular to the
         main-axis).
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setAlignItems("flex-start")}
@@ -443,7 +443,7 @@ const BoxModel = ({ nr }) => {
           <Text.Green>baseline</Text.Green>
           <br></br>
         </div>
-        <div id="father_display" class={`flex align ${alignItems}`}>
+        <div id="father_display" className={`flex align ${alignItems}`}>
           <div id="vader">
             Vader <img src={vader} />{" "}
           </div>
@@ -472,7 +472,7 @@ const BoxModel = ({ nr }) => {
         However, the order property controls the order in which they appear in
         the flex container.
         <br></br>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setOrder("1")}
@@ -506,7 +506,7 @@ const BoxModel = ({ nr }) => {
           <Text.Orange>4</Text.Orange>
           <br></br>{" "}
         </div>
-        <div id="father_display" class={`flex order order${order}`}>
+        <div id="father_display" className={`flex order order${order}`}>
           <div id="vader">
             {" "}
             <img src={vader} />{" "}
@@ -526,7 +526,7 @@ const BoxModel = ({ nr }) => {
         dictates what amount of the available space inside the flex container
         the item should take up.
         <br></br>
-        <div id="father_display" class={`flex `}>
+        <div id="father_display" className={`flex `}>
           <div id="vader" className={flexGrow === "vader" ? "flex-grow" : ""}>
             {" "}
             <img src={vader} onClick={() => setFlexGrow("vader")} />{" "}
@@ -546,7 +546,7 @@ const BoxModel = ({ nr }) => {
         <b>align-self</b> This allows the default alignment (or the one
         specified by align-items) to be overridden for individual flex items.
         <br></br>
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setAlignSelf("flex-start")}
@@ -588,7 +588,7 @@ const BoxModel = ({ nr }) => {
           <Text.Orange>strech</Text.Orange>
           <br></br>{" "}
         </div>
-        <div id="father_display" class={`flex align-self ${alignSelf}`}>
+        <div id="father_display" className={`flex align-self ${alignSelf}`}>
           <div id="vader">
             {" "}
             Vader <img src={vader} />{" "}
@@ -628,7 +628,7 @@ const BoxModel = ({ nr }) => {
         on the scroll position. It is positioned relative until a given offset
         position is met in the viewport - then it "sticks" in place (like
         position:fixed).
-        <div class="examples">
+        <div className="examples">
           <input
             type="radio"
             onClick={() => setPosition("static")}
@@ -653,26 +653,26 @@ const BoxModel = ({ nr }) => {
           <Text.Orange>position: </Text.Orange>
           <Text.Blue>absolute;</Text.Blue>
           <br></br>
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               onChange={e => {
                 setTop(e.target.checked);
               }}
             ></input>
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
           <Text.Orange>top: </Text.Orange>
           <Text.Blue>100px;</Text.Blue>
           <br></br>
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               onChange={e => {
                 setLeft(e.target.checked);
               }}
             ></input>
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
           <Text.Orange>left: </Text.Orange>
           <Text.Blue>60px;</Text.Blue>
@@ -707,7 +707,7 @@ const BoxModel = ({ nr }) => {
           <tr>
             <td>.class</td>
             <td>.example</td>
-            <td>Selects all elements with class="example"</td>
+            <td>Selects all elements with className="example"</td>
           </tr>
           <tr>
             <td>.class1 .class2</td>
@@ -875,7 +875,7 @@ const BoxModel = ({ nr }) => {
       </table>
 
       <h4 id="element>element">element > element</h4>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"div > p {"} </Text.Orange>
         <Text.Purple>backround-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
@@ -917,7 +917,7 @@ const BoxModel = ({ nr }) => {
 
       <h4 id="element~element">element ~ element</h4>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"div ~ p {"} </Text.Orange>
         <Text.Purple>backround-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
@@ -951,7 +951,7 @@ const BoxModel = ({ nr }) => {
 
       <h4 id="element+element">element + element</h4>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"div + p {"} </Text.Orange>
         <Text.Purple>backround-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
@@ -985,7 +985,7 @@ const BoxModel = ({ nr }) => {
 
       <h4 id="[atribute]">[atribute]</h4>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"a[target] {"} </Text.Orange>
         <Text.Purple>backround-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
@@ -1023,7 +1023,7 @@ const BoxModel = ({ nr }) => {
 
       <h4 id="beforeafter">::before & ::after </h4>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"p::"} </Text.Orange>
         <Text.Green>{"after"}</Text.Green> {"{"}
         <Text.Purple>content:</Text.Purple>
@@ -1046,7 +1046,7 @@ const BoxModel = ({ nr }) => {
 
       <h4 id="firstlastnth">:first-child & :last-child & :nth-child </h4>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Orange> {"div p::first-child"} </Text.Orange> {"{"}
         <Text.Purple>background-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
@@ -1154,8 +1154,8 @@ const BoxModel = ({ nr }) => {
           </tr>
           <tr>
             <td>div.menu a:hover</td>
-            <td class="hidden">0,0,2,2</td>
-            <td class="hidden">
+            <td className="hidden">0,0,2,2</td>
+            <td className="hidden">
               Two elements, two points in the first square. Another class and a
               pseudo-class, plus two points in the second box.
             </td>
@@ -1171,8 +1171,8 @@ const BoxModel = ({ nr }) => {
           </tr>
           <tr>
             <td>article#content p</td>
-            <td class="hidden">0,1,0,2</td>
-            <td class="hidden">
+            <td className="hidden">0,1,0,2</td>
+            <td className="hidden">
               Two elements, two points in the first square. An ID, a point in
               the third box.
             </td>

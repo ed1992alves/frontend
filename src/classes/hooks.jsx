@@ -3,7 +3,6 @@ import "../styles/reactHooks.less";
 import "../styles/main.less";
 import * as Text from "../Utils/Text";
 import Navigation from "./navigation";
-import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 import { Dropdown } from "../components/dropdown";
 import { Avatar } from "../components/avatar";

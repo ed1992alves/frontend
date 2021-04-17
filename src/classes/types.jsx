@@ -125,7 +125,7 @@ const Types = ({ nr }) => {
         variable can, in one assignment statement, hold a string, and in the
         next hold a number, and so on.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>var</Text.Purple> a = <Text.Red>42</Text.Red>; <br></br>
         <Text.Orange>typeof</Text.Orange> a; <Text.Grey>// "number"</Text.Grey>{" "}
         <br></br>a = <Text.Yellow>true</Text.Yellow>; <br></br>
@@ -141,7 +141,7 @@ const Types = ({ nr }) => {
         <b>null is an assignment value</b>. It can be assigned to a variable as
         a representation of no value
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>var</Text.Purple> a;
         <p></p>
         a; <Text.Grey>// undefined</Text.Grey>

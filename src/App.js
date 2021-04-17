@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const MainPage = () => (
   <>
-    <div class="pageHeader">
+    <div className="pageHeader">
       <h1> All Classes </h1>
     </div>
     {classOrder.map(lesson => (

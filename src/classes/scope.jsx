@@ -312,7 +312,7 @@ const Operators = ({ nr }) => {
         of that assumption which can lead to incorrect thinking about your
         program.
       </div>
-      <div class="examples">
+      <div className="examples">
         a <Text.Blue>= 2</Text.Blue>;<br></br> <Text.Red>var</Text.Red> a;{" "}
         <br></br> <Text.Black className="hover">console.log( a );</Text.Black>
         <Text.Grey> // 2</Text.Grey>
@@ -324,7 +324,7 @@ const Operators = ({ nr }) => {
         undefined. <b>However, the output will be 2.</b>
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Black className="hover">console.log( a );</Text.Black>{" "}
         <Text.Grey>// undefined</Text.Grey> <br></br>
         <Text.Red>var</Text.Red> a <Text.Blue> = 2</Text.Blue>;
@@ -351,17 +351,17 @@ const Operators = ({ nr }) => {
           this:
         </p>
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>var</Text.Red> a;
       </div>
-      <div class="examples">
+      <div className="examples">
         a <Text.Blue> = 2</Text.Blue>;<br></br> console.log( a );
       </div>
       <div>Similarly, our second snippet is actually processed as:</div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>var</Text.Red> a;
       </div>
-      <div class="examples">
+      <div className="examples">
         console.log( a ); <br></br>a <Text.Blue> = 2</Text.Blue>;
       </div>
       <div>
@@ -467,7 +467,7 @@ const Operators = ({ nr }) => {
         .
       </div>
       <h2>Loops + Closure</h2>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>for</Text.Red> ( <Text.Red>var</Text.Red> i
         <Text.Blue> = 1</Text.Blue>; {"i<="} <Text.Blue> 5</Text.Blue>; i
         <Text.Blue> ++</Text.Blue>) {"{"} <br></br>
@@ -508,7 +508,7 @@ const Operators = ({ nr }) => {
         </p>
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Red>for</Text.Red> ( <Text.Red>let</Text.Red> i
         <Text.Blue> = 1</Text.Blue>; {"i<="} <Text.Blue> 5</Text.Blue>; i
         <Text.Blue> ++</Text.Blue>) {"{"} <br></br>
@@ -525,7 +525,7 @@ const Operators = ({ nr }) => {
         {"}"}
       </div>
 
-      <div class="exercise">
+      <div className="exercise">
         <Text.Black>
           <Text.Purple>function</Text.Purple> <Text.Orange>outer</Text.Orange>(){" "}
           {" {"}

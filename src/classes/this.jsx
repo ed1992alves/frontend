@@ -450,7 +450,7 @@ const This = ({ nr }) => {
       <li>2. Explicit binding</li>
       <li>3. Implicit binding</li>
       <li>4. Default binding</li>
-      <div class="exercise">
+      <div className="exercise">
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(something){" "}
         {"{"} <br></br>
         <Text.Black nr_idents={1}></Text.Black>this.<Text.Blue>a</Text.Blue>{" "}
@@ -532,7 +532,7 @@ const This = ({ nr }) => {
         functions are executed at runtime when the event is triggered. Here is a
         basic example:
       </div>
-      <div class="examples batatas">
+      <div className="examples batatas">
         var company = {"{"} <br></br>
         <Text.Black nr_idents={1}>
           <Text.Blue>name</Text.Blue>: <Text.Green>'Scotch'</Text.Green>,{" "}
@@ -647,7 +647,7 @@ const This = ({ nr }) => {
         </Text.Black>
         <Text.Grey> // 2</Text.Grey>
       </div>
-      <div class="examples batatas">
+      <div className="examples batatas">
         var company = {"{"} <br></br>
         <Text.Black nr_idents={1}>
           <Text.Blue>name</Text.Blue>: <Text.Green>'Scotch'</Text.Green>,{" "}
@@ -674,7 +674,7 @@ const This = ({ nr }) => {
         <Text.Green>'click'</Text.Green>, () => company.
         <Text.Blue>getName</Text.Blue>() ) <br></br>
       </div>
-      <div class="exercise">
+      <div className="exercise">
         <Text.Red>function</Text.Red> <Text.Purple>getLastName</Text.Purple>()
         {"{"}
         <br></br>

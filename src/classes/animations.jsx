@@ -322,8 +322,8 @@ const Animations = ({ nr }) => {
         ></div>
       </div>
       <h3> Number of repetitions / Speed / Direction </h3>
-      <div class="info flex-container">
-        <div class="flex-column">
+      <div className="info flex-container">
+        <div className="flex-column">
           <h4>Repetitions</h4>
           <br></br>
           <input
@@ -345,7 +345,7 @@ const Animations = ({ nr }) => {
           ></input>
           Infinite
         </div>
-        <div class="flex-column">
+        <div className="flex-column">
           <h4>Speed</h4>
           <br></br>
           <input
@@ -385,7 +385,7 @@ const Animations = ({ nr }) => {
           ></input>
           cubic-bezier
         </div>
-        <div class="flex-column">
+        <div className="flex-column">
           <h4>Direction</h4>
           <br></br>
           <input
@@ -440,11 +440,11 @@ const Animations = ({ nr }) => {
       </div>
       <h3>Exercise: Loading</h3>
       <div className="exercise">
-        <div class="ball delay1"></div>
-        <div class="ball delay2"></div>
-        <div class="ball delay3"></div>
-        <div class="ball delay4"></div>
-        <div class="ball delay5"></div>
+        <div className="ball delay1"></div>
+        <div className="ball delay2"></div>
+        <div className="ball delay3"></div>
+        <div className="ball delay4"></div>
+        <div className="ball delay5"></div>
       </div>
     </>
   );
