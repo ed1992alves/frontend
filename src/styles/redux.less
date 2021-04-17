@@ -1,0 +1,64 @@
+@import "colors";
+
+div:not(#root)#redux {
+  margin: 0px;
+  padding: 0px;
+
+  h3 {
+    border-bottom: 1px solid rgba(@text-yellow, 0.6);
+    border-radius: 4px;
+  }
+
+  h4 {
+    border-bottom: 1px solid rgba(@text-purple, 0.6);
+    border-radius: 4px;
+    margin: 0px 50px;
+
+    & ~ div:not(#root) {
+      margin: 20px 60px;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      margin-right: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+  #dropdown {
+    margin-left: calc(50% - 105px);
+  }
+
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    div:not(#root) {
+      margin: 0px;
+
+      button {
+        padding: 10px;
+        width: 100px;
+        cursor: pointer;
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

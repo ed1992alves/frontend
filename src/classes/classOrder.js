@@ -8,6 +8,7 @@ import HTML from "./html";
 import FetchApi from "./fetch";
 import ReactClass from "./react";
 import ReactHooks from "./hooks";
+import Redux from "./redux";
 
 const classOrder = [
   { path: "/html", title: "HTML Semantic and SEO", component: HTML },
@@ -23,7 +24,8 @@ const classOrder = [
   { path: "/this", title: "Binding (This)", component: This },
   { path: "/fetch", title: "Fetch API", component: FetchApi },
   { path: "/react", title: "React", component: ReactClass },
-  { path: "/hooks", title: "React Hooks", component: ReactHooks }
+  { path: "/hooks", title: "React Hooks", component: ReactHooks },
+  { path: "/redux", title: "Redux", component: Redux }
 ];
 
 export default classOrder;

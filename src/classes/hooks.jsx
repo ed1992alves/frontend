@@ -206,6 +206,11 @@ const ReactHooks = ({ nr }) => {
         <br></br>
         {"}"}
       </div>
+      <div>
+        If you pass a ref object to React with {"<div ref={myRef} />"}, React
+        will set its .current property to the corresponding DOM node whenever
+        that node changes.
+      </div>
       <div className="info center">
         <div>
           Option selected: <Text.Orange>{optionSelected}</Text.Orange>{" "}
