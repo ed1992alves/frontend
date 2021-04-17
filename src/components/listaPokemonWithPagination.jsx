@@ -88,7 +88,7 @@ export const ListaPokemonWithPagination = () => {
   });
 
   return (
-    <div class="listContainer pokemonPageWrapper">
+    <div className="listContainer pokemonPageWrapper">
       <Dropdown
         title="pokemon list"
         name="pokemon"
@@ -100,7 +100,7 @@ export const ListaPokemonWithPagination = () => {
         }}
       ></Dropdown>
       {pokemonsList && (
-        <div class="flexContainer">
+        <div className="flexContainer">
           {Object.keys(pokemonsList).map((pokemonName, key) => (
             <Card
               key={key}
