@@ -45,7 +45,7 @@ export function fetchAllPokemons(searchParams = location.search) {
   return async dispatch => {
     let params = new URLSearchParams(searchParams);
     let page = params.get("page") ? params.get("page") : "1";
-    let type = params.get("type") ? params.get("type") : "Normal";
+    let type = params.get("type") ? params.get("type") : "All";
     dispatch(fetchPokemonsStart());
     let arrayPokemon = [];
     for (let aux = 1; aux <= 250; aux++) {

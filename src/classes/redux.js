@@ -205,7 +205,7 @@ const Redux = ({ nr }) => {
       <div className="examples">
         <Text.Purple>const</Text.Purple> mapDispatchToProps = dispatch => {"{"}{" "}
         <br></br>
-        <Text.Purple>return</Text.Purple> {"{"} <br></br>
+        <Text.Purple nr_idents={1}>return</Text.Purple> {"{"} <br></br>
         <Text.Black nr_idents={2}>
           increment: () => dispatch({"{"} type:{" "}
           <Text.Green>'INCREMENT'</Text.Green> {"}"})
