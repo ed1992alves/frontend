@@ -225,6 +225,81 @@ const Redux = ({ nr }) => {
           selectUserIds = state => state.users.map(user => user.id);
         </Text.Black>
       </div>
+      <h3>Reselect</h3>
+      <div>Simple “selector” library for Redux </div>
+      <ul>
+        <li>
+          Selectors can compute derived data, allowing Redux to store the
+          minimal possible state.
+        </li>
+        <li>
+          Selectors are efficient. A selector is not recomputed unless one of
+          its arguments changes.
+        </li>
+        <li>
+          Selectors are composable. They can be used as input to other
+          selectors.
+        </li>
+      </ul>
+      <div class="examples">
+        <Text.Red>import</Text.Red> {"{ createSelector }"}{" "}
+        <Text.Red>from </Text.Red> 'reselect' <br></br>
+        <p></p>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Purple>shopItemsSelector</Text.Purple> = state =>
+        state.shop.items <br></br>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Purple>taxPercentSelector</Text.Purple> = state =>
+        state.shop.taxPercent <br></br> <p></p>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
+        <Text.Purple> createSelector</Text.Purple>( <br></br>
+        <Text.Orange nr_idents={1}>shopItemsSelector</Text.Orange>, <br></br>
+        <Text.Black nr_idents={1}></Text.Black>items => items.
+        <Text.Purple>reduce</Text.Purple>((subtotal, item) => subtotal +
+        item.value, <Text.Green>0</Text.Green>) <br></br>)<p></p>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
+        <Text.Purple> createSelector</Text.Purple>( <br></br>
+        <Text.Orange nr_idents={1}>subtotalSelector</Text.Orange>, <br></br>
+        <Text.Orange nr_idents={1}>taxPercentSelector</Text.Orange>, <br></br>
+        <Text.Black nr_idents={1}></Text.Black> (subtotal, taxPercent) =>
+        subtotal * (taxPercent /<Text.Green>100</Text.Green>) <br></br>)<p></p>
+        <Text.Red>const</Text.Red> <Text.Orange>totalSelector</Text.Orange> =
+        <Text.Purple> createSelector</Text.Purple>( <br></br>
+        <Text.Orange nr_idents={1}>subtotalSelector</Text.Orange>, <br></br>
+        <Text.Orange nr_idents={1}>taxSelector</Text.Orange>, <br></br>
+        <Text.Black nr_idents={1}></Text.Black> (subtotal, tax) =>{" "}
+        {"({ total: subtotal + tax })"} <br></br>)<p></p>
+        <Text.Red>const</Text.Red> exampleState = {"{"}
+        <br></br>
+        <Text.Blue nr_idents={1}>shop</Text.Blue>: {"{"} <br></br>
+        <Text.Blue nr_idents={2}>taxPercent</Text.Blue>: 8, <br></br>
+        <Text.Blue nr_idents={2}>items</Text.Blue>: [ <br></br>
+        <Text.Black nr_idents={3}></Text.Black>
+        {"{"} <Text.Blue>name</Text.Blue>: <Text.Green>'apple'</Text.Green>,{" "}
+        <Text.Blue>value</Text.Blue>: <Text.Green>1.20 </Text.Green> {"}"},{" "}
+        <br></br>
+        <Text.Black nr_idents={3}></Text.Black>
+        {"{"} <Text.Blue>name</Text.Blue>: <Text.Green>'orange'</Text.Green>,{" "}
+        <Text.Blue>value</Text.Blue>: <Text.Green>0.95 </Text.Green> {"}"},{" "}
+        <br></br>
+        <Text.Black nr_idents={2}></Text.Black>] <br></br>
+        <Text.Black nr_idents={1}></Text.Black>} <br></br> }<p></p>
+        console.<Text.Purple>log</Text.Purple>(
+        <Text.Purple>subtotalSelector</Text.Purple>(exampleState)){" "}
+        <Text.Grey>// 2.15</Text.Grey> <br></br>
+        console.<Text.Purple>log</Text.Purple>(
+        <Text.Purple>taxSelector</Text.Purple>(exampleState)){" "}
+        <Text.Grey>// 0.172</Text.Grey> <br></br>
+        console.<Text.Purple>log</Text.Purple>(
+        <Text.Purple>totalSelector</Text.Purple>(exampleState)){" "}
+        <Text.Grey>{"// { total: 2.322 }"}</Text.Grey>
+      </div>
       <h2>React-Redux Hooks</h2>
       <div>
         React Redux now offers a set of hook APIs as an alternative to the
@@ -298,6 +373,88 @@ const Redux = ({ nr }) => {
         </Text.Black>
         <br></br>
         {"}"}
+      </div>
+      <h2>Redux-thunk</h2>
+      <div>
+        Redux Thunk middleware allows you to write action creators that return a
+        function instead of an action. The thunk can be used to delay the
+        dispatch of an action, or to dispatch only if a certain condition is
+        met. The inner function receives the store methods dispatch and getState
+        as parameters.
+        <p>
+          An action creator that returns a function to perform asynchronous
+          dispatch:
+        </p>
+      </div>
+      <div className="examples">
+        <Text.Red>const</Text.Red> <Text.Blue>INCREMENT_COUNTER</Text.Blue> ={" "}
+        <Text.Green>'INCREMENT_COUNTER'</Text.Green>; <br></br>
+        <p></p>
+        <Text.Red>function </Text.Red>
+        <Text.Purple>increment</Text.Purple>() {"{"}
+        <br></br>
+        <Text.Red nr_idents={1}>return </Text.Red> {"{"} <br></br>
+        <Text.Orange nr_idents={2}>type</Text.Orange>:{" "}
+        <Text.Blue>INCREMENT_COUNTER</Text.Blue>, <br></br>
+        <Text.Black nr_idents={1}>{"};"}</Text.Black> <br></br>
+        {"}"} <br></br>
+        <p></p>
+        <Text.Red>function </Text.Red>
+        <Text.Purple>incrementAsync</Text.Purple>() {"{"}
+        <br></br>
+        <Text.Red nr_idents={1}>return </Text.Red> {"(dispatch) => {"} <br></br>
+        <Text.Purple nr_idents={2}>setTimeout</Text.Purple>
+        {"(() => {"} <br></br>
+        <Text.Black nr_idents={3}>dispatch</Text.Black>(
+        <Text.Purple>increment</Text.Purple>
+        {"());"} <br></br>
+        <Text.Black nr_idents={2}></Text.Black>
+        {"}, "} <Text.Green>1000</Text.Green> {');"}'}
+        <br></br>
+        <Text.Black nr_idents={1}></Text.Black>
+        {"}"} <br></br>
+        {"}"} <br></br>
+      </div>
+      <div>
+        An action creator that returns a function to perform conditional
+        dispatch:
+      </div>
+      <div class="examples">
+        {" "}
+        <Text.Red>function </Text.Red>
+        <Text.Purple>incrementIfOdd</Text.Purple>() {"{"}
+        <br></br>
+        <Text.Red nr_idents={1}>return </Text.Red> {"(dispatch, getState) => {"}{" "}
+        <br></br>
+        <Text.Red nr_idents={2}>const</Text.Red> {"{counter} = getState();"}{" "}
+        <br></br>
+        <Text.Red nr_idents={2}>{"if"}</Text.Red> {"(counter %"}{" "}
+        <Text.Green>2</Text.Green> {"==="} <Text.Green>0</Text.Green> {")"}{" "}
+        <br></br>
+        <Text.Red nr_idents={3}>return</Text.Red>; <br></br>
+        <Text.Black nr_idents={2}>{"}"}</Text.Black> <br></br>
+        <Text.Black nr_idents={2}>dispatch</Text.Black>(
+        <Text.Purple>increment</Text.Purple>
+        {"());"} <br></br>
+        <Text.Black nr_idents={1}></Text.Black>
+        {"}"} <br></br>
+        {"}"} <br></br>
+      </div>
+      <h3>What’s a thunk?!</h3>
+      <div>
+        A thunk is a function that wraps an expression to delay its evaluation.
+      </div>
+      <div class="examples">
+        <Text.Red>let</Text.Red> x = <Text.Blue>1</Text.Blue> +{" "}
+        <Text.Blue>2</Text.Blue> ; <br></br>
+        <Text.Red>let</Text.Red> <Text.Purple>foo</Text.Purple> = () =>{" "}
+        <Text.Blue>1</Text.Blue> + <Text.Blue>2</Text.Blue> ; <br></br>
+      </div>
+      <h3>Installation</h3>
+      <div className="examples">
+        <Text.Red>const</Text.Red> store ={" "}
+        <Text.Purple>createStore</Text.Purple>(rootReducer,
+        <Text.Purple>applyMiddleware</Text.Purple>(thunk));
       </div>
       <div className="info">
         <ListaPokemonWithPagination></ListaPokemonWithPagination>
