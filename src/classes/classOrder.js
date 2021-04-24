@@ -9,6 +9,7 @@ import FetchApi from "./fetch";
 import ReactClass from "./react";
 import ReactHooks from "./hooks";
 import Redux from "./redux";
+import Context from "./context";
 
 const classOrder = [
   { path: "/html", title: "HTML Semantic and SEO", component: HTML },
@@ -25,6 +26,7 @@ const classOrder = [
   { path: "/fetch", title: "Fetch API", component: FetchApi },
   { path: "/react", title: "React", component: ReactClass },
   { path: "/hooks", title: "React Hooks", component: ReactHooks },
+  { path: "/context", title: "Context", component: Context },
   { path: "/redux", title: "Redux", component: Redux }
 ];
 
