@@ -26,7 +26,7 @@ const classOrder = [
   { path: "/fetch", title: "Fetch API", component: FetchApi },
   { path: "/react", title: "React", component: ReactClass },
   { path: "/hooks", title: "React Hooks", component: ReactHooks },
-  { path: "/context", title: "Context", component: Context },
+  { path: "/context", title: "Context API", component: Context },
   { path: "/redux", title: "Redux", component: Redux }
 ];
 

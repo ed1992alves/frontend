@@ -40,7 +40,7 @@ const Context = ({ nr }) => {
           </li>
         </ul>
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange>const</Text.Orange> UserContext = React.
         <Text.Purple>createContext()</Text.Purple> <br></br>
         <Text.Orange>export const </Text.Orange>
@@ -57,7 +57,7 @@ const Context = ({ nr }) => {
         deeper within the tree. <p></p>All consumers that are descendants of a
         Provider will re-render whenever the Provider’s value prop changes.{" "}
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange>import</Text.Orange> React <Text.Orange>from</Text.Orange>{" "}
         <Text.Green>'react'</Text.Green> <br></br>
         <Text.Orange>import</Text.Orange> Homepage{" "}
@@ -102,7 +102,7 @@ const Context = ({ nr }) => {
         The most common way to access Context from a class component is via the
         static <i>contextType</i>.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange>import</Text.Orange> React, {"{Component}"}{" "}
         <Text.Orange>from</Text.Orange> <Text.Green>'react'</Text.Green>{" "}
         <br></br>
@@ -118,8 +118,8 @@ const Context = ({ nr }) => {
         <Text.Orange nr_idents={1}>static</Text.Orange>{" "}
         {"contextType = UserContext"} <br></br>
         <p></p>
-        <Text.Purple nr_idents={1}>{"componentDidMount"}</Text.Purple> {"() {"}{" "}
-        <br></br>
+        <Text.Purple nr_idents={1}>{"render"}</Text.Purple>
+        {"() {"} <br></br>
         <Text.Orange nr_idents={2}>const</Text.Orange> user ={" "}
         <Text.Orange>this</Text.Orange>.context <br></br>
         <p></p>
@@ -127,9 +127,6 @@ const Context = ({ nr }) => {
         <Text.Orange>log</Text.Orange>(user){" "}
         <Text.Grey>//{" { name: 'Tania', loggedIn: true }"}</Text.Grey>{" "}
         <br></br>
-        <Text.Orange nr_idents={1}></Text.Orange> {"}"} <br></br> <p></p>
-        <Text.Purple nr_idents={1}>{"render"}</Text.Purple>
-        {"() {"} <br></br>
         <Text.Orange nr_idents={2}>return</Text.Orange> {"<"}
         <Text.Blue>div</Text.Blue>
         {">"}
@@ -147,7 +144,7 @@ const Context = ({ nr }) => {
         access the value prop as <i>props</i>. You may still see this, but it's
         more of a legacy way of accessing Context.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Orange>import</Text.Orange> React , {"{Component}"}{" "}
         <Text.Orange>from</Text.Orange> <Text.Green>'react'</Text.Green>{" "}
         <br></br>
@@ -189,7 +186,7 @@ const Context = ({ nr }) => {
         For functional components, you'll use <i>useContext</i>, such as in the
         example below. This is the equivalent of static contextType.
       </div>
-      <div class="examples">
+      <div className="examples">
         {" "}
         <Text.Orange>import</Text.Orange> React <Text.Orange>from</Text.Orange>{" "}
         <Text.Green>'react, {"{Component}"}</Text.Green> <br></br>
