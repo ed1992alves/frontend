@@ -160,8 +160,8 @@ const ReactHooks = ({ nr }) => {
       </div>
       <div className="examples">
         <Text.Purple>function</Text.Purple>
-        <Text.Orange> TextInputWithFocusButton </Text.Orange> ()
-        {"{"} <br></br>
+        <Text.Orange> TextInputWithFocusButton </Text.Orange> = () => 
+        {" {"} <br></br>
         <Text.Purple nr_idents={1}>const</Text.Purple> inputEl ={" "}
         <Text.Orange>useRef</Text.Orange>
         (null);

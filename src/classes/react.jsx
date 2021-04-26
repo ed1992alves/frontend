@@ -29,7 +29,7 @@ const ReactClass = ({ nr }) => {
       <h2>React.Element</h2>
       <div>
         It is a simple object that describes a DOM node and its attributes or
-        properties you can say. It is an immutable description object and you
+        properties. It is an immutable description object and you
         can not apply any methods on it.
       </div>
       <div className="examples">

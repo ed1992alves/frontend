@@ -26,8 +26,8 @@ const Context = ({ nr }) => {
         everywhere throughout a React app.
         <p></p>
         I'll create Context, and call it <i>UserContext</i>. This will also give
-        me
-        <i>UserContext.Provider</i> and <i>UserContext.Consumer</i>. What these
+        me 
+        <i> UserContext.Provider</i> and <i>UserContext.Consumer</i>. What these
         two components do is straightforward:
         <ul>
           <li>
@@ -42,7 +42,7 @@ const Context = ({ nr }) => {
       </div>
       <div className="examples">
         <Text.Orange>const</Text.Orange> UserContext = React.
-        <Text.Purple>createContext()</Text.Purple> <br></br>
+        <Text.Purple>createContext</Text.Purple>() <br></br>
         <Text.Orange>export const </Text.Orange>
         UserProvider = UserContext.Provider <br></br>
         <Text.Orange>export const </Text.Orange>UserConsumer =
@@ -188,8 +188,9 @@ const Context = ({ nr }) => {
       </div>
       <div className="examples">
         {" "}
-        <Text.Orange>import</Text.Orange> React <Text.Orange>from</Text.Orange>{" "}
-        <Text.Green>'react, {"{Component}"}</Text.Green> <br></br>
+        <Text.Orange>import</Text.Orange> React, {"{useContext}"} 
+        <Text.Orange> from</Text.Orange>{" "}
+        <Text.Green>'react', </Text.Green> <br></br>
         <Text.Orange>import</Text.Orange> {" UserContext"}{" "}
         <Text.Orange>from</Text.Orange> <Text.Green>'./UserContext'</Text.Green>{" "}
         <br></br>
