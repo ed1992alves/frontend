@@ -4,6 +4,7 @@ const webpack = require("webpack");
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
+  devtool: "source-map",
   module: {
     rules: [
       {
@@ -34,7 +35,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
-    port: 3003,
+    port: 3004,
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true,
     historyApiFallback: true,
