@@ -245,25 +245,17 @@ const Redux = ({ nr }) => {
         <Text.Red>import</Text.Red> {"{ createSelector }"}{" "}
         <Text.Red>from </Text.Red> 'reselect' <br></br>
         <p></p>
-        <Text.Red>
-          const
-        </Text.Red> <Text.Purple>shopItemsSelector</Text.Purple> = state =>
-        state.shop.items <br></br>
-        <Text.Red>
-          const
-        </Text.Red> <Text.Purple>taxPercentSelector</Text.Purple> = state =>
-        state.shop.taxPercent <br></br> <p></p>
-        <Text.Red>
-          const
-        </Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
+        <Text.Red>const</Text.Red> <Text.Purple>shopItemsSelector</Text.Purple>{" "}
+        = state => state.shop.items <br></br>
+        <Text.Red>const</Text.Red> <Text.Purple>taxPercentSelector</Text.Purple>{" "}
+        = state => state.shop.taxPercent <br></br> <p></p>
+        <Text.Red>const</Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
         <Text.Purple> createSelector</Text.Purple>( <br></br>
         <Text.Orange nr_idents={1}>shopItemsSelector</Text.Orange>, <br></br>
         <Text.Black nr_idents={1}></Text.Black>items => items.
         <Text.Purple>reduce</Text.Purple>((subtotal, item) => subtotal +
         item.value, <Text.Green>0</Text.Green>) <br></br>)<p></p>
-        <Text.Red>
-          const
-        </Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
+        <Text.Red>const</Text.Red> <Text.Orange>taxSelector</Text.Orange> =
         <Text.Purple> createSelector</Text.Purple>( <br></br>
         <Text.Orange nr_idents={1}>subtotalSelector</Text.Orange>, <br></br>
         <Text.Orange nr_idents={1}>taxPercentSelector</Text.Orange>, <br></br>
