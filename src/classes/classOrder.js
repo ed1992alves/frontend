@@ -10,6 +10,7 @@ import ReactClass from "./react";
 import ReactHooks from "./hooks";
 import Redux from "./redux";
 import Context from "./context";
+import UnitTest from "./unitTest";
 
 const classOrder = [
   { path: "/html", title: "HTML Semantic and SEO", component: HTML },
@@ -27,7 +28,8 @@ const classOrder = [
   { path: "/react", title: "React", component: ReactClass },
   { path: "/hooks", title: "React Hooks", component: ReactHooks },
   { path: "/context", title: "Context API", component: Context },
-  { path: "/redux", title: "Redux", component: Redux }
+  { path: "/redux", title: "Redux", component: Redux },
+  { path: "/testing", title: "Unit Testing", component: UnitTest }
 ];
 
 export default classOrder;
