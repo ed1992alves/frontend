@@ -324,7 +324,7 @@ const UnitTest = ({ nr }) => {
         React components.{" "}
       </div>
       <h3>Render()</h3>
-      <p>
+      <div>
         render(Component) returns:
         <ul>
           <li>
@@ -339,8 +339,8 @@ const UnitTest = ({ nr }) => {
           </li>
           <li>re-render function </li>
         </ul>
-      </p>
-      <div className="scopes examples">
+      </div>
+      <div className="examples">
         <div>
           <Text.Blue>import</Text.Blue> {"{ render, fireEvent }"}{" "}
           <Text.Blue>from</Text.Blue>{" "}
