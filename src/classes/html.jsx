@@ -12,6 +12,214 @@ const HTML = ({ nr }) => {
   return (
     <>
       <Navigation currentPage={nr}></Navigation>
+      <h2>HTML 4</h2>
+      <h3>Tags</h3>
+      <div class="info infoWithExample">
+        <div>
+          <ul>
+            <li>
+              <b>{"<a>"}</b>: Specifies an anchor
+            </li>
+            <li>
+              <b>{"<b>"}</b>: Specifies bold text
+            </li>
+            <li>
+              <b>{"<body>"}</b>: Specifies the body element
+            </li>
+            <li>
+              <b>{"<br>"}</b>: Inserts a single line break
+            </li>
+            <li>
+              <b>{"<button>"}</b>: Specifies a push button
+            </li>
+            <li>
+              <b>{"<div>"}</b>: Specifies a section in a document
+            </li>
+            <li>
+              <b>{"<form>"}</b>: Specifies a form
+            </li>
+            <li>
+              <b>{"<frame>"}</b>: Specifies a sub window (a frame)
+            </li>
+
+            <li>
+              <b>{"<h1-h6>"}</b>: Specifies header 1 to header 6
+            </li>
+            <li>
+              <b>{"<head>"}</b>: Specifies information about the document
+            </li>
+            <li>
+              <b>{"<html>"}</b>: Specifies an html document
+            </li>
+            <li>
+              <b>{"<i>"}</b>: Specifies italic text
+            </li>
+            <li>
+              <b>{"<img>"}</b>: Specifies an image
+            </li>
+            <li>
+              <b>{"<input>"}</b>: Specifies an input field
+            </li>
+            <li>
+              <b>{"<li>"}</b>: Specifies a list item
+            </li>
+            <li>
+              <b>{"<meta>"}</b>: Specifies meta information
+            </li>
+            <li>
+              <b>{"<ol>"}</b>: Specifies an ordered list
+            </li>
+            <li>
+              <b>{"<option>"}</b>: Specifies an option in a drop-down list
+            </li>
+            <li>
+              <b>{"<p>"}</b>: Specifies a paragraph
+            </li>
+            <li>
+              <b>{"<script>"}</b>: Specifies a script
+            </li>
+            <li>
+              <b>{"<select>"}</b>: Specifies a selectable list
+            </li>
+            <li>
+              <b>{"<span>"}</b>: Specifies a section in a document
+            </li>
+            <li>
+              <b>{"<table>"}</b>: Specifies a table
+            </li>
+            <li>
+              <b>{"<tbody>"}</b>: Specifies a table body
+            </li>
+            <li>
+              <b>{"<td>"}</b>: Specifies a table cell
+            </li>
+            <li>
+              <b>{"<th>"}</b>: Specifies a table header
+            </li>
+            <li>
+              <b>{"<tr>"}</b>: Specifies a table row
+            </li>
+            <li>
+              <b>{"<textara>"}</b>: Specifies a text area
+            </li>
+            <li>
+              <b>{"<ul>"}</b>: Specifies an unordered list
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Tables</h3>
+      <div class="info infoWithExample">
+        <div>
+          <Text.Black nr_idents={0}>{"<table>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>
+            {" "}
+            {"<th>"}Name {"</th>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {"<th>"}Single{"</th>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {" "}
+            {"<th>"}Year{"</th>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>
+            {"<td>"}Maria Bethania{"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {"<td>"}Carta da Amor{"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {" "}
+            {"<td>"}2017{"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}>
+            {"<td>"}Elvis Presley {"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {"<td>"}Can't Help Falling in Love{"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={2}>
+            {"<td>"}1961{"</td>"}
+          </Text.Black>{" "}
+          <br></br>
+          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={0}>{"</table>"}</Text.Black> <br></br>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <th>Artist</th>
+              <th>Single</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+              <td>Maria Bethania</td>
+              <td>Cartas de Amor</td>
+              <td>2017</td>
+            </tr>
+            <tr>
+              <td>Elvis Presley</td>
+              <td>Can't Help Falling in Love</td>
+              <td>1961</td>
+            </tr>
+            <tr>
+              <td>Björk</td>
+              <td>It's oh so quiet</td>
+              <td>2007</td>
+            </tr>
+            <tr>
+              <td>The Coors</td>
+              <td>Breathless</td>
+              <td>2009</td>
+            </tr>
+            <tr>
+              <td>Chicago</td>
+              <td>25 or 6 to 4</td>
+              <td>1970</td>
+            </tr>
+            <tr>
+              <td>Earth, Wind & Fire</td>
+              <td>September</td>
+              <td>1978</td>
+            </tr>
+            <tr>
+              <td>Xana Toc Toc</td>
+              <td>Pulguinha Teimosa</td>
+              <td>2019</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <h3>Div VS Span</h3>
+      <div class="info infoWithExample">
+        <div>
+          <ul>
+            <li>div is a block element</li>
+            <li>span is an inline element</li>
+          </ul>
+        </div>
+        <div class="center">
+          This means that to use them semantically, divs should be used to wrap
+          sections of a document, while spans should be used to wrap small
+          portions of text, images, etc.
+        </div>
+      </div>
+      <div></div>
       <h2>Semantic HTML5 Elements</h2>
       <div>
         Semantic HTML elements are those that clearly describe their meaning in
@@ -80,17 +288,11 @@ const HTML = ({ nr }) => {
         <div className="info">
           <Text.Black nr_idents={0}>{"<div id='header' ></div>"}</Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={1}>
-            {"<div class='section' >"}
-          </Text.Black>{" "}
+          <Text.Black nr_idents={1}>{"<div class='section' >"}</Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
-            {"<div class='article' >"}
-          </Text.Black>{" "}
+          <Text.Black nr_idents={2}>{"<div class='article' >"}</Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={3}>
-            {"<div class='figure' >"}
-          </Text.Black>{" "}
+          <Text.Black nr_idents={3}>{"<div class='figure' >"}</Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={4}>{"<img>"}</Text.Black> <br></br>
           <Text.Black nr_idents={4}>

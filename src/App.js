@@ -9,12 +9,14 @@ const MainPage = () => (
     <div className="pageHeader">
       <h1> All Classes </h1>
     </div>
-    {classOrder.map(lesson => (
-      <>
-        <Link to={lesson.path}>{lesson.title}</Link>
-        <p></p>
-      </>
-    ))}
+    {classOrder.map(lesson =>
+      lesson.status ? (
+        <>
+          <Link to={lesson.path}>{lesson.title}</Link>
+          <p></p>
+        </>
+      ) : null
+    )}
   </>
 );
 
@@ -32,11 +34,13 @@ const App = () => {
         <Route exact path="/">
           <MainPage />
         </Route>
-        {classOrder.map((lesson, key) => (
-          <Route key={key} exact path={lesson.path}>
-            <lesson.component nr={key} />
-          </Route>
-        ))}
+        {classOrder.map((lesson, key) =>
+          lesson.status ? (
+            <Route key={key} exact path={lesson.path}>
+              <lesson.component nr={key} />
+            </Route>
+          ) : null
+        )}
       </Switch>
     </Router>
   );
