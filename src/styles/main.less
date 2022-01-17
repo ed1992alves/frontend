@@ -157,15 +157,14 @@ div:not(#root) {
       var(--bg-color)
     );
     color: var(--examples-text-color);
-    width: calc(100% + 20px);
-    position: relative;
-    left: -20px;
+    width: 100vw;
+    left: 0px;
     top: -20px;
     margin: 20px 0px;
     border-bottom: 1px solid rgba(@yellow, 1);
     position: fixed;
     z-index: 2;
-
+    box-sizing: border-box;
     h1 {
       border: 0px;
     }
@@ -382,6 +381,7 @@ footer {
   display: flex;
   justify-content: center;
   padding: 30px;
+  box-sizing: border-box;
   .theme {
     position: relative;
     top: 5px;
