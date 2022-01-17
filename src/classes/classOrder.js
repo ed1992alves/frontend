@@ -1,4 +1,4 @@
-import BoxModel from "./boxModel";
+import css from "./css";
 import Animations from "./animations";
 import Operators from "./operators";
 import Types from "./types";
@@ -11,6 +11,7 @@ import ReactHooks from "./hooks";
 import Redux from "./redux";
 import Context from "./context";
 import UnitTest from "./unitTest";
+import Selectors from "./selectors";
 
 const classOrder = [
   {
@@ -19,7 +20,13 @@ const classOrder = [
     component: HTML,
     status: true
   },
-  { path: "/css", title: "CSS basics", component: BoxModel, status: true },
+  { path: "/css", title: "CSS basics", component: css, status: true },
+  {
+    path: "/selectors",
+    title: "Selectors And Specificity",
+    component: Selectors,
+    status: true
+  },
   {
     path: "/animations",
     title: "Animations",
