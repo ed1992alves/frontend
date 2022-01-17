@@ -696,6 +696,81 @@ const BoxModel = ({ nr }) => {
         </div>
       </div>
 
+      <h2>CSS Units</h2>
+
+      <h3>Absolute Units</h3>
+
+      <table class="units">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>cm</td>
+            <td> centimeters</td>
+          </tr>
+          <tr>
+            <td>in</td>
+            <td> inches</td>
+          </tr>
+
+          <tr>
+            <td>px</td>
+            <td> pixels</td>
+          </tr>
+
+          <tr>
+            <td>pt</td>
+            <td> points</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div>
+        Most of these units are more useful when used for print, rather than
+        screen output. For example, we don't typically use cm (centimeters) on
+        screen. The only value that you will commonly use is px (pixels).
+      </div>
+
+      <h3>Relative Units</h3>
+
+      <table class="units">
+        <thead>
+          <tr>
+            <th>Unit</th>
+            <th>Relative To </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>em</td>
+            <td>Font size of the parent.</td>
+          </tr>
+          <tr>
+            <td>rem</td>
+            <td>Font size of the root element.</td>
+          </tr>
+
+          <tr>
+            <td>vw</td>
+            <td>1% of the viewport's width.</td>
+          </tr>
+
+          <tr>
+            <td>vh</td>
+            <td>1% of the viewport's height.</td>
+          </tr>
+
+          <tr>
+            <td>%</td>
+            <td>Relative to the parent element.</td>
+          </tr>
+        </tbody>
+      </table>
+
       <h2>SELECTORS AND PSEUDO SELECTORS </h2>
 
       <table>
