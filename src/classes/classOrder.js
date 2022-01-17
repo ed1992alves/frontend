@@ -19,7 +19,7 @@ const classOrder = [
     component: HTML,
     status: true
   },
-  { path: "/css", title: "CSS basics", component: BoxModel, status: false },
+  { path: "/css", title: "CSS basics", component: BoxModel, status: true },
   {
     path: "/animations",
     title: "Animations",

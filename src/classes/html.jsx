@@ -7,6 +7,7 @@ import facebookAdds from "../styles/images/facebook_adds.png";
 import minderaTags from "../styles/images/mindera_tags.png";
 import minderaHeaders from "../styles/images/mindera_headers.png";
 import minderaImages from "../styles/images/mindera_images.png";
+import zip from "../styles/images/zip.svg";
 
 const HTML = ({ nr }) => {
   return (
@@ -116,7 +117,7 @@ const HTML = ({ nr }) => {
           <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
           <Text.Black nr_idents={2}>
             {" "}
-            {"<th>"}Name {"</th>"}
+            {"<th>"}Artist{"</th>"}
           </Text.Black>{" "}
           <br></br>
           <Text.Black nr_idents={2}>
@@ -483,6 +484,13 @@ const HTML = ({ nr }) => {
         <br></br>
         <Text.Blue>{"</figure>"}</Text.Blue>
       </div>
+      <a href="./exercicio.zip" download>
+        <span class="zip">
+          <h3>Exercício</h3>
+
+          <img src={zip} alt="exercicio"></img>
+        </span>
+      </a>
       <h2>Website Traffic</h2>
       <div>
         Website traffic is a number of people who come to your site through
@@ -519,8 +527,9 @@ const HTML = ({ nr }) => {
             of traffic without paying any cost. However, driving organic traffic
             need lots of <b>Search Engine Optimization (SEO)</b> works to rank
             for specified keywords. SEO is the collection of strategies to
-            maintain the health of the website so as to rank in the SERPs by
-            satisfying the algorithms defined by the search engines.
+            maintain the health of the website so as to rank in the Search
+            Engine Results Pages (SERPs) by satisfying the algorithms defined by
+            the search engines.
             <ul>
               <li>It is free </li>
               <li>

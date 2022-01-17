@@ -315,9 +315,9 @@ div#father {
   position: relative;
 
   #red_child {
-    width: calc(100% - 20px);
+    width: 100%;
     height: 100px;
-    margin: 10px auto;
+    margin: 0px;
     border: 1px double @text-red;
     border-radius: 2px;
     position: relative;
@@ -325,12 +325,15 @@ div#father {
     line-height: 90px;
     color: @red;
     background-color: rgba(@text-red, 0.1);
+    display: inline-block;
+    box-sizing: border-box;
   }
 
   #blue_child {
     width: calc(100% - 140px);
     height: 100px;
-    margin: auto;
+    margin: 0px;
+    margin-top: 10px;
     border: 1px double @warmblue;
     border-radius: 2px;
     position: static;
@@ -343,6 +346,7 @@ div#father {
   &.absolute {
     #blue_child {
       position: absolute;
+      width: calc(100% - 160px);
     }
   }
 
@@ -354,7 +358,7 @@ div#father {
 
   &.top {
     #blue_child {
-      top: 100px;
+      top: 120px;
     }
   }
 

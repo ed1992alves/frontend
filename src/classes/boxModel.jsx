@@ -134,6 +134,9 @@ const BoxModel = ({ nr }) => {
         <b>Inline: </b>Takes up only as much width as it needs, and does not
         force new lines (display:inline;)
         <br></br> <b>HTML: span, img </b>
+        <p></p>
+        <b>Inline-Block: </b>It’s formatted just like the inline element, but
+        you can set width and height values.
       </div>
 
       <div className="examples">
@@ -663,7 +666,7 @@ const BoxModel = ({ nr }) => {
             <span className="slider round"></span>
           </label>
           <Text.Orange>top: </Text.Orange>
-          <Text.Blue>100px;</Text.Blue>
+          <Text.Blue>120px;</Text.Blue>
           <br></br>
           <label className="switch">
             <input
