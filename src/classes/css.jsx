@@ -6,9 +6,8 @@ import leia from "../styles/images/leia.png";
 import chewbacca from "../styles/images/chewbacca.png";
 import c3po from "../styles/images/c3po.png";
 import bounty from "../styles/images/bounty_hunter.png";
-import Navigation from "./navigation";
 
-const Css = ({ nr }) => {
+const Css = () => {
   const [boxSizing, setBoxSizing] = useState("content");
   const [display, setDisplay] = useState("block");
   const [flexDirection, setFlexDirection] = useState("row");
@@ -24,8 +23,6 @@ const Css = ({ nr }) => {
 
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
-
       <h2>Box Model </h2>
       <div>
         {" "}
@@ -700,7 +697,7 @@ const Css = ({ nr }) => {
 
       <h3>Absolute Units</h3>
 
-      <table class="units">
+      <table className="units">
         <thead>
           <tr>
             <th>Unit</th>
@@ -737,7 +734,7 @@ const Css = ({ nr }) => {
 
       <h3>Relative Units</h3>
 
-      <table class="units">
+      <table className="units">
         <thead>
           <tr>
             <th>Unit</th>
@@ -789,7 +786,7 @@ const Css = ({ nr }) => {
       <div>
         Like any other property, this is written inside a ruleset, like so:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Green>element</Text.Green> {"{"} <br></br>
         <Text.Blue className="nr_idents1">--main-bg-color</Text.Blue>
         {": brown;"}
@@ -803,7 +800,7 @@ const Css = ({ nr }) => {
         globally across your HTML document:
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Green>:root</Text.Green> {"{"} <br></br>
         <Text.Blue className="nr_idents1">--main-bg-color</Text.Blue>
         {": brown;"}
@@ -814,7 +811,7 @@ const Css = ({ nr }) => {
         You use the custom property value by specifying your custom property
         name inside the var() function, in place of a regular property value:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Green>element</Text.Green> {"{"} <br></br>
         <Text.Blue className="nr_idents1">background-color</Text.Blue>
         {":"} <Text.Pink>var</Text.Pink>

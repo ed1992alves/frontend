@@ -1,10 +1,5 @@
 @import "colors";
 
-:root {
-  --bg-color: rgba(253, 209, 58, 0.4);
-  --text-color: black;
-}
-
 .spacesquare(@times) {
   width: calc(100% - @times * 80px);
   height: calc(100% - @times * 80px);
@@ -494,6 +489,6 @@ table.units {
 }
 
 div:not(#root).examples {
-  background-color: var(--bg-color);
+  background-color: var(--examples-bg-color);
   color: var(--text-color);
 }

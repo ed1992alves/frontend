@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/react.less";
 import "../styles/main.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 
@@ -13,12 +12,11 @@ const Tick = props => (
   </>
 );
 
-const ReactClass = ({ nr }) => {
+const ReactClass = () => {
   const [date, setDate] = useState(new Date().toLocaleTimeString());
   setInterval(() => setDate(new Date().toLocaleTimeString()), 1000);
   return (
     <div id="react">
-      <Navigation currentPage={nr}></Navigation>
       <h2> What is React? </h2>
       <div>
         React is a declarative, efficient, and flexible JavaScript library for
@@ -29,8 +27,8 @@ const ReactClass = ({ nr }) => {
       <h2>React.Element</h2>
       <div>
         It is a simple object that describes a DOM node and its attributes or
-        properties. It is an immutable description object and you
-        can not apply any methods on it.
+        properties. It is an immutable description object and you can not apply
+        any methods on it.
       </div>
       <div className="examples">
         <Text.Blue> &lt;h1&gt;</Text.Blue> Hello, world{" "}

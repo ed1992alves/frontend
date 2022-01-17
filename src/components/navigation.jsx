@@ -1,4 +1,4 @@
-import classOrder from "./classOrder";
+import classOrder from "../classes/classOrder";
 import React from "react";
 import { Link } from "react-router-dom";
 import minder from "../styles/images/minder.svg";

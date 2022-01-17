@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../styles/html.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 import paidTraffic from "../styles/images/star_wars_traffic.png";
 import facebookAdds from "../styles/images/facebook_adds.png";
 import minderaTags from "../styles/images/mindera_tags.png";
@@ -9,13 +8,12 @@ import minderaHeaders from "../styles/images/mindera_headers.png";
 import minderaImages from "../styles/images/mindera_images.png";
 import zip from "../styles/images/zip.svg";
 
-const HTML = ({ nr }) => {
+const HTML = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <h2>HTML 4</h2>
       <h3>Tags</h3>
-      <div class="info infoWithExample">
+      <div className="info infoWithExample">
         <div>
           <ul>
             <li>
@@ -111,110 +109,118 @@ const HTML = ({ nr }) => {
       </div>
 
       <h3>Tables</h3>
-      <div class="info infoWithExample">
+      <div className="info infoWithExample">
         <div>
           <Text.Black nr_idents={0}>{"<table>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={1}> {"<thead>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={3}>
             {" "}
             {"<th>"}Artist{"</th>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {"<th>"}Single{"</th>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {" "}
             {"<th>"}Year{"</th>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={2}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"</thead>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"<tbody>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={3}>
             {"<td>"}Maria Bethania{"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {"<td>"}Carta da Amor{"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {" "}
             {"<td>"}2017{"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={1}> {"<tr>"}</Text.Black> <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={2}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}> {"<tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={3}>
             {"<td>"}Elvis Presley {"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {"<td>"}Can't Help Falling in Love{"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={2}>
+          <Text.Black nr_idents={3}>
             {"<td>"}1961{"</td>"}
           </Text.Black>{" "}
           <br></br>
-          <Text.Black nr_idents={1}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={2}> {"</tr>"}</Text.Black> <br></br>
+          <Text.Black nr_idents={1}> {"</tbody>"}</Text.Black> <br></br>
           <Text.Black nr_idents={0}>{"</table>"}</Text.Black> <br></br>
         </div>
         <div>
           <table>
-            <tr>
-              <th>Artist</th>
-              <th>Single</th>
-              <th>Year</th>
-            </tr>
-            <tr>
-              <td>Maria Bethania</td>
-              <td>Cartas de Amor</td>
-              <td>2017</td>
-            </tr>
-            <tr>
-              <td>Elvis Presley</td>
-              <td>Can't Help Falling in Love</td>
-              <td>1961</td>
-            </tr>
-            <tr>
-              <td>Björk</td>
-              <td>It's oh so quiet</td>
-              <td>2007</td>
-            </tr>
-            <tr>
-              <td>The Coors</td>
-              <td>Breathless</td>
-              <td>2009</td>
-            </tr>
-            <tr>
-              <td>Chicago</td>
-              <td>25 or 6 to 4</td>
-              <td>1970</td>
-            </tr>
-            <tr>
-              <td>Earth, Wind & Fire</td>
-              <td>September</td>
-              <td>1978</td>
-            </tr>
-            <tr>
-              <td>Xana Toc Toc</td>
-              <td>Pulguinha Teimosa</td>
-              <td>2019</td>
-            </tr>
+            <thead>
+              <tr>
+                <th>Artist</th>
+                <th>Single</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maria Bethania</td>
+                <td>Cartas de Amor</td>
+                <td>2017</td>
+              </tr>
+              <tr>
+                <td>Elvis Presley</td>
+                <td>Can't Help Falling in Love</td>
+                <td>1961</td>
+              </tr>
+              <tr>
+                <td>Björk</td>
+                <td>It's oh so quiet</td>
+                <td>2007</td>
+              </tr>
+              <tr>
+                <td>The Coors</td>
+                <td>Breathless</td>
+                <td>2009</td>
+              </tr>
+              <tr>
+                <td>Chicago</td>
+                <td>25 or 6 to 4</td>
+                <td>1970</td>
+              </tr>
+              <tr>
+                <td>Earth, Wind & Fire</td>
+                <td>September</td>
+                <td>1978</td>
+              </tr>
+              <tr>
+                <td>Xana Toc Toc</td>
+                <td>Pulguinha Teimosa</td>
+                <td>2019</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>
       <h3>Div VS Span</h3>
-      <div class="info infoWithExample">
+      <div className="info infoWithExample">
         <div>
           <ul>
             <li>div is a block element</li>
             <li>span is an inline element</li>
           </ul>
         </div>
-        <div class="center">
+        <div className="center">
           This means that to use them semantically, divs should be used to wrap
           sections of a document, while spans should be used to wrap small
           portions of text, images, etc.
@@ -485,7 +491,7 @@ const HTML = ({ nr }) => {
         <Text.Blue>{"</figure>"}</Text.Blue>
       </div>
       <a href="./exercicio.zip" download>
-        <span class="zip">
+        <span className="zip">
           <h3>Exercício</h3>
 
           <img src={zip} alt="exercicio"></img>

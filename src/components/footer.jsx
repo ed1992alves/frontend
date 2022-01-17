@@ -8,13 +8,18 @@ const Footer = () => {
 
   useEffect(() => {
     if (theme) {
-      r.style.setProperty("--bg-color", "#073642");
+      r.style.setProperty("--examples-bg-color", "#073642");
+      r.style.setProperty("--examples-text-color", "white");
       r.style.setProperty("--text-color", "white");
+      r.style.setProperty("--bg-color", "black");
+
       return;
     }
 
-    r.style.setProperty("--bg-color", "rgba(253, 209, 58, 0.4)");
+    r.style.setProperty("--examples-bg-color", "rgba(253, 209, 58, 0.4)");
+    r.style.setProperty("--examples-text-color", "black");
     r.style.setProperty("--text-color", "black");
+    r.style.setProperty("--bg-color", "white");
   }, [theme]);
 
   return (
@@ -28,7 +33,7 @@ const Footer = () => {
         ></input>
         <span className="slider round"></span>{" "}
       </label>
-      <span class="theme">{themes[theme]} Theme</span>
+      <span className="theme">{themes[theme]} Theme</span>
     </footer>
   );
 };

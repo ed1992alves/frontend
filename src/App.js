@@ -3,7 +3,8 @@ import { hot } from "react-hot-loader";
 import "./styles/main.less";
 import classOrder from "./classes/classOrder";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Footer from "./classes/footer";
+import Footer from "./components/footer";
+import Navigation from "./components/navigation";
 
 const MainPage = () => (
   <>
@@ -38,6 +39,7 @@ const App = () => {
         {classOrder.map((lesson, key) =>
           lesson.status ? (
             <Route key={key} exact path={lesson.path}>
+              <Navigation currentPage={key}></Navigation>
               <lesson.component nr={key} />
             </Route>
           ) : null

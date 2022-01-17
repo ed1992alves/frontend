@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import "../styles/animations.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
 const getSpeedText = speed =>
   speed === "cubic" ? "cubic-bezier(0.05, 1.81, 1, -1.05)" : speed;
 
-const Animations = ({ nr }) => {
+const Animations = () => {
   const [speed, setSpeed] = useState("ease");
   const [nrRepetitions, setNrRepetitions] = useState(1);
   const [animationSpeed, setAnimationSpeed] = useState("ease");
   const [direction, setDirection] = useState("normal");
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
-
       <h2> Transition Property </h2>
 
       <div>

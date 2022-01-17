@@ -1,5 +1,12 @@
 @import "colors";
 
+:root {
+  --examples-bg-color: rgba(253, 209, 58, 0.4);
+  --examples-text-color: black;
+  --bg-color: white;
+  --text-color: black;
+}
+
 @keyframes scaleMindera {
   0% {
     transform: scale(0.9);
@@ -25,8 +32,11 @@ h1 {
 
 h2 {
   border-bottom: 1px solid rgba(@text-light-blue, 0.4);
-  margin: 40px 20px 10px 20px;
-  background-image: linear-gradient(rgba(@text-light-blue, 0.2), white);
+  margin: 20px 20px 10px 20px;
+  background-image: linear-gradient(
+    rgba(@text-light-blue, 0.2),
+    var(--bg-color)
+  );
   font-size: 32px;
   font-weight: 600;
   border-radius: 4px;
@@ -71,8 +81,10 @@ table {
 
 body {
   margin: 0px;
-  padding: 45px;
+  padding: 0px 45px;
   font-family: monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 div:not(#root) {
@@ -140,14 +152,17 @@ div:not(#root) {
   &.pageHeader {
     .boxes();
     background-color: white;
-    background-image: linear-gradient(rgba(@text-light-blue, 0.4), white);
-    color: black;
+    background-image: linear-gradient(
+      var(--examples-bg-color),
+      var(--bg-color)
+    );
+    color: var(--examples-text-color);
     width: calc(100% + 20px);
     position: relative;
     left: -20px;
     top: -20px;
     margin: 20px 0px;
-    border-bottom: 1px solid rgba(@text-light-blue, 0.4);
+    border-bottom: 1px solid rgba(@yellow, 1);
     position: fixed;
     z-index: 2;
 
@@ -278,7 +293,7 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0px;
+  margin: 10px;
 
   div:not(#root) {
     text-align: center;
@@ -332,12 +347,12 @@ table {
   right: 15px;
   width: 45px;
   height: 45px;
-  background-color: white;
   transition: 1s linear background-color;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 
   &:hover {
     background-color: rgba(@text-red, 0.5);
@@ -361,7 +376,12 @@ table {
 }
 
 footer {
-  border-top: 1px dotted;
+  position: relative;
+  left: -45px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
   .theme {
     position: relative;
     top: 5px;

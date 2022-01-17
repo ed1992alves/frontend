@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import "../styles/main.less";
 import "../styles/redux.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 import { ListaPokemonWithPagination } from "../components/listaPokemonWithPagination";
 
-const Redux = ({ nr }) => {
+const Redux = () => {
   return (
     <div id="redux">
       {" "}
-      <Navigation currentPage={nr}></Navigation>
       <h2>Actions</h2>
       <div>
         Actions are payloads of information that send data from your application
@@ -241,15 +239,21 @@ const Redux = ({ nr }) => {
           selectors.
         </li>
       </ul>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>import</Text.Red> {"{ createSelector }"}{" "}
         <Text.Red>from </Text.Red> 'reselect' <br></br>
         <p></p>
-        <Text.Red>const</Text.Red> <Text.Purple>shopItemsSelector</Text.Purple>{" "}
-        = state => state.shop.items <br></br>
-        <Text.Red>const</Text.Red> <Text.Purple>taxPercentSelector</Text.Purple>{" "}
-        = state => state.shop.taxPercent <br></br> <p></p>
-        <Text.Red>const</Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
+        <Text.Red>
+          const
+        </Text.Red> <Text.Purple>shopItemsSelector</Text.Purple> = state =>
+        state.shop.items <br></br>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Purple>taxPercentSelector</Text.Purple> = state =>
+        state.shop.taxPercent <br></br> <p></p>
+        <Text.Red>
+          const
+        </Text.Red> <Text.Orange>subtotalSelector</Text.Orange> =
         <Text.Purple> createSelector</Text.Purple>( <br></br>
         <Text.Orange nr_idents={1}>shopItemsSelector</Text.Orange>, <br></br>
         <Text.Black nr_idents={1}></Text.Black>items => items.
@@ -411,7 +415,7 @@ const Redux = ({ nr }) => {
         An action creator that returns a function to perform conditional
         dispatch:
       </div>
-      <div class="examples">
+      <div className="examples">
         {" "}
         <Text.Red>function </Text.Red>
         <Text.Purple>incrementIfOdd</Text.Purple>() {"{"}
@@ -436,7 +440,7 @@ const Redux = ({ nr }) => {
       <div>
         A thunk is a function that wraps an expression to delay its evaluation.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Red>let</Text.Red> x = <Text.Blue>1</Text.Blue> +{" "}
         <Text.Blue>2</Text.Blue> ; <br></br>
         <Text.Red>let</Text.Red> <Text.Purple>foo</Text.Purple> = () =>{" "}

@@ -6,12 +6,10 @@ import leia from "../styles/images/leia.png";
 import chewbacca from "../styles/images/chewbacca.png";
 import c3po from "../styles/images/c3po.png";
 import bounty from "../styles/images/bounty_hunter.png";
-import Navigation from "./navigation";
 
-const Selectors = ({ nr }) => {
+const Selectors = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <h2>SELECTORS AND PSEUDO SELECTORS </h2>
 
       <table>

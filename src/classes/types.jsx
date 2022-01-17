@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "../styles/operators.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
-const Types = ({ nr }) => {
+const Types = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <h2>Types (?)</h2>
       <div>
         Some people say JS shouldn't claim to have "types," and they should

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "../styles/html.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 import { PokemonCard } from "../components/pokemon";
 
-const FetchApi = ({ nr }) => {
+const FetchApi = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <h2>Fetch API</h2>
       <div>
         The Fetch API provides a JavaScript interface for accessing and

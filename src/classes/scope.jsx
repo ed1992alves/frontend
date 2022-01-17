@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "../styles/scope.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 import scopes from "../styles/images/scopes.png";
 import scopes_examples from "../styles/images/scopes_examples.png";
 
-const Operators = ({ nr }) => {
+const Operators = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <div>
         <b>Scope</b> is the set of rules that govern how the <i>Engine</i> can
         look up a variable by its identifier name and find it, either in the

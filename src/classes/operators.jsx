@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "../styles/operators.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
-const Operators = ({ nr }) => {
+const Operators = () => {
   return (
     <>
-      <Navigation currentPage={nr}></Navigation>
       <h2>1) Assignment Operators</h2>
       <div className="info">
         <h4>Default (with equal)</h4>

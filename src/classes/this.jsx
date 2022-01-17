@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import "../styles/this.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
-const This = ({ nr }) => {
+const This = () => {
   return (
     <div id="this">
-      <Navigation currentPage={nr}></Navigation>
       <h2>This</h2>
       <div>
         One of the most confused mechanisms in JavaScript is the <b>this</b>{" "}

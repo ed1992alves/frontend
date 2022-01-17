@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import "../styles/main.less";
 import "../styles/context.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
-const Context = ({ nr }) => {
+const Context = () => {
   return (
     <div id="context">
-      <Navigation currentPage={nr}></Navigation>
       <div>
         Context provides a way to pass data through the component tree without
         having to pass props down manually at every level.
@@ -26,7 +24,7 @@ const Context = ({ nr }) => {
         everywhere throughout a React app.
         <p></p>
         I'll create Context, and call it <i>UserContext</i>. This will also give
-        me 
+        me
         <i> UserContext.Provider</i> and <i>UserContext.Consumer</i>. What these
         two components do is straightforward:
         <ul>
@@ -188,9 +186,9 @@ const Context = ({ nr }) => {
       </div>
       <div className="examples">
         {" "}
-        <Text.Orange>import</Text.Orange> React, {"{useContext}"} 
-        <Text.Orange> from</Text.Orange>{" "}
-        <Text.Green>'react', </Text.Green> <br></br>
+        <Text.Orange>import</Text.Orange> React, {"{useContext}"}
+        <Text.Orange> from</Text.Orange> <Text.Green>'react', </Text.Green>{" "}
+        <br></br>
         <Text.Orange>import</Text.Orange> {" UserContext"}{" "}
         <Text.Orange>from</Text.Orange> <Text.Green>'./UserContext'</Text.Green>{" "}
         <br></br>

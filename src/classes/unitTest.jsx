@@ -2,12 +2,10 @@ import React from "react";
 import "../styles/html.less";
 import "../styles/unitTesting.less";
 import * as Text from "../Utils/Text";
-import Navigation from "./navigation";
 
-const UnitTest = ({ nr }) => {
+const UnitTest = () => {
   return (
     <div id="unitTesting">
-      <Navigation currentPage={nr}></Navigation>
       <h2>Unit testing</h2>
       <h3>Jest</h3>
       <div>
@@ -76,7 +74,7 @@ const UnitTest = ({ nr }) => {
         And if you want to mock a whole module, you can use <b>jest.mock</b>.
       </div>
 
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>function</Text.Purple>{" "}
         <Text.Orange>greetWorld</Text.Orange>
         (greettingFn) {"{"} <br></br>
@@ -108,7 +106,7 @@ const UnitTest = ({ nr }) => {
       </div>
       <h3>Jest.fn vs jest.mock vs jest.spyOn</h3>
       <div>Imagine a math.js file with the following functions:</div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>export const</Text.Purple> <Text.Orange>add</Text.Orange> =
         (a, b) => a + b; <br></br>
         <Text.Purple>export const</Text.Purple>{" "}
@@ -119,7 +117,7 @@ const UnitTest = ({ nr }) => {
         <Text.Orange>divide</Text.Orange> = (a, b) => b / a; <br></br>
       </div>
       <div>that is invoked in app.js</div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> math{" "}
         <Text.Purple>from</Text.Purple> './math.js';
         <p></p>
@@ -143,7 +141,7 @@ const UnitTest = ({ nr }) => {
         Mock Function. Then, anywhere the reassigned functions are used, the
         mock will be called instead of the original function:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> app{" "}
         <Text.Purple>from</Text.Purple> "./app"; <br></br>
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> math{" "}
@@ -190,7 +188,7 @@ const UnitTest = ({ nr }) => {
         exports of a module to the Mock Function. So, calling
         jest.mock('./math.js'); essentially sets math.js to:
       </div>
-      <div class="examples">
+      <div className="examples">
         {" "}
         <Text.Purple>
           export const
@@ -209,7 +207,7 @@ const UnitTest = ({ nr }) => {
         <Text.Orange>divide</Text.Orange> = jest.<Text.Orange>fn</Text.Orange>()
         <br></br>
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> app{" "}
         <Text.Purple>from</Text.Purple> "./app"; <br></br>
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> math{" "}
@@ -249,7 +247,7 @@ const UnitTest = ({ nr }) => {
         original implementation. Other times you may want to mock the
         implementation, but restore the original later in the suite.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> app{" "}
         <Text.Purple>from</Text.Purple> "./app"; <br></br>
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> math{" "}
@@ -282,7 +280,7 @@ const UnitTest = ({ nr }) => {
         In other cases, you may want to mock a function, but then restore the
         original implementation:
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> app{" "}
         <Text.Purple>from</Text.Purple> "./app"; <br></br>
         <Text.Purple>import</Text.Purple> * <Text.Purple>as</Text.Purple> math{" "}
