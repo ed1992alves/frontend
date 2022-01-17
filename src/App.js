@@ -11,14 +11,16 @@ const MainPage = () => (
     <div className="pageHeader">
       <h1> All Classes </h1>
     </div>
-    {classOrder.map(lesson =>
-      lesson.status ? (
-        <>
-          <Link to={lesson.path}>{lesson.title}</Link>
-          <p></p>
-        </>
-      ) : null
-    )}
+    <section class="allClasses">
+      {classOrder.map(lesson =>
+        lesson.status ? (
+          <>
+            <Link to={lesson.path}>{lesson.title}</Link>
+            <p></p>
+          </>
+        ) : null
+      )}
+    </section>
   </>
 );
 
