@@ -517,6 +517,71 @@ const Selectors = () => {
       <div>
         The tiebreaker in this case is: <b>who came last wins.</b>
       </div>
+
+      <h2>Media Queries</h2>
+      <div>
+        Media queries can modify the appearance (and even behavior) or a website
+        or app based on a matched set of conditions about the user’s device,
+        browser or system settings.
+      </div>
+      <h3>Anatomy of a Media Query</h3>
+      <ul>
+        <li>
+          <b>@media</b>: The first ingredient in a media query recipe is the
+          @media rule itself, which is one of many CSS at-rules.
+        </li>
+        <li>
+          <b>Media types</b>: What type of media are we trying to target?
+          <ol>
+            <li>
+              <b>all:</b> Matches all devices
+            </li>
+            <li>
+              <b>print</b>: Matches documents that are viewed in a print preview
+              or any media that breaks the content up into pages intended to
+              print.
+            </li>
+            <li>
+              <b>screen</b>: Matches devices with a screen.
+            </li>
+            <li>
+              <b>speech</b>: Matches devices that read the content audibly, such
+              as a screenreader.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <b>Media features: </b>Once we define the type of media we’re trying
+          to match, we can start defining what features we are trying to match
+          it to. The most common is min-width and max-width.
+        </li>
+        <li>
+          <b>Operators</b>: Media queries support logical operators like many
+          programming languages so that we can match media types based on
+          certain conditions. The @media rule is itself a logical operator that
+          is basically stating that “if” the following types and features are
+          matches, then do some stuff.
+        </li>
+      </ul>
+      <div className="examples">
+        <Text.Grey>/* Matches screen between 320px AND 768px */</Text.Grey>{" "}
+        <br></br>
+        <Text.Green>@media screen</Text.Green>
+        <Text.Blue>(min-width: </Text.Blue>
+        <Text.Orange>320px</Text.Orange>
+        <Text.Blue>)</Text.Blue> <Text.Green>and</Text.Green>{" "}
+        <Text.Blue>(max-width: </Text.Blue> <Text.Orange>768px</Text.Orange>{" "}
+        <Text.Blue>)</Text.Blue>
+        {"{"}
+        <br></br>
+        <Text.Red className="nr_idents1">.element</Text.Red> {"{"} <br></br>
+        <Text.Grey className="nr_idents2">/* Styles! */</Text.Grey>
+        <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>
+        {"}"}
+        <br></br>
+        {"}"}
+      </div>
     </>
   );
 };

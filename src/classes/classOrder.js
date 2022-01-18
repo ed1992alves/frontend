@@ -12,6 +12,8 @@ import Redux from "./redux";
 import Context from "./context";
 import UnitTest from "./unitTest";
 import Selectors from "./selectors";
+import DomObject from "./dom";
+import Inputs from "./inputs";
 
 const classOrder = [
   {
@@ -26,6 +28,18 @@ const classOrder = [
     title: "Selectors And Specificity",
     component: Selectors,
     status: true
+  },
+  {
+    path: "/dom",
+    title: "Document Object Model (DOM)",
+    component: DomObject,
+    status: false
+  },
+  {
+    path: "/inputs",
+    title: "HTML Forms",
+    component: Inputs,
+    status: false
   },
   {
     path: "/animations",

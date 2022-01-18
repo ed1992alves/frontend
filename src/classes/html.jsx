@@ -492,7 +492,7 @@ const HTML = () => {
       </div>
       <a href="./exercicio.zip" download>
         <span className="zip">
-          <h3>Exercício</h3>
+          <h3>Exercise</h3>
 
           <img src={zip} alt="exercicio"></img>
         </span>

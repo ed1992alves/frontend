@@ -11,7 +11,7 @@ const MainPage = () => (
     <div className="pageHeader">
       <h1> All Classes </h1>
     </div>
-    <section class="allClasses">
+    <section className="allClasses">
       {classOrder.map(lesson =>
         lesson.status ? (
           <>
