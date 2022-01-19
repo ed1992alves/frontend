@@ -11,34 +11,42 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] },
+        options: { presets: ["@babel/env"] }
       },
       {
         test: /\.less$/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader" },
-          { loader: "less-loader" },
-        ],
+          { loader: "less-loader" }
+        ]
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: "sass-loader" }
+        ]
       },
       {
         test: [/\.bmp/, /\.gif/, /\.jpe?g/, /\.png/, /\.svg/],
-        loader: "url-loader",
-      },
-    ],
+        loader: "url-loader"
+      }
+    ]
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
-    filename: "bundle.js",
+    filename: "bundle.js"
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: 3004,
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true,
-    historyApiFallback: true,
+    historyApiFallback: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 };

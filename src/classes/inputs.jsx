@@ -3,9 +3,32 @@ import * as Text from "../Utils/Text";
 import "../styles/inputs.less";
 
 const inputs = () => {
+  const [name, setName] = useState(null);
+  const [age, setAge] = useState(null);
+  const [sex, setSex] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [hobbies, setHobbies] = useState(null);
+
+  const defaultHobbies = ["music", "cinema", "dance"];
+
   const beforeSubmit = event => {
+    let userHobbies = "";
     event.preventDefault();
     document.getElementById("data").classList.remove("hidden");
+    setName(document.querySelector('input[name="name"]').value);
+    setAge(document.querySelector('input[name="age"]').value);
+    setPassword(document.querySelector('input[name="password"]').value);
+    setEmail(document.querySelector('input[name="email"]').value);
+    setSex(document.querySelector('input[name="sexo"]').value);
+
+    defaultHobbies.forEach(hobbie => {
+      userHobbies = document.getElementById(hobbie).checked
+        ? `${userHobbies} / ${hobbie}`
+        : userHobbies;
+    });
+    userHobbies = userHobbies.slice(3);
+    setHobbies(userHobbies);
   };
   const updateTextInput = () =>
     (document.getElementById("userAge").innerHTML = document.getElementById(
@@ -266,71 +289,87 @@ const inputs = () => {
           </tr>
         </tbody>
       </table>
-      <div class="examples exampleForm">
+      <div className="examples exampleForm">
         <form onSubmit={beforeSubmit}>
-          <div class="row">
-            <label for="sexo">Sexo:</label>
+          <div className="row">
+            <label htmlFor="name">Name:</label>
+            <input name="name" type="text" required></input>
+          </div>
+          <div className="row">
+            <label htmlFor="tel">Cell Phone:</label>
+            <input
+              name="tel"
+              type="tel"
+              pattern="^(\+351)?\s?9[2|6|1][0-9]{7}"
+              placeholder="+351"
+              required
+            ></input>
+          </div>
+          <div className="row">
+            <label htmlFor="sexo">Sexo:</label>
             <input
               id="feminino"
               name="sexo"
               value="Feminino"
               type="radio"
+              required
             ></input>
-            <label for="feminino">Feminino</label>
+            <label htmlFor="feminino">Feminino</label>
             <input
               id="masculino"
               name="sexo"
               value="Masculino"
               type="radio"
             ></input>
-            <label for="masculino">Masculino</label>
+            <label htmlFor="masculino">Masculino</label>
           </div>
-          <div class="row">
-            <label for="email">Email:</label>
+          <div className="row">
+            <label htmlFor="email">Email:</label>
             <input name="email" type="email" required></input>
           </div>
-          <div class="row">
-            <label for="password">Password:</label>
+          <div className="row">
+            <label htmlFor="password">Password:</label>
             <input
-              /*pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"*/
+              placeholder="Minimum eight characters, at least one letter and one number:"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
               name="password"
               type="password"
               required
             ></input>
           </div>
-          <div class="row">
+          <div className="row">
             <div id="hobbies">Hobbies:</div>
             <section>
-              <div class="checkboxOverride">
+              <div className="checkboxOverride">
                 <input id="music" name="music" type="checkbox"></input>
-                <label for="music">Music</label>
+                <label htmlFor="music">Music</label>
               </div>{" "}
-              <div class="checkboxOverride">
+              <div className="checkboxOverride">
                 <input
                   id="cinema"
                   name="cinema"
                   type="checkbox"
-                  checked
+                  defaultChecked
                 ></input>
-                <label for="cinema">Cinema</label>
+                <label htmlFor="cinema">Cinema</label>
               </div>
-              <div class="checkboxOverride">
+              <div className="checkboxOverride">
                 <input id="dance" name="dance" type="checkbox"></input>
-                <label for="dance">Dance</label>
+                <label htmlFor="dance">Dance</label>
               </div>
-              <div class="checkboxOverride">
+              <div className="checkboxOverride">
                 <input
                   id="photography"
                   name="photography"
                   type="checkbox"
                   disabled
                 ></input>
-                <label for="photography">Photography</label>
+                <label htmlFor="photography">Photography</label>
               </div>
             </section>
           </div>
-          <div class="row">
-            <label for="age">Age:</label>
+          <div className="row">
+            <label htmlFor="age">Age:</label>
             <div id="userAge">30</div>
             <input
               id="age"
@@ -342,10 +381,19 @@ const inputs = () => {
               onChange={updateTextInput}
             ></input>
           </div>
-          <input type="submit"></input>
+          <div className="row">
+            <input
+              onClick={() =>
+                document.getElementById("data").classList.add("hidden")
+              }
+              type="submit"
+            ></input>
+          </div>
         </form>
         <div id="data" className="hidden ">
-          Name: Age: Sex: Email: Password: Hobbies:
+          Name: {name} <br></br>Age: {age} <br></br>Sex: {sex} <br></br>Email:{" "}
+          {email} <br></br>
+          Password: {password} <br></br>Hobbies: {hobbies} <br></br>
         </div>
       </div>
     </>

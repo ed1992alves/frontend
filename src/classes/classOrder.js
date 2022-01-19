@@ -33,19 +33,19 @@ const classOrder = [
     path: "/dom",
     title: "Document Object Model (DOM)",
     component: DomObject,
-    status: false
+    status: true
   },
   {
     path: "/inputs",
     title: "HTML Forms",
     component: Inputs,
-    status: false
+    status: true
   },
   {
     path: "/animations",
     title: "Animations",
     component: Animations,
-    status: false
+    status: true
   },
   {
     path: "/types",
