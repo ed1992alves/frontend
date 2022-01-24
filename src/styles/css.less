@@ -493,3 +493,113 @@ div:not(#root).examples {
   background-color: var(--examples-bg-color);
   color: var(--text-color);
 }
+
+div:not(#root).examples.mediaquery {
+  background: #ffe81f;
+  color: white;
+  border: 1px solid white;
+
+  section.title {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: 600;
+  }
+
+  section.content {
+    margin-bottom: 30px;
+    color: black;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  figure {
+    border-radius: 5px;
+    color: var(--text-color);
+    margin: 0 0 25px 0;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid transparent;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:first-child {
+      background-color: rgba(@red, 0.4);
+      color: @red;
+      &:hover {
+        border: 1px solid @red;
+      }
+    }
+
+    &:nth-child(2) {
+      color: @warmblue;
+      background-color: rgba(@warmblue, 0.4);
+      &:hover {
+        border: 1px solid @warmblue;
+      }
+    }
+
+    &:nth-child(3) {
+      color: @green;
+      background-color: rgba(@green, 0.4);
+      &:hover {
+        border: 1px solid @green;
+      }
+    }
+
+    &:nth-child(4) {
+      color: @text-grey;
+      background-color: rgba(@text-grey, 0.4);
+      &:hover {
+        border: 1px solid @text-grey;
+      }
+    }
+
+    &:last-child {
+      color: @yellow;
+      background-color: rgba(@yellow, 0.4);
+      &:hover {
+        border: 1px solid @yellow;
+      }
+    }
+  }
+
+  figcaption {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 794px) {
+  div:not(#root).examples.mediaquery {
+    background: black;
+    section.title {
+      font-size: 34px;
+      color: #ffe81f;
+    }
+    section.content {
+      color: white;
+    }
+
+    figure {
+      width: calc(45%);
+      margin: 2.5%;
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  div:not(#root).examples.mediaquery {
+    section.title {
+      font-size: 38px;
+      text-align: center;
+    }
+
+    figure {
+      width: calc(33.33% - 10px);
+      margin: 5px;
+    }
+  }
+}

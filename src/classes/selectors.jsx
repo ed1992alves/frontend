@@ -582,6 +582,43 @@ const Selectors = () => {
         <br></br>
         {"}"}
       </div>
+      <div class="examples mediaquery">
+        <section class="title">Episode IV: A New Hope</section>
+        <section class="content">
+          It is a period of civil war. Rebel spaceships, striking from a hidden
+          base, have won their first victory against the evil Galactic Empire.
+          During the battle, Rebel spies managed to steal secret plans to the
+          Empire’s ultimate weapon, the DEATH STAR, an armoured space station
+          with enough power to destroy an entire planet.
+          <p></p>
+          Pursued by the Empire’s sinister agents, Princess Leia races home
+          aboard her starship, custodian of the stolen plans that can save her
+          people and restore freedom to the galaxy….
+        </section>
+        <section class="images">
+          <figure>
+            <img src={vader}></img>
+            <figcaption>Darth Vader</figcaption>
+          </figure>
+
+          <figure>
+            <img src={leia}></img>
+            <figcaption>Leia</figcaption>
+          </figure>
+          <figure>
+            <img src={chewbacca}></img>
+            <figcaption>Chewbacca</figcaption>
+          </figure>
+          <figure>
+            <img src={bounty}></img>
+            <figcaption>Bobba Fett</figcaption>
+          </figure>
+          <figure>
+            <img src={c3po}></img>
+            <figcaption>C3PO</figcaption>
+          </figure>
+        </section>
+      </div>
     </>
   );
 };

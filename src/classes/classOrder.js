@@ -52,18 +52,19 @@ const classOrder = [
     path: "/types",
     title: "Javascript Types",
     component: Types,
-    status: false
+    status: true
+  },
+
+  {
+    path: "/operators",
+    title: "Javascript Operators",
+    component: Operators,
+    status: true
   },
   {
     path: "/typescript",
     title: "Typescript",
     component: Typescript,
-    status: false
-  },
-  {
-    path: "/operators",
-    title: "Javascript Operators",
-    component: Operators,
     status: false
   },
   {
