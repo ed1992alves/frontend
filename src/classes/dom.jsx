@@ -231,9 +231,8 @@ const DomObject = () => {
         delay.
         <br></br>
         Luckily, there are two {"<script>"} attributes that solve the problem
-        for us: defer and async.s
+        for us: defer and async.
       </div>
-      <h3>defer</h3>
       <div>
         Both async and defer have one common thing: downloading of such scripts
         doesn’t block page rendering. So the user can read page content and get
@@ -295,7 +294,7 @@ const DomObject = () => {
             <span className="square"></span> <span>HTML Parsing paused</span>
           </div>
           <div>
-            <span className="square"></span> <span>Script Dowload</span>
+            <span className="square"></span> <span>Script Download</span>
           </div>
           <div>
             <span className="square"></span> <span>Script Execution</span>
@@ -303,16 +302,6 @@ const DomObject = () => {
         </div>
       </div>
       <h3>Exercise</h3>
-      <div className="examples button">
-        <button
-          className={colours[color] + " border-" + colours[border] + " box"}
-          onClick={() => changeColor(setColor, color)}
-          onMouseOut={() => changeColor(setBorder, border)}
-        >
-          {" "}
-          Click here{" "}
-        </button>
-      </div>
     </>
   );
 };

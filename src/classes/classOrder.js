@@ -34,7 +34,7 @@ const classOrder = [
     path: "/dom",
     title: "Document Object Model (DOM)",
     component: DomObject,
-    status: false
+    status: true
   },
   {
     path: "/inputs",
