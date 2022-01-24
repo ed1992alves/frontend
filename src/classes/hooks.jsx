@@ -16,7 +16,6 @@ const ReactHooks = () => {
   return (
     <div id="reactHooks">
       {" "}
-      <Navigation currentPage={nr}></Navigation>
       <h2> React Hooks </h2>
       <div>
         Hooks are a new addition in React 16.8. They let you use state and other
@@ -70,12 +69,12 @@ const ReactHooks = () => {
         the DOM updates. In this effect, we set the document title, but we could
         also perform data fetching or call some other imperative API.
         <p></p>
-        <b>What does calling useState do?</b>
+        <b>What does calling useEffect do?</b>
         <p>
           By using this Hook, you tell React that your component needs to do
           something after render.
         </p>
-        <b>What do we pass to useState as an argument?</b>
+        <b>What do we pass to useEffect as an argument?</b>
         <p>
           Placing useEffect inside the component lets us access any state
           variables (or any props) right from the effect.

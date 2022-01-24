@@ -14,6 +14,7 @@ import UnitTest from "./unitTest";
 import Selectors from "./selectors";
 import DomObject from "./dom";
 import Inputs from "./inputs";
+import Typescript from "./typescript";
 
 const classOrder = [
   {
@@ -33,24 +34,30 @@ const classOrder = [
     path: "/dom",
     title: "Document Object Model (DOM)",
     component: DomObject,
-    status: true
+    status: false
   },
   {
     path: "/inputs",
     title: "HTML Forms",
     component: Inputs,
-    status: true
+    status: false
   },
   {
     path: "/animations",
     title: "Animations",
     component: Animations,
-    status: true
+    status: false
   },
   {
     path: "/types",
     title: "Javascript Types",
     component: Types,
+    status: false
+  },
+  {
+    path: "/typescript",
+    title: "Typescript",
+    component: Typescript,
     status: false
   },
   {

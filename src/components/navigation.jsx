@@ -6,7 +6,7 @@ import minder from "../styles/images/minder.svg";
 const navigation = ({ currentPage }) => {
   const previousPage = currentPage > 0 && classOrder[currentPage - 1];
   const followingPage =
-    classOrder.length > currentPage &&
+    classOrder.length > currentPage + 1 &&
     classOrder[currentPage + 1].status &&
     classOrder[currentPage + 1];
 

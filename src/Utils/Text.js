@@ -36,3 +36,7 @@ export const Pink = props => (
 export const Black = props => (
   <Text colour="black" {...props} content={props.children}></Text>
 );
+
+export const WarmBlue = props => (
+  <Text colour="warmblue" {...props} content={props.children}></Text>
+);
