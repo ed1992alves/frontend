@@ -149,12 +149,20 @@ const DomObject = () => {
             <td>The user moves the mouse out of an element</td>
           </tr>
           <tr>
+            <td>onmouseup</td>
+            <td>The user releases the mouse button over an element</td>
+          </tr>
+          <tr>
+            <td>onmousedown</td>
+            <td>The user press the mouse button over an element</td>
+          </tr>
+          <tr>
             <td>onkeyup</td>
-            <td>The user press the HTML element and releases</td>
+            <td>The user is releaseing a key (on the keyboard)</td>
           </tr>
           <tr>
             <td>onkeydown</td>
-            <td>The user press the HTML element</td>
+            <td>The user is pressing a key (on the keyboard).</td>
           </tr>
           <tr>
             <td>onload</td>
@@ -302,6 +310,16 @@ const DomObject = () => {
         </div>
       </div>
       <h3>Exercise</h3>
+      <div className="examples button">
+        <button
+          className={colours[color] + " border-" + colours[border] + " box"}
+          onClick={() => changeColor(setColor, color)}
+          onMouseOut={() => changeColor(setBorder, border)}
+        >
+          {" "}
+          Click here{" "}
+        </button>
+      </div>
     </>
   );
 };
