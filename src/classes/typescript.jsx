@@ -15,7 +15,7 @@ const Typescript = () => {
         All “primitive”, or built-in data types in JavaScript are recognized by
         TypeScript.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Green>"Hello, world!"</Text.Green>{" "}
         <Text.Grey>// string</Text.Grey> <br></br>
         <Text.Orange>42 </Text.Orange>
@@ -32,7 +32,7 @@ const Typescript = () => {
         declaration. Type inference will log a complaint if the variable is
         later reassigned to a different type.
       </div>
-      <div class="examples">
+      <div className="examples">
         let first = <Text.Green>'Anders'</Text.Green>;<br></br>
         first = 1337;{" "}
         <Text.Grey>
@@ -40,7 +40,7 @@ const Typescript = () => {
         </Text.Grey>
       </div>
       <h3>Typescript any</h3>
-      <div class="examples">
+      <div className="examples">
         let first; <br></br>
         first = <Text.Green>'Anders'</Text.Green>; <br></br>
         first = <Text.Orange>1337</Text.Orange>;
@@ -51,7 +51,7 @@ const Typescript = () => {
         The type annotation for a one-dimensional array in TypeScript is similar
         to a primitive data type, except we add a [] after the type.
       </div>
-      <div class="examples">
+      <div className="examples">
         let zipcodes: <Text.Purple>string</Text.Purple>[] = [
         <Text.Green>'03255'</Text.Green>, <Text.Green>'04562'</Text.Green>,
         <Text.Green>'08123'</Text.Green>, <Text.Green>'1234'</Text.Green>];
@@ -61,7 +61,7 @@ const Typescript = () => {
         The type for a one-dimensional array in TypeScript can be annotated with
         Array{"<T>"}, where T stands for the type.
       </div>
-      <div class="examples">
+      <div className="examples">
         let zipcodes: <Text.Red>Array</Text.Red>
         <Text.Purple>{"<string>"}</Text.Purple> = [
         <Text.Green>'03255'</Text.Green>, <Text.Green>'04562'</Text.Green>,
@@ -72,7 +72,7 @@ const Typescript = () => {
         An array that has a fixed size of similar or different element types
         arranged in a particular sequence is defined as a tuple in TypeScript.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>// This is an array </Text.Grey> <br></br>
         let header: <Text.Purple>string</Text.Purple>[] = [
         <Text.Green>'Name'</Text.Green>, <Text.Green>'Age'</Text.Green>,
@@ -93,7 +93,7 @@ const Typescript = () => {
         array can. Hence, assigning an array to a tuple that matches the same
         type and length will generate an error.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>// This is a tuple</Text.Grey> <br></br>
         let eventDate: [<Text.Purple>string</Text.Purple>,{" "}
         <Text.Purple>string</Text.Purple>] = [<Text.Green>'January'</Text.Green>
@@ -116,7 +116,7 @@ const Typescript = () => {
         TypeScript automatically infers such a variable instance to be an array
         instead of a tuple.
       </div>
-      <div class="examples">
+      <div className="examples">
         let mixed = [<Text.Green>'one'</Text.Green>,{" "}
         <Text.Orange>2</Text.Orange>, <Text.Orange>3</Text.Orange>,{" "}
         <Text.Green>'four'</Text.Green>];<br></br>
@@ -128,7 +128,7 @@ const Typescript = () => {
         A programmer can define a set of possible values for a variable using
         TypeScript’s complex type called enum.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Purple>enum MaritalStatus</Text.Purple> {"{"} <br></br>
         <Text.WarmBlue className="nr_idents1">Single</Text.WarmBlue>, <br></br>
         <Text.WarmBlue className="nr_idents1">Married</Text.WarmBlue>, <br></br>
@@ -156,7 +156,7 @@ const Typescript = () => {
         members. However, you can override the default value for any member by
         assigning specific numeric values to some or all of the members.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>// This is a numeric enum type</Text.Grey> <br></br>
         <Text.Purple>enum ClassGrade</Text.Purple> {"{"}
         <br></br>
@@ -197,7 +197,7 @@ const Typescript = () => {
         specify what properties must be provided and their accompanying value
         types.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>// Define an object type for car</Text.Grey> <br></br>
         let car: {"{"}make: <Text.Purple>string</Text.Purple>, model:{" "}
         <Text.Purple>string</Text.Purple>, year:{" "}
@@ -211,7 +211,7 @@ const Typescript = () => {
         creating an alias with the type keyword, you can assign a data type to
         it. To create a type alias, follow this syntax: type MyString = string;
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>// This is a type alias</Text.Grey> <br></br>
         <Text.Purple>type Student</Text.Purple> = {"{"}
         <br></br>
@@ -232,7 +232,7 @@ const Typescript = () => {
         You can create multiple type aliases that define the same data type, and
         use the aliases as assignments to variables.
       </div>
-      <div class="examples">
+      <div className="examples">
         <Text.Grey>
           // This is also a type alias with the same type as Student
         </Text.Grey>{" "}
@@ -322,7 +322,7 @@ const Typescript = () => {
         <br></br>myBoolean = <Text.Blue>false</Text.Blue>;{" "}
         <Text.Grey>// boolean type</Text.Grey>
       </div>
-      <h3>TypeScript Literal Types</h3>
+      <h3>TypeScript Union of Literal Types</h3>
       <div>
         Literal types combine nicely with union types, and type aliases. You can
         use these features together to get enum-like behavior with strings.
@@ -333,6 +333,130 @@ const Typescript = () => {
         <Text.Green>"ease-out" </Text.Green> |{" "}
         <Text.Green>"ease-in-out" </Text.Green>;
       </div>
+      <h3>Typescript Union Types</h3>
+      <div>
+        Union types create a new type that lets us create objects that have some
+        or all of the properties of each type that created the union type. Union
+        types are created by joining multiples types with the pipe | symbol.
+      </div>
+      <div className="examples">
+        <Text.Purple>type Animal</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>kind:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        <Text.Purple>type Person</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>age:{" "}
+        <Text.Purple>number</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        <Text.Purple>type Employee</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>employeeCode:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        <Text.Grey>//employee1 is from Person type </Text.Grey> <br></br>
+        let employee1:<Text.Purple>
+          {" "}
+          Animal | Person | Employee{" "}
+        </Text.Purple> = {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>kind:{" "}
+        <Text.Green>'human'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
+        <Text.Green>'Jane'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
+        <Text.Green>'Smith'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>age:{" "}
+        <Text.Orange>20</Text.Orange> <br></br>
+        {"}"}
+        <p></p>
+        <Text.Grey>//employee2 is from Employee type </Text.Grey> <br></br>
+        let employee2:<Text.Purple>
+          {" "}
+          Animal | Person | Employee{" "}
+        </Text.Purple> = {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>employeeCode:{" "}
+        <Text.Green>'J1233123'</Text.Green>, <br></br>
+        {"}"}
+        <p></p>
+        <Text.Grey>
+          //Error:{" "}
+          {
+            "Property 'lastName' is missing in type '{ firstName: string; age: number; }' but required in type 'Person'."
+          }
+        </Text.Grey>
+        <br></br>
+        let employee3:<Text.Purple>
+          {" "}
+          Animal | Person | Employee{" "}
+        </Text.Purple> = {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
+        <Text.Green>'Jane'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>age:{" "}
+        <Text.Orange>20</Text.Orange> <br></br>
+        {"}"}
+        <p></p>
+        <Text.Black className="hover">
+          console.log(employee.kind);
+        </Text.Black>{" "}
+        <Text.Grey>//Property 'kind' does not exist on type 'Person'</Text.Grey>{" "}
+        <br></br>
+        <Text.Black className="hover">
+          console.log(employee.employeeCode);
+        </Text.Black>{" "}
+        <Text.Grey>//J123312</Text.Grey>
+      </div>
+      <div>
+        The code above has an employee object of the Animal | Person | Employee
+        type which means that it can have some of the properties of the Animal,
+        Person, or Employee interfaces. Not all of them have to be included,
+      </div>
+      <h3>Typescript Intersection Types</h3>
+      <div>
+        An intersection type lets us combine multiple types into one. The
+        structure of an object that has an intersection type has to have both
+        the structure of all the types that form the intersection types. It’s
+        denoted by an & sign. All members of all the types are required in the
+        object of an intersection type.
+      </div>
+      <div className="examples">
+        <Text.Purple>type Animal</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>kind:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        <Text.Purple>type Person</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>age:{" "}
+        <Text.Purple>number</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        <Text.Purple>type Employee</Text.Purple> {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>employeeCode:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
+        {"}"} <p></p>
+        let employee:<Text.Purple>
+          {" "}
+          Animal & Person & Employee{" "}
+        </Text.Purple> = {"{"} <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>kind:{" "}
+        <Text.Green>'human'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
+        <Text.Green>'Jane'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>lasName:{" "}
+        <Text.Green>'Maria'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
+        <Text.Green>'Smith'</Text.Green>, <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>age:{" "}
+        <Text.Orange>20</Text.Orange> <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>employeeCode:{" "}
+        <Text.Green>'J10050'</Text.Green>, <br></br>
+        {"}"}
+      </div>
+
+      <div></div>
       <h2>Type Narrowing</h2>
       <div>
         Since a variable of a union type can assume one of several different
@@ -462,7 +586,8 @@ const Typescript = () => {
         <Text.Grey>// Model inherits property from Brand</Text.Grey> <br></br>
         <Text.Purple>interface Model extends Brand</Text.Purple>
         {"{"} <br></br>
-        <Text.Black className="nr_idents1"></Text.Black>model: string; <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>model:{" "}
+        <Text.Purple>string</Text.Purple>; <br></br>
         {"}"}
       </div>
       <h3>TypeScript Interface/Type Index Signature</h3>
@@ -487,7 +612,7 @@ const Typescript = () => {
         <Text.Red>code</Text.Red>: <Text.Purple>string</Text.Purple>]:{" "}
         <Text.Purple>number</Text.Purple>;<br></br>
         {"}"} <br></br>
-        const stateToCodes: <Text.Purple>ReverseCode</Text.Purple> = {"{"}{" "}
+        const stateToCodes: <Text.Purple>ReverseCode</Text.Purple> = {"{"}
         <Text.Green>'NH'</Text.Green>:<Text.Orange>603</Text.Orange>,{" "}
         <Text.Green>'MA'</Text.Green>: <Text.Orange>617</Text.Orange>
         {"}"} ;
@@ -571,6 +696,7 @@ const Typescript = () => {
         constructor(engine:<Text.Purple>string</Text.Purple>) {"{"} <br></br>
         <Text.Black className="nr_idents2"></Text.Black>this.name = name{" "}
         <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>
         {"}"} <br></br>
         <Text.Black className="nr_idents1"></Text.Black>printCar = () => {"{"}{" "}
         <br></br>
@@ -579,6 +705,38 @@ const Typescript = () => {
         <Text.Black className="nr_idents1"></Text.Black>
         {"}"} <br></br>
         {"}"};
+      </div>
+      <h3>string vs String </h3>
+      <div>
+        <b>String</b> is the JavaScript String type, which you could use to
+        create new strings.
+        <p></p>
+        <b>string</b> is the TypeScript string type, which you can use to type
+        variables, parameters and return values.
+      </div>
+      <div className="examples">
+        var s1: <Text.Purple>String</Text.Purple> = new String(
+        <Text.Green>"Avoid newing things where possible"</Text.Green>);{" "}
+        <br></br>
+        var s2: <Text.Purple>string</Text.Purple> ={" "}
+        <Text.Green>"A string, in TypeScript of type 'string'"</Text.Green>;
+      </div>
+      <h3>Installation</h3>
+      <div>
+        You will need a copy of Node.js as an environment to run the package.
+        Then you use a dependency manager like npm, yarn :{" "}
+      </div>
+      <div className="examples">
+        <ul>
+          <ol>
+            Install:
+            <b>(npm|yarn) install typescript --save-dev</b>
+          </ol>
+          <ol>
+            Execute:
+            <b>(npm|yarn) tsc</b>
+          </ol>
+        </ul>
       </div>
     </>
   );

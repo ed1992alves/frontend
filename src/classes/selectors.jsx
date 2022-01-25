@@ -582,9 +582,9 @@ const Selectors = () => {
         <br></br>
         {"}"}
       </div>
-      <div class="examples mediaquery">
-        <section class="title">Episode IV: A New Hope</section>
-        <section class="content">
+      <div className="examples mediaquery">
+        <section className="title">Episode IV: A New Hope</section>
+        <section className="content">
           It is a period of civil war. Rebel spaceships, striking from a hidden
           base, have won their first victory against the evil Galactic Empire.
           During the battle, Rebel spies managed to steal secret plans to the
@@ -595,7 +595,7 @@ const Selectors = () => {
           aboard her starship, custodian of the stolen plans that can save her
           people and restore freedom to the galaxy….
         </section>
-        <section class="images">
+        <section className="images">
           <figure>
             <img src={vader}></img>
             <figcaption>Darth Vader</figcaption>
