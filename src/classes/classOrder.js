@@ -15,6 +15,7 @@ import Selectors from "./selectors";
 import DomObject from "./dom";
 import Inputs from "./inputs";
 import Typescript from "./typescript";
+import Sass from "./sass";
 
 const classOrder = [
   {
@@ -49,12 +50,17 @@ const classOrder = [
     status: false
   },
   {
+    path: "/sass",
+    title: "Css Preprocessors: Sass",
+    component: Sass,
+    status: false
+  },
+  {
     path: "/types",
     title: "Javascript Types",
     component: Types,
     status: true
   },
-
   {
     path: "/operators",
     title: "Javascript Operators",
@@ -91,5 +97,7 @@ const classOrder = [
     status: false
   }
 ];
+
+// classes em falta: Pre processadores de CSS, React-router-dom, prototype, event loop
 
 export default classOrder;

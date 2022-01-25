@@ -9,6 +9,29 @@ const Typescript = () => {
         The TypeScript programming language is a superset of JavaScript that
         adds types to JavaScript using a set of tools called a type system.
       </div>
+      <h3>Installation</h3>
+      <div>
+        You will need a copy of Node.js as an environment to run the package.
+        Then you use a dependency manager like npm, yarn :{" "}
+      </div>
+      <div className="info">
+        <ul>
+          <ol>
+            Install:
+            <b>(npm|yarn) install typescript --save-dev</b>
+          </ol>
+          <ol>
+            Execute:
+            <b>(npm|yarn) tsc</b>
+          </ol>
+        </ul>
+      </div>
+      <h3>Playground</h3>
+      <div className="info">
+        <a target="_blank" href="https://www.typescriptlang.org/play">
+          Typescript Playground
+        </a>
+      </div>
       <h2>Types</h2>
       <h3>Primitive Types</h3>
       <div>
@@ -720,23 +743,6 @@ const Typescript = () => {
         <br></br>
         var s2: <Text.Purple>string</Text.Purple> ={" "}
         <Text.Green>"A string, in TypeScript of type 'string'"</Text.Green>;
-      </div>
-      <h3>Installation</h3>
-      <div>
-        You will need a copy of Node.js as an environment to run the package.
-        Then you use a dependency manager like npm, yarn :{" "}
-      </div>
-      <div className="examples">
-        <ul>
-          <ol>
-            Install:
-            <b>(npm|yarn) install typescript --save-dev</b>
-          </ol>
-          <ol>
-            Execute:
-            <b>(npm|yarn) tsc</b>
-          </ol>
-        </ul>
       </div>
     </>
   );
