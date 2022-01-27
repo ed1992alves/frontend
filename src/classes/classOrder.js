@@ -16,6 +16,7 @@ import DomObject from "./dom";
 import Inputs from "./inputs";
 import Typescript from "./typescript";
 import Sass from "./sass";
+import Prototype from "./prototype";
 
 const classOrder = [
   {
@@ -80,6 +81,12 @@ const classOrder = [
     status: false
   },
   { path: "/this", title: "Binding (This)", component: This, status: false },
+  {
+    path: "/prototype",
+    title: "Prototype",
+    component: Prototype,
+    status: false
+  },
   { path: "/fetch", title: "Fetch API", component: FetchApi, status: false },
   { path: "/react", title: "React", component: ReactClass, status: false },
   {
@@ -101,3 +108,9 @@ const classOrder = [
 // classes em falta: Pre processadores de CSS, React-router-dom, prototype, event loop
 
 export default classOrder;
+
+Array.prototype.sum = () => {
+  let total;
+  this.forEach(element => (total = total + element));
+  return total;
+};
