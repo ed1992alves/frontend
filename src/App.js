@@ -12,10 +12,10 @@ const MainPage = () => (
       <h1> All Classes </h1>
     </div>
     <section className="allClasses">
-      {classOrder.map(lesson =>
+      {classOrder.map((lesson, key) =>
         lesson.status ? (
           <>
-            <Link to={lesson.path}>{lesson.title}</Link>
+            <Link to={lesson.path}>{`${key + 1}.${lesson.title}`}</Link>
             <p></p>
           </>
         ) : null
