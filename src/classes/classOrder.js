@@ -17,6 +17,7 @@ import Inputs from "./inputs";
 import Typescript from "./typescript";
 import Sass from "./sass";
 import Prototype from "./prototype";
+import Natives from "./natives";
 
 const classOrder = [
   {
@@ -85,6 +86,12 @@ const classOrder = [
     path: "/prototype",
     title: "Prototype",
     component: Prototype,
+    status: false
+  },
+  {
+    path: "/natives",
+    title: "Built-in / Natives Objects",
+    component: Natives,
     status: false
   },
   { path: "/fetch", title: "Fetch API", component: FetchApi, status: false },
