@@ -18,6 +18,7 @@ import Typescript from "./typescript";
 import Sass from "./sass";
 import Prototype from "./prototype";
 import Natives from "./natives";
+import ReactRouter from "./reactRouter";
 
 const classOrder = [
   {
@@ -102,6 +103,12 @@ const classOrder = [
     component: ReactHooks,
     status: false
   },
+  {
+    path: "/reactRouter",
+    title: "React Router",
+    component: ReactRouter,
+    status: false
+  },
   { path: "/context", title: "Context API", component: Context, status: false },
   { path: "/redux", title: "Redux", component: Redux, status: false },
   {
@@ -112,7 +119,7 @@ const classOrder = [
   }
 ];
 
-// classes em falta: Pre processadores de CSS, React-router-dom, prototype, event loop
+// classes em falta:  event loop, adicionar useMemo e useCallback
 
 export default classOrder;
 
