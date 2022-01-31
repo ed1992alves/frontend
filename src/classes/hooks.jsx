@@ -226,6 +226,42 @@ const ReactHooks = () => {
       <div className="info center">
         <TabExample></TabExample>
       </div>
+      <h3> useCallback</h3>
+      <div className="examples">
+        <Text.Purple>const</Text.Purple> memoizedCallback ={" "}
+        <Text.Orange>useCallback</Text.Orange>( <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>
+        {"() => {"} <br></br>
+        <Text.Orange className="nr_idents2">doSomething</Text.Orange>(a, b);{" "}
+        <br></br>
+        <Text.Black className="nr_idents1"></Text.Black>
+        {"},"}
+        <br></br>
+        <Text.Black className="nr_idents1"></Text.Black> [a, b], <br></br>
+        );
+      </div>
+      <div>
+        Returns a memoized callback.<p></p>
+        Pass an inline callback and an array of dependencies. useCallback will
+        return a memoized version of the callback that only changes if one of
+        the dependencies has changed to prevent unnecessary renders.
+        <p></p>
+        useCallback(fn, deps) is equivalent to useMemo(() => fn, deps).
+      </div>
+      <h3> useMemo </h3>
+      <div className="examples">
+        <Text.Purple>const</Text.Purple> memoizedValue ={" "}
+        <Text.Orange>useMemo</Text.Orange>(() => computeExpensiveValue(a, b),
+        [a, b]);
+      </div>
+      <div>
+        Returns a memoized value.<p></p>
+        Pass a “create” function and an array of dependencies. useMemo will only
+        recompute the memoized value when one of the dependencies has changed.
+        This optimization helps to avoid expensive calculations on every render.
+        <p></p>
+        Remember that the function passed to useMemo runs during rendering.
+      </div>
       <h3> useReducer</h3>
       <div className="examples">
         <Text.Purple>const</Text.Purple> [state, dispatch] ={" "}
@@ -309,7 +345,6 @@ const ReactHooks = () => {
         <br></br>
         {"}"}
       </div>
-      <Text.Black>}</Text.Black>
       <div className="info center">
         <Avatar></Avatar>
       </div>
