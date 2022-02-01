@@ -210,7 +210,15 @@ const Animations = () => {
       <div className="exercise">
         <input />
       </div>
-
+      <h3>Exercise: Radio Button</h3>
+      <div className="exercise">
+        <input type="radio" id="male" name="gender" value="male" />
+        <label htmlFor="male">Male</label>
+        <br></br>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label htmlFor="female">Female</label>
+        <br></br>
+      </div>
       <h2> Animation Property </h2>
       <div>
         Animations are more complicated, but will also give you more flexibility
@@ -422,6 +430,18 @@ const Animations = () => {
             animationSpeed
           )} nr_repetitions_${nrRepetitions} ${direction}`}
         ></div>
+      </div>
+      <h3>Exercise: The Square</h3>
+      <div className="exercise">
+        <div id="square"></div>
+      </div>
+      <h3>Exercise: Loading</h3>
+      <div className="exercise">
+        <div className="ball delay1"></div>
+        <div className="ball delay2"></div>
+        <div className="ball delay3"></div>
+        <div className="ball delay4"></div>
+        <div className="ball delay5"></div>
       </div>
     </>
   );

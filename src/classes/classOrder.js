@@ -44,7 +44,7 @@ const classOrder = [
     path: "/inputs",
     title: "HTML Forms",
     component: Inputs,
-    status: false
+    status: true
   },
   {
     path: "/animations",
