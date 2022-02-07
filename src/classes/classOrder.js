@@ -56,7 +56,7 @@ const classOrder = [
     path: "/sass",
     title: "Css Preprocessors: Sass",
     component: Sass,
-    status: false
+    status: true
   },
   {
     path: "/types",
@@ -70,17 +70,12 @@ const classOrder = [
     component: Operators,
     status: true
   },
-  {
-    path: "/typescript",
-    title: "Typescript",
-    component: Typescript,
-    status: false
-  },
+
   {
     path: "/scopes",
     title: "Scope & Closures",
     component: Scope,
-    status: false
+    status: true
   },
   { path: "/this", title: "Binding (This)", component: This, status: false },
   {
@@ -101,6 +96,12 @@ const classOrder = [
     path: "/hooks",
     title: "React Hooks",
     component: ReactHooks,
+    status: false
+  },
+  {
+    path: "/typescript",
+    title: "Typescript",
+    component: Typescript,
     status: false
   },
   {

@@ -1,0 +1,44 @@
+@mixin box($color: DarkGray, $content: "") {
+  border: 1px solid $color;
+  width: 100px;
+  height: 40px;
+  background-color: rgba($color, 0.2);
+  margin: auto;
+  border-radius: 2px;
+  align-self: center;
+  box-sizing: border-box;
+  padding: 0px;
+  text-align: center;
+  line-height: 38px;
+  margin-bottom: 5px;
+  transition: 1s linear border;
+
+  &:before {
+    content: $content;
+    color: $color;
+    transition: 1s linear color;
+  }
+
+  &:hover {
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:before {
+      color: black;
+    }
+  }
+}
+
+div:not(#root).examples.sass {
+  display: flex;
+  flex-direction: column;
+  .success {
+    @include box(green, "Success");
+  }
+  .alert {
+    @include box(red, "Alert!");
+  }
+  .info {
+    @include box(purple, "Warning");
+  }
+}

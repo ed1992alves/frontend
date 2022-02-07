@@ -289,6 +289,113 @@ const inputs = () => {
           </tr>
         </tbody>
       </table>
+      <div className="examples exampleForm">
+        <form onSubmit={beforeSubmit}>
+          <div className="row">
+            <label htmlFor="name">Name:</label>
+            <input name="name" type="text" required></input>
+          </div>
+          <div className="row">
+            <label htmlFor="tel">Cell Phone:</label>
+            <input
+              name="tel"
+              type="tel"
+              pattern="^(\+351)?\s?9[2|6|1][0-9]{7}"
+              placeholder="+351"
+              required
+            ></input>
+          </div>
+          <div className="row">
+            <label htmlFor="sexo">Sexo:</label>
+            <input
+              id="feminino"
+              name="sexo"
+              value="Feminino"
+              type="radio"
+              required
+            ></input>
+            <label htmlFor="feminino">Feminino</label>
+            <input
+              id="masculino"
+              name="sexo"
+              value="Masculino"
+              type="radio"
+            ></input>
+            <label htmlFor="masculino">Masculino</label>
+          </div>
+          <div className="row">
+            <label htmlFor="email">Email:</label>
+            <input name="email" type="email" required></input>
+          </div>
+          <div className="row">
+            <label htmlFor="password">Password:</label>
+            <input
+              placeholder="Minimum eight characters, at least one letter and one number:"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              name="password"
+              type="password"
+              required
+            ></input>
+          </div>
+          <div className="row">
+            <div id="hobbies">Hobbies:</div>
+            <section>
+              <div className="checkboxOverride">
+                <input id="music" name="music" type="checkbox"></input>
+                <label htmlFor="music">Music</label>
+              </div>{" "}
+              <div className="checkboxOverride">
+                <input
+                  id="cinema"
+                  name="cinema"
+                  type="checkbox"
+                  defaultChecked
+                ></input>
+                <label htmlFor="cinema">Cinema</label>
+              </div>
+              <div className="checkboxOverride">
+                <input id="dance" name="dance" type="checkbox"></input>
+                <label htmlFor="dance">Dance</label>
+              </div>
+              <div className="checkboxOverride">
+                <input
+                  id="photography"
+                  name="photography"
+                  type="checkbox"
+                  disabled
+                ></input>
+                <label htmlFor="photography">Photography</label>
+              </div>
+            </section>
+          </div>
+          <div className="row">
+            <label htmlFor="age">Age:</label>
+            <div id="userAge">30</div>
+            <input
+              id="age"
+              name="age"
+              type="range"
+              min="18"
+              defaultValue="30"
+              max="99"
+              onChange={updateTextInput}
+            ></input>
+          </div>
+          <div className="row">
+            <input
+              onClick={() =>
+                document.getElementById("data").classList.add("hidden")
+              }
+              type="submit"
+            ></input>
+          </div>
+        </form>
+        <div id="data" className="hidden ">
+          Name: {name} <br></br>Age: {age} <br></br>Sex: {sex} <br></br>Email:{" "}
+          {email} <br></br>
+          Password: {password} <br></br>Hobbies: {hobbies} <br></br>
+        </div>
+      </div>
     </>
   );
 };

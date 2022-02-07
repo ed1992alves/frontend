@@ -112,14 +112,14 @@ const Operators = () => {
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(a) {"{"}{" "}
         <br></br>
         <Text.Red nr_idents={1}>var</Text.Red> b <Text.Blue> = </Text.Blue> a *
-        2; <br></br>
+        <Text.Blue> 2</Text.Blue>; <p></p>
         <Text.Red nr_idents={1}>function</Text.Red>{" "}
         <Text.Purple>bar</Text.Purple>(c) {"{"} <br></br>
         <Text.Black nr_idents={2}></Text.Black>console.log( a, b, c ); <br></br>
         <Text.Black nr_idents={1}></Text.Black> {"}"}
-        <br></br>
+        <p></p>
         <Text.Purple nr_idents={1}>bar </Text.Purple>(b *
-        <Text.Blue>3</Text.Blue>); <br></br>
+        <Text.Blue> 3</Text.Blue>); <br></br>
         <Text.Black nr_idents={1}>
           {" "}
           b <Text.Blue>= </Text.Blue> a;{" "}
@@ -159,12 +159,12 @@ const Operators = () => {
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>(a) {"{"}{" "}
         <br></br>
         <Text.Red nr_idents={1}>var</Text.Red> b <Text.Blue> = </Text.Blue>
-        2; <br></br>
+        <Text.Blue>2</Text.Blue>; <br></br>
         <Text.Red nr_idents={1}>function</Text.Red>{" "}
         <Text.Purple>bar</Text.Purple>() {"{ }"} <br></br>
         <Text.Red nr_idents={1}>var</Text.Red> c <Text.Blue> = </Text.Blue>
-        3; <br></br> {"}"}
-        <br></br>
+        <Text.Blue>3</Text.Blue>; <br></br> {"}"}
+        <p></p>
         <Text.Purple>foo</Text.Purple>( <Text.Blue>2</Text.Blue> );{" "}
       </div>
       <div>
@@ -230,10 +230,15 @@ const Operators = () => {
         foo * 2; <br></br>
         <Text.Black nr_idents={1}>bar</Text.Black> ={" "}
         <Text.Purple>something</Text.Purple> (bar);<br></br>
-        <Text.Black nr_idents={1}>console.log(bar)</Text.Black>;<br></br>
+        <Text.Black className="hover" nr_idents={1}>
+          console.log(bar)
+        </Text.Black>
+        ; <Text.Grey> // 2</Text.Grey>
+        <br></br>
         {"}"}
         <br></br>
-        <Text.Black>console.log(bar)</Text.Black>;
+        <Text.Black className="hover">console.log(bar)</Text.Black>;{" "}
+        <Text.Grey> // 2</Text.Grey>
       </div>
       <div>
         We are using a <b>bar</b> variable only in the context of the
@@ -255,9 +260,9 @@ const Operators = () => {
         <Text.Red>let</Text.Red> foo<Text.Blue> = true</Text.Blue>; <br></br>
         <Text.Red>if</Text.Red> (<Text.Orange>foo</Text.Orange>) {"{"} <br></br>
         <Text.Red nr_idents={1}>var </Text.Red>bar <Text.Blue> = </Text.Blue>{" "}
-        foo * 2; <br></br>
+        foo * <Text.Blue>2</Text.Blue>; <br></br>
         <Text.Black nr_idents={1}>bar</Text.Black> ={" "}
-        <Text.Purple>something</Text.Purple> (bar);<br></br>
+        <Text.Purple>something</Text.Purple>(bar);<br></br>
         <Text.Black nr_idents={1}>console.log(bar)</Text.Black>;<br></br>
         {"}"}
         <br></br>
@@ -380,7 +385,7 @@ const Operators = () => {
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}{" "}
         <br></br>
         <Text.Red nr_idents={1}>var</Text.Red> a <Text.Blue> = </Text.Blue>
-        2; <br></br>
+        <Text.Blue>2</Text.Blue>; <br></br>
         <Text.Red nr_idents={1}>function</Text.Red>{" "}
         <Text.Purple>bar</Text.Purple>() {"{ "}
         <br></br>
@@ -403,8 +408,8 @@ const Operators = () => {
         <i>foo() </i>(and indeed, even over the rest of the scopes it has access
         to, such as the global scope in our case). Put slightly differently,
         it's said that
-        <i>bar() </i> closes over the scope of <i>foo() </i>. Why? Because{" "}
-        <i>bar() </i> appears nested inside of <i>foo() </i>. Plain and simple.
+        <i>bar() </i> closes over the scope of <i>foo()</i>. Why? Because{" "}
+        <i>bar() </i> appears nested inside of <i>foo()</i>. Plain and simple.
         <p></p>
         But, closure defined in this way is not directly observable, nor do we
         see closure exercised in that snippet. We clearly see lexical scope, but
@@ -413,8 +418,8 @@ const Operators = () => {
       <div className="examples">
         <Text.Red>function</Text.Red> <Text.Purple>foo</Text.Purple>() {"{"}{" "}
         <br></br>
-        <Text.Red nr_idents={1}>var</Text.Red> a <Text.Blue> = </Text.Blue>
-        2; <br></br>
+        <Text.Red nr_idents={1}>var</Text.Red> a <Text.Blue> = 2</Text.Blue>;{" "}
+        <br></br>
         <Text.Red nr_idents={1}>function</Text.Red>{" "}
         <Text.Purple>bar</Text.Purple>() {"{ "}
         <br></br>
@@ -435,7 +440,7 @@ const Operators = () => {
         that bar references.
         <p></p>
         After we execute <i>foo()</i>, we assign the value it returned (our
-        inner <i> bar()</i>
+        inner <i> bar() </i>
         function) to a variable called <i>baz</i>, and then we actually invoke{" "}
         <i>baz()</i>, which of course is invoking our inner function{" "}
         <i>bar()</i>, just by a different identifier reference.

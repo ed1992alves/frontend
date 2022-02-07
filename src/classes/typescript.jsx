@@ -468,8 +468,6 @@ const Typescript = () => {
         <Text.Green>'human'</Text.Green>, <br></br>
         <Text.Black className="nr_idents1"></Text.Black>firstName:{" "}
         <Text.Green>'Jane'</Text.Green>, <br></br>
-        <Text.Black className="nr_idents1"></Text.Black>lasName:{" "}
-        <Text.Green>'Maria'</Text.Green>, <br></br>
         <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
         <Text.Green>'Smith'</Text.Green>, <br></br>
         <Text.Black className="nr_idents1"></Text.Black>age:{" "}

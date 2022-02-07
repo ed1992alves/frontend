@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/html.less";
+import "../styles/sass.scss";
 import * as Text from "../Utils/Text";
 
 const HTML = () => {
@@ -253,7 +254,7 @@ const HTML = () => {
           {"}"}
         </div>
       </div>
-      <h3>Extened/Inheritance</h3>
+      <h3>Extend/Inheritance</h3>
       <div>
         Using @extend lets you share a set of CSS properties from one selector
         to another. In our example we're going to create a simple series of
@@ -415,6 +416,11 @@ const HTML = () => {
         <Text.Pink>math.div</Text.Pink>(600px, 960px) <Text.Pink>*</Text.Pink>{" "}
         100%; <br></br>
         {"}"}
+      </div>
+      <div className="examples sass">
+        <div className="success"></div>
+        <div className="alert"></div>
+        <div className="info"></div>
       </div>
     </>
   );
