@@ -12,7 +12,8 @@
   "scripts": {
     "test": "jest",
     "test:update:snapshot": "jest --updateSnapshot",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack"
   },
   "author": "Edgar",
   "license": "ISC",

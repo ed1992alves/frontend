@@ -19,6 +19,7 @@ import Sass from "./sass";
 import Prototype from "./prototype";
 import Natives from "./natives";
 import ReactRouter from "./reactRouter";
+import Setup from "./Setup";
 
 const classOrder = [
   {
@@ -77,7 +78,7 @@ const classOrder = [
     component: Scope,
     status: true
   },
-  { path: "/this", title: "Binding (This)", component: This, status: false },
+  { path: "/this", title: "Binding (This)", component: This, status: true },
   {
     path: "/prototype",
     title: "Prototype",
@@ -91,6 +92,12 @@ const classOrder = [
     status: false
   },
   { path: "/fetch", title: "Fetch API", component: FetchApi, status: false },
+  {
+    path: "/setup",
+    title: "Setup React with Webpack",
+    component: Setup,
+    status: false
+  },
   { path: "/react", title: "React", component: ReactClass, status: false },
   {
     path: "/hooks",

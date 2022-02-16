@@ -67,8 +67,10 @@ const FetchApi = () => {
         </Text.Black>{" "}
         <br></br>
         <Text.Black className="nr_idents1">
-          body: JSON.<Text.Orange>stringify</Text.Orange>(data) // body data
-          type must match "Content-Type" header
+          body: JSON.<Text.Orange>stringify</Text.Orange>(data){" "}
+          <Text.Grey>
+            // body data type must match "Content-Type" header
+          </Text.Grey>
         </Text.Black>{" "}
         <br></br>
         {"}"});
