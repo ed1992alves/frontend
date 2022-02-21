@@ -4,8 +4,8 @@ import * as Text from "../Utils/Text";
 import prototype from "../styles/images/prototype.svg";
 import prototype2 from "../styles/images/prototype2.svg";
 
-String.prototype.sheldonize = function() {
-  return `knock knock ${this} ... knock knock ${this} ... knock knock ${this}`;
+String.prototype.sheldonize = function(ntimes) {
+  console.log(`${"knock ".repeat(ntimes)}${this} \n`.repeat(ntimes));
 };
 
 Array.prototype.sumNumbersOrStrings = function() {

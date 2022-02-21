@@ -1,10 +1,114 @@
 import React, { useState } from "react";
 import "../styles/this.less";
 import * as Text from "../Utils/Text";
+import zip from "../styles/images/zip.svg";
 
 const Setup = () => {
   return (
     <>
+      <h2>Semantic versioning </h2>
+      <div>
+        Before starting creating our first setup let's understand the importance
+        of versioning: <p></p>
+        Software versioning is the process of assigning either unique version
+        names or unique version numbers to unique states of computer software.
+        Within a given version number category (e.g., major or minor), these
+        numbers are generally assigned in increasing order and correspond to new
+        developments in the software.
+        <div className="examples">
+          <Text.Green>"url-loader"</Text.Green>:{" "}
+          <Text.Green>"^4.0.0"</Text.Green>, <br></br>
+          <Text.Green>"webpack"</Text.Green>: <Text.Green>"~4.46.0"</Text.Green>
+        </div>
+        <div>
+          A program’s version does not represent the state of the software but
+          makes a statement about its API for the consumer. <p></p>
+          Semantic versioning does not reflect the size of the update,{" "}
+          <b>but the changes in the software’s public API.</b>
+        </div>
+        <h3>Major.Minor.Patch</h3>
+        <div>
+          Dependencies are specified in a simple object that maps a package name
+          to a version range. The version range is a string which has one or
+          more space-separated descriptors.
+        </div>
+        <table className="units">
+          <tbody>
+            <tr>
+              <td> version </td>
+              <td> Must match version exactly </td>
+            </tr>
+            <tr>
+              <td>{`>version`}</td>
+              <td>Must be greater than version</td>
+            </tr>
+            <tr>
+              <td>{`~version`}</td>
+              <td>
+                "Approximately equivalent to version", will update you to all
+                future patch versions, without incrementing the minor version.
+                ~1.2.3 will use releases from 1.2.3 to {"<1.3.0"}.
+              </td>
+            </tr>
+            <tr>
+              <td>{`^version`}</td>
+              <td>
+                {" "}
+                "Compatible with version", will update you to all future
+                minor/patch versions, without incrementing the major version.
+                ^2.3.4 will use releases from 2.3.4 to {"<3.0.0"}.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div className="info">
+          <b>Patch:</b> Patch updates are interchangeable, meaning consumers can
+          upgrade or downgrade freely.
+          <ul>
+            <li>
+              <b>Content</b>: Internal fix
+            </li>
+            <li>
+              <b>Example</b>: Bug fix, Performance improvement, environment or
+              internal tweaks{" "}
+            </li>
+            <li>
+              <b>Policy</b>: Consumers should update their software without
+              hesitation
+            </li>
+          </ul>
+          <b>Minor:</b> Minor updates are backwards compatible, meaning
+          consumers can upgrade freely.
+          <ul>
+            <li>
+              <b>Content</b>: Interface change with full backward compatibility
+            </li>
+            <li>
+              <b>Example</b>: New feature, Endpoint declared deprecated
+            </li>
+            <li>
+              <b>Policy</b>: Update your software to get some new features.
+              Nothing will break
+            </li>
+          </ul>
+          <b>Major:</b> Major updates are non-compatible, meaning consumers can
+          not upgrade without changing their software where applicable.
+          <ul>
+            <li>
+              <b>Content</b>: Interface change breaking backward compatibility
+            </li>
+            <li>
+              <b>Example</b>: Change API endpoint name or signature, Remove an
+              endpoint
+            </li>
+            <li>
+              <b>Policy</b>: Test your system extensively after updating.
+              Migration documents may be in order
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Let's start </h2>
       <div>Lets install some basic packages</div>
       <ul>
         <li>
@@ -309,6 +413,73 @@ const Setup = () => {
         src/index.html.
       </div>
       <h2> webpack-dev-server</h2>
+      <div>
+        webpack-dev-server is Webpack's officially supported CLI-based tool for
+        starting a static server for your assets. While you don't need any CLI
+        tools to use Webpack, webpack-dev-server gives you a single command that
+        starts a static server with built-in live reload.
+        <p>
+          To add to the dependencies of the project run the the following line:
+        </p>
+      </div>
+      <div className="info">npm install webpack-dev-server --save-dev</div>
+      <div> e adicionar ao webpack.config </div>
+      <div className="info">
+        devServer: {"{"} <br></br>
+        <Text.Blue className="nr_idents1">port</Text.Blue>:{" "}
+        <Text.Orange>3000</Text.Orange>, <br></br>
+        <Text.Blue className="nr_idents1">historyApiFallback</Text.Blue>: true{" "}
+        <br></br>
+        {"}"}
+      </div>
+      <div>
+        historyApiFallback indicate that when url path not match a true
+        file,webpack-dev-server use the file config in entry to show in browser
+        rather than 404 page. Single Page Applications (SPA) typically only
+        utilise one index file that is accessible by web browsers: usually
+        index.html.
+      </div>
+      <div> Last we can add a new script to package.json: </div>
+      <div className="info">
+        {" "}
+        "start": "webpack-dev-server --mode development"
+      </div>
+      <h3>Add Css to setup</h3>
+      <div className="info">npm i --save-dev css-loader style-loader</div>
+      <div>
+        css-loader is the npm module that would help webpack to collect CSS from
+        all the css files referenced in your application and put it into a
+        string.
+      </div>
+      <div>Add the following code to rules in webpack.config file: </div>
+      <div className="info">
+        {"{"} <br></br>
+        <Text.Blue className="nr_idents1">test</Text.Blue>: /\.(css)$/,{" "}
+        <br></br>
+        <Text.Blue className="nr_idents1">use</Text.Blue>: [
+        <Text.Green>"style-loader"</Text.Green>,
+        <Text.Green>"css-loader"</Text.Green>] <br></br>
+        {"}"}
+      </div>
+      <div>
+        {" "}
+        Finally you can create an app.css file an import your styles in js
+        files:
+      </div>
+      <div className="info">
+        <Text.Purple>import</Text.Purple> <Text.Green>'./app.css'</Text.Green>;{" "}
+      </div>
+      <a href="./setup.zip" download>
+        <span className="zip">
+          <h3>Setup</h3>
+
+          <img src={zip} alt="setup"></img>
+        </span>
+      </a>
+      <div className="exercise">
+        <b>Exercise:</b> Try to add to your setup a loader for images (jpeg,
+        svg, png) and a loader for a css pre-processor (less or sass)
+      </div>
     </>
   );
 };
