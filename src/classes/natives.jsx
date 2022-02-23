@@ -326,7 +326,7 @@ const Natives = () => {
         console.log([<Text.Orange>1</Text.Orange>,<Text.Orange>2</Text.Orange>,
         <Text.Orange>3</Text.Orange>,<Text.Orange>4</Text.Orange>,
         <Text.Orange>5</Text.Orange>].forEach(elem => sum += elem))
-        <Text.Grey> //undefined </Text.Grey>
+        <Text.Grey> //undefined </Text.Grey> <br></br>
         console.log(sum) <Text.Grey>//15</Text.Grey>
       </div>
       <div className="examples">
@@ -347,8 +347,8 @@ const Natives = () => {
         <p></p>
         console.log([<Text.Orange>1</Text.Orange>,<Text.Orange>2</Text.Orange>,
         <Text.Orange>3</Text.Orange>,<Text.Orange>4</Text.Orange>,
-        <Text.Orange>5</Text.Orange>].filter(elem => elem%
-        <Text.Orange>2</Text.Orange>))
+        <Text.Orange>5</Text.Orange>].filter(elem => elem %
+        <Text.Orange> 2</Text.Orange>))
         <Text.Grey> //[1, 3, 5] </Text.Grey>
       </div>
       <div className="examples">
@@ -463,7 +463,7 @@ const Natives = () => {
           new String("teste") === new String("teste")
         </p>
         <p className="false v100"> String('hello') instanceof String *</p>
-        <p className="false v100"> new String('hello') instanceof String *</p>
+        <p className="true v100"> new String('hello') instanceof String *</p>
       </div>
       <div>
         <i>
