@@ -91,7 +91,7 @@ const classOrder = [
     component: Natives,
     status: true
   },
-  { path: "/fetch", title: "Fetch API", component: FetchApi, status: false },
+  { path: "/fetch", title: "Fetch API", component: FetchApi, status: true },
   {
     path: "/setup",
     title: "Setup React with Webpack",

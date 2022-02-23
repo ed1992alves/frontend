@@ -276,9 +276,6 @@ const FetchApi = () => {
         <br></br>
         <Text.Black>{"}"});</Text.Black>
       </div>
-      <div className="info center">
-        <PokemonCard></PokemonCard>
-      </div>
     </>
   );
 };
