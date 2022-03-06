@@ -96,7 +96,7 @@ const classOrder = [
     path: "/setup",
     title: "Setup React with Webpack",
     component: Setup,
-    status: false
+    status: true
   },
   { path: "/react", title: "React", component: ReactClass, status: false },
   {
