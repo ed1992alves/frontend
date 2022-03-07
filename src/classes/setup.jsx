@@ -145,7 +145,7 @@ const Setup = () => {
         └───src <br></br>│ └───App.js <br></br>│ └───index.js <br></br>|
         └───index.html <br></br>| └───index.css<br></br> └───package-lock.json
         <br></br> └───package.json <br></br>
-        └───webpack.config.json
+        └───webpack.config.js
       </div>
       <h2>Webpack Terminologies</h2>
       <div>
@@ -423,7 +423,7 @@ const Setup = () => {
         </p>
       </div>
       <div className="info">npm install webpack-dev-server --save-dev</div>
-      <div> e adicionar ao webpack.config </div>
+      <div> and add to webpack.config </div>
       <div className="info">
         devServer: {"{"} <br></br>
         <Text.Blue className="nr_idents1">port</Text.Blue>:{" "}
