@@ -98,18 +98,18 @@ const classOrder = [
     component: Setup,
     status: true
   },
-  { path: "/react", title: "React", component: ReactClass, status: false },
+  { path: "/react", title: "React", component: ReactClass, status: true },
   {
     path: "/hooks",
     title: "React Hooks",
     component: ReactHooks,
-    status: false
+    status: true
   },
   {
     path: "/typescript",
     title: "Typescript",
     component: Typescript,
-    status: false
+    status: true
   },
   {
     path: "/reactRouter",

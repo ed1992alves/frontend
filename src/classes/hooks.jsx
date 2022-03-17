@@ -208,7 +208,8 @@ const ReactHooks = () => {
         will set its .current property to the corresponding DOM node whenever
         that node changes.
       </div>
-      <div className="info center">
+      // REMOVER HIDDEN
+      <div className="info center hidden">
         <div>
           Option selected: <Text.Orange>{optionSelected}</Text.Orange>{" "}
         </div>
@@ -223,7 +224,8 @@ const ReactHooks = () => {
           }}
         ></Dropdown>
       </div>
-      <div className="info center">
+      // REMOVER HIDDEN
+      <div className="info center hidden">
         <TabExample></TabExample>
       </div>
       <h3> useCallback</h3>
