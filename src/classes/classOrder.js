@@ -117,7 +117,7 @@ const classOrder = [
     component: ReactRouter,
     status: true
   },
-  { path: "/context", title: "Context API", component: Context, status: false },
+  { path: "/context", title: "Context API", component: Context, status: true },
   { path: "/redux", title: "Redux", component: Redux, status: false },
   {
     path: "/testing",

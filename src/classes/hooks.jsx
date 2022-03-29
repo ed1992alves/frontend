@@ -12,7 +12,6 @@ let pokemonSelected;
 
 const ReactHooks = () => {
   const [optionSelected, setOptionSelected] = useState(options[0]);
-
   return (
     <div id="reactHooks">
       {" "}
@@ -208,8 +207,7 @@ const ReactHooks = () => {
         will set its .current property to the corresponding DOM node whenever
         that node changes.
       </div>
-      // REMOVER HIDDEN
-      <div className="info center hidden">
+      <div className="info center">
         <div>
           Option selected: <Text.Orange>{optionSelected}</Text.Orange>{" "}
         </div>
@@ -224,8 +222,7 @@ const ReactHooks = () => {
           }}
         ></Dropdown>
       </div>
-      // REMOVER HIDDEN
-      <div className="info center hidden">
+      <div className="info center">
         <TabExample></TabExample>
       </div>
       <h3> useCallback</h3>

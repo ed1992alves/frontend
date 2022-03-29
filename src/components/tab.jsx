@@ -25,7 +25,7 @@ export const Tab = props => {
           className={
             key === selectedOption ? "selected tabElement" : "tabElement"
           }
-          onClick={() => callback(key)}
+          onClick={() => {if(key === selectedOption) return; callback(key)}}
         >
           {item}
         </div>
