@@ -28,7 +28,7 @@ const ReactRouter = () => {
         <Text.Orange className="nr_idents3">{"<Route"}</Text.Orange> path=
         <Text.Green>"/"</Text.Green> element={"{"}
         <Text.Orange>{"<App />"}</Text.Orange>
-        {"}"} <Text.Orange>{"/>"}</Text.Orange> <br></br>
+        {"}"}<Text.Orange>{">"}</Text.Orange> <br></br>
         <Text.Orange className="nr_idents4">{"<Route "}</Text.Orange> index
         element={"{"}
         <Text.Orange>{"<Home />"}</Text.Orange>
@@ -36,7 +36,7 @@ const ReactRouter = () => {
         <Text.Orange className="nr_idents4">{"<Route "}</Text.Orange> path=
         <Text.Green>"teams"</Text.Green> element={"{"}
         <Text.Orange>{"<Teams />"}</Text.Orange>
-        {"}"} <Text.Orange>{"/>"}</Text.Orange> <br></br>
+        {"}"}<Text.Orange>{">"}</Text.Orange> <br></br>
         <Text.Orange className="nr_idents5">{"<Route "}</Text.Orange> path=
         <Text.Green>":teamId"</Text.Green> element={"{"}
         <Text.Orange>{"<Team />"}</Text.Orange>
@@ -49,12 +49,12 @@ const ReactRouter = () => {
         element={"{"}
         <Text.Orange>{"<LeagueStandings />"}</Text.Orange>
         {"}"} <Text.Orange>{"/>"}</Text.Orange> <br></br>
-        <Text.Orange className="nr_idents4">{"</Route "}</Text.Orange> <br></br>
-        <Text.Orange className="nr_idents3">{"</Route "}</Text.Orange> <br></br>
-        <Text.Orange className="nr_idents2">{"</Routes "}</Text.Orange>{" "}
+        <Text.Orange className="nr_idents4">{"</Route> "}</Text.Orange> <br></br>
+        <Text.Orange className="nr_idents3">{"</Route> "}</Text.Orange> <br></br>
+        <Text.Orange className="nr_idents2">{"</Routes> "}</Text.Orange>{" "}
         <br></br>
         <Text.Orange className="nr_idents1">
-          {"</BrowserRoute "}
+          {"</BrowserRoute> "}
         </Text.Orange>{" "}
         <br></br>);
       </div>
