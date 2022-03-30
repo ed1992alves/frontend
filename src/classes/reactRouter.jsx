@@ -175,7 +175,7 @@ const ReactRouter = () => {
         <br></br>
         <Text.Orange>{"</App>"}</Text.Orange> <br></br>
       </div>
-      When the URL is "/invoices/123", the component tree will:
+      <div>When the URL is "/invoices/123", the component tree will:</div>
       <div className="examples">
         <Text.Orange>{"<App>"}</Text.Orange> <br></br>
         <Text.Orange className="nr_idents1">{"<Invoices>"}</Text.Orange>{" "}

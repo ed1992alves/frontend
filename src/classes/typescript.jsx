@@ -471,7 +471,7 @@ const Typescript = () => {
         <Text.Black className="nr_idents1"></Text.Black>lastName:{" "}
         <Text.Green>'Smith'</Text.Green>, <br></br>
         <Text.Black className="nr_idents1"></Text.Black>age:{" "}
-        <Text.Orange>20</Text.Orange> <br></br>
+        <Text.Orange>20</Text.Orange>, <br></br>
         <Text.Black className="nr_idents1"></Text.Black>employeeCode:{" "}
         <Text.Green>'J10050'</Text.Green>, <br></br>
         {"}"}
@@ -651,7 +651,7 @@ const Typescript = () => {
         <Text.Black className="nr_idents1"></Text.Black>age:{" "}
         <Text.Purple>number</Text.Purple>; <br></br>
         <Text.Black className="nr_idents1"></Text.Black>hobbies
-        <Text.Red>?</Text.Red>: <Text.Purple>string?</Text.Purple>; <br></br>
+        <Text.Red>?</Text.Red>: <Text.Purple>string</Text.Purple>; <br></br>
         {"}"} <p></p>
         <Text.Grey>
           // The property, hobbies, is optional, but name and age are required.
