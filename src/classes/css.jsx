@@ -4,7 +4,7 @@ import * as Text from "../Utils/Text";
 import vader from "../styles/images/darth_vader.png";
 import leia from "../styles/images/leia.png";
 import chewbacca from "../styles/images/chewbacca.png";
-import c3po from "../styles/images/c3po.png";
+import c3po from "../styles/images/C3PO.png";
 import bounty from "../styles/images/bounty_hunter.png";
 
 const Css = () => {
@@ -679,9 +679,8 @@ const Css = () => {
           <br></br>
         </div>
         <div
-          className={`document ${top ? "top" : null} ${
-            left ? "left" : null
-          } ${position}`}
+          className={`document ${top ? "top" : null} ${left ? "left" : null
+            } ${position}`}
         >
           <div id="red_child"> FIRST CHILD: RELATIVE</div>
           <div id="blue_child">
