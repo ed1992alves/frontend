@@ -1,8 +1,9 @@
 {
-  "name": "new_project",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://201flaviosilva-labs.github.io/frontend",
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",
