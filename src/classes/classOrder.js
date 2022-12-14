@@ -127,7 +127,7 @@ const classOrder = [
   }
 ];
 
-// classes em falta:  event loop, adicionar useMemo e useCallback
+// classes em falta:  event loop
 
 export default classOrder;
 
