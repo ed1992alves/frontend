@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import * as Text from "../Utils/Text";
 import dom from "../styles/images/DOM.svg";
-import asyncDefer1 from "../styles/images/asyncdefer1.svg";
-import asyncDefer2 from "../styles/images/asyncdefer2.svg";
-import asyncDefer3 from "../styles/images/asyncdefer3.svg";
+import asyncDefer1 from "../styles/images/asyncDefer1.svg";
+import asyncDefer2 from "../styles/images/asyncDefer2.svg";
+import asyncDefer3 from "../styles/images/asyncDefer3.svg";
 import "../styles/dom.less";
 
 const colours = ["green", "yellow", "orange", "purple", "red", "blue", "grey"];

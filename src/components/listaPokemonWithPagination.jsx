@@ -7,7 +7,7 @@ import {
   setType,
   fetchAllPokemons,
   setPage
-} from "../Redux/actions";
+} from "../redux/actions";
 import { connect } from "react-redux";
 import {
   getPokemonsOnList,
