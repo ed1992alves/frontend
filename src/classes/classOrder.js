@@ -9,7 +9,7 @@ import FetchApi from "./fetch";
 import ReactClass from "./react";
 import ReactHooks from "./hooks";
 import Redux from "./redux";
-import Context from "./context";
+import Context from "./Context";
 import UnitTest from "./unitTest";
 import Selectors from "./selectors";
 import DomObject from "./dom";
@@ -127,7 +127,7 @@ const classOrder = [
   }
 ];
 
-// classes em falta:  event loop, adicionar useMemo e useCallback
+// classes em falta:  event loop
 
 export default classOrder;
 

@@ -237,8 +237,9 @@ const ReactClass = () => {
         <Text.Black nr_idents={1}> {"}"}</Text.Black>!{" "}
         <Text.Pink>{"</h1>"}</Text.Pink> <br></br>
         <Text.Black nr_idents={1}> {"}"}</Text.Black>! <br></br>
-        <Text.Purple>return</Text.Purple> <Text.Pink>{"<h1>"}</Text.Pink>Hello,
-        Stranger.<Text.Pink>{"</h1>"}</Text.Pink>; <br></br>}
+        <Text.Purple nr_idents={1}>return</Text.Purple>{" "}
+        <Text.Pink>{"<h1>"}</Text.Pink>Hello, Stranger.
+        <Text.Pink>{"</h1>"}</Text.Pink>; <br></br>}
       </div>
       <h3>Specifying Attributes with JSX</h3>
       <div>You may use quotes to specify string literals as attributes:</div>
@@ -308,7 +309,8 @@ const ReactClass = () => {
         <Text.Pink>{"</h1>"}</Text.Pink>;<br></br>
         ReactDOM.
         <Text.Blue>render</Text.Blue>(element, document.
-        <Text.Blue>getElementById</Text.Blue>(<Text.Green>'root'</Text.Green>));
+        <Text.Blue>getElementById</Text.Blue>(<Text.Green>'root'</Text.Green>
+        ));
       </div>
       <h3>Updating the Rendered Element</h3>
       <div>
@@ -330,8 +332,8 @@ const ReactClass = () => {
         <Text.Black nr_idents={1}></Text.Black>
         ); <br></br> <Text.Black nr_idents={1}></Text.Black> ReactDOM.
         <Text.Blue>render</Text.Blue>(element, document.
-        <Text.Blue>getElementById</Text.Blue>(<Text.Green>'root'</Text.Green>));{" "}
-        <br></br> {"}"}
+        <Text.Blue>getElementById</Text.Blue>(<Text.Green>'root'</Text.Green>
+        )); <br></br> {"}"}
         <br></br> setInterval(tick, 1000);
       </div>
       <div className="info date">
