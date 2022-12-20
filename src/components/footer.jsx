@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 const Footer = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || 0);
+  const [theme, setTheme] = useState(parseInt(localStorage.getItem("theme") || 0));
   const themes = ["White", "Dark"];
 
   var r = document.querySelector(":root");
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
-
-    if (theme) {
+    if (theme == 1) {
       r.style.setProperty("--examples-bg-color", "#073642");
       r.style.setProperty("--examples-text-color", "white");
       r.style.setProperty("--text-color", "white");
@@ -31,6 +29,7 @@ const Footer = () => {
           type="checkbox"
           defaultChecked={theme}
           onChange={e => {
+            localStorage.setItem("theme", theme ? 0 : 1);
             setTheme(parseInt(theme ? 0 : 1));
           }}
         ></input>
