@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "homepage": "https://ed1992alves.github.io/frontend",
   "jest": {
     "transform": {
@@ -58,7 +57,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "devDependencies": {
-    "css-loader": "^6.7.3",
+    "css-loader": "^1.0.0",
     "webpack": "^5.75.0"
   }
 }
