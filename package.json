@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://201flaviosilva-labs.github.io/frontend",
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",
