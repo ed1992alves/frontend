@@ -27,7 +27,7 @@ const MainPage = () => (
 const App = () => {
   useEffect(() => {
     window.scrollTo(window.scrollX, 0);
-    window.addEventListener("hashchange", e => {
+    window.addEventListener("hashchange", (e) => {
       window.scrollTo(window.scrollX, window.scrollY - 120);
     });
   }, []);
