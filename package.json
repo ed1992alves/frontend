@@ -1,6 +1,9 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://ed1992alves.github.io/frontend",
   "jest": {
     "transform": {
       "^.+\\.js$": "babel-jest",
