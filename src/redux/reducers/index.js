@@ -5,8 +5,9 @@ import {
   USER_TYPE,
   FETCH_POKEMON_START,
   FETCH_POKEMON_SUCCESS,
-  SET_PAGE
+  SET_PAGE,
 } from "../constants";
+
 import { bindActionCreators } from "redux";
 
 const initialState = { pokemonList: {}, url: {}, list: {} };
@@ -16,18 +17,18 @@ function rootReducer(state = initialState, action) {
     case ADD_POKEMON:
       return {
         ...state,
-        pokemonList: { ...state.pokemonList, [action.name]: action.value }
+        pokemonList: { ...state.pokemonList, [action.name]: action.value },
       };
     case ADD_POKEMON_LIST:
       return {
         ...state,
         pokemonList: { ...state.pokemonList, ...action.list },
-        list: { start: action.start, end: action.end }
+        list: { start: action.start, end: action.end },
       };
     case FETCH_POKEMON_START:
       return {
         ...state,
-        list: { ...state.list, fetching: "fetching" }
+        list: { ...state.list, fetching: "fetching" },
       };
     case FETCH_POKEMON_SUCCESS:
       return {
@@ -36,22 +37,22 @@ function rootReducer(state = initialState, action) {
         list: {
           page: action.page,
           type: action.pokemonType,
-          fetching: "completed"
-        }
+          fetching: "completed",
+        },
       };
     case USER_TYPE:
       return {
         ...state,
         pokemonList: { ...state.pokemonList, ...action.list },
-        list: { ...state.list, type: action.pokemonType }
+        list: { ...state.list, type: action.pokemonType },
       };
     case USER_NAVIGATION: {
       return {
         ...state,
         url: {
           current: action.current,
-          previous: state.url.current
-        }
+          previous: state.url.current,
+        },
       };
     }
     case SET_PAGE: {
@@ -59,8 +60,8 @@ function rootReducer(state = initialState, action) {
         ...state,
         list: {
           ...state.list,
-          page: action.page
-        }
+          page: action.page,
+        },
       };
     }
     default:
