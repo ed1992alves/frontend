@@ -23,6 +23,7 @@ const MainPage = () => (
     </section>
   </>
 );
+
 const App = () => {
   useEffect(() => {
     window.scrollTo(window.scrollX, 0);
