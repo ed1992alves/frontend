@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { hot } from "react-hot-loader";
 import "./styles/main.less";
 import classOrder from "./classes/classOrder";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/footer";
 import Navigation from "./components/navigation";
 
@@ -35,9 +35,6 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
         {classOrder.map((lesson, key) =>
           lesson.status ? (
             <Route key={key} exact path={lesson.path}>
@@ -46,6 +43,9 @@ const App = () => {
             </Route>
           ) : null
         )}
+        <Route path="/">
+          <MainPage />
+        </Route>
       </Switch>
       <Footer />
     </Router>
