@@ -471,8 +471,8 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>div.menu a:hover</td>
-            <td className="hidden">0,0,2,2</td>
-            <td className="hidden">
+            <td className="csshidden">0,0,2,2</td>
+            <td className="csshidden">
               Two elements, two points in the first square. Another class and a
               pseudo-class, plus two points in the second box.
             </td>
@@ -488,8 +488,8 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>article#content p</td>
-            <td className="hidden">0,1,0,2</td>
-            <td className="hidden">
+            <td className="csshidden">0,1,0,2</td>
+            <td className="csshidden">
               Two elements, two points in the first square. An ID, a point in
               the third box.
             </td>

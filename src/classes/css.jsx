@@ -475,6 +475,14 @@ const Css = () => {
         <div className="examples">
           <input
             type="radio"
+            onClick={() => setOrder("0")}
+            name="display"
+          ></input>
+          <Text.Green>order: </Text.Green>
+          <Text.Orange>0</Text.Orange>
+          <br></br>
+          <input
+            type="radio"
             onClick={() => setOrder("1")}
             name="display"
           ></input>
@@ -491,19 +499,11 @@ const Css = () => {
           <br></br>
           <input
             type="radio"
-            onClick={() => setOrder("3")}
-            name="display"
-          ></input>
-          <Text.Green>order: </Text.Green>
-          <Text.Orange>3</Text.Orange>
-          <br></br>
-          <input
-            type="radio"
             onClick={() => setOrder("4")}
             name="display"
           ></input>
           <Text.Green>order: </Text.Green>
-          <Text.Orange>4</Text.Orange>
+          <Text.Orange>3</Text.Orange>
           <br></br>{" "}
         </div>
         <div id="father_display" className={`flex order order${order}`}>

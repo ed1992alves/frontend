@@ -275,16 +275,16 @@ div#father {
 
   &.order {
     #leia {
-      order: 2;
+      order: 1;
     }
-    #chewbacca {
-      order: 3;
+    #chewbacca { 
+      order: 2;
     }
   }
 
   &.order1 {
     #vader {
-      order: 1;
+      order: 0;
     }
   }
 
@@ -469,14 +469,14 @@ img {
     }
   }
 }
-.hidden {
+.csshidden {
   opacity: 0;
 
   &:hover {
     opacity: 1;
   }
 
-  &:hover + .hidden {
+  &:hover + .csshidden {
     opacity: 1;
   }
 }
