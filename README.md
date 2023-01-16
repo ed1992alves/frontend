@@ -1,6 +1,6 @@
 # frontend
 
-Mindera School project that includes frontend lessons.
+Mindera School project that includes frontend lessons. Check the online project here: <https://ed1992alves.github.io/frontend/>
 
 ## install
 
