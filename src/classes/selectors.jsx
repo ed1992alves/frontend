@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/css.less";
 import * as Text from "../Utils/Text";
 import vader from "../styles/images/darth_vader.png";
@@ -6,8 +6,19 @@ import leia from "../styles/images/leia.png";
 import chewbacca from "../styles/images/chewbacca.png";
 import c3po from "../styles/images/C3PO.png";
 import bounty from "../styles/images/bounty_hunter.png";
+import { Link } from "react-router-dom";
+
+
 
 const Selectors = () => {
+  const element1 = useRef(null);
+  const element2 = useRef(null);
+  const element3 = useRef(null);
+  const element4 = useRef(null);
+  const element5 = useRef(null);
+  const element6 = useRef(null);
+
+  const onClickLink = (element) => element?.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   return (
     <>
       <h2>SELECTORS AND PSEUDO SELECTORS </h2>
@@ -64,7 +75,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#element>element">element>element </a>
+              <a onClick={() => onClickLink(element1)}>element>element </a>
             </td>
             <td> div > p </td>
             <td>
@@ -73,7 +84,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#element~element">element1~element2</a>
+              <a onClick={() => onClickLink(element2)}>element1~element2</a>
             </td>
             <td>p ~ ul</td>
             <td>
@@ -82,7 +93,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#element+element">element+element</a>
+              <a onClick={() => onClickLink(element3)}>>element+element</a>
             </td>
             <td>div + p</td>
             <td>
@@ -93,7 +104,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#[atribute]">[attibute]</a>
+            <a onClick={() => onClickLink(element4)}>[attibute]</a>
             </td>
             <td>[target]</td>
             <td>{"Selects all elements with a target attribute"}</td>
@@ -110,14 +121,14 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#beforeafter">::after</a>
+            <a onClick={() => onClickLink(element5)}>::after</a>
             </td>
             <td>p:after</td>
             <td>{"Insert something after the content of each <p> element"}</td>
           </tr>
           <tr>
             <td>
-              <a href="#beforeafter">::before</a>
+            <a onClick={() => onClickLink(element5)}>::before</a>
             </td>
             <td>p:before</td>
             <td>{"Insert something before the content of each <p> element"}</td>
@@ -134,7 +145,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#firstlastnth">:first-child</a>
+            <a onClick={() => onClickLink(element6)}>:first-child</a>
             </td>
             <td>p:first-child</td>
             <td>
@@ -160,7 +171,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#firstlastnth">:last-child</a>
+            <a onClick={() => onClickLink(element6)}>:last-child</a>
             </td>
             <td>p:last-child</td>
             <td>
@@ -174,12 +185,23 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a href="#firstlastnth">:nth-child(n)</a>
+            <a onClick={() => onClickLink(element6)}>:nth-child(n)</a>
             </td>
             <td>p:nth-child(2)</td>
             <td>
               {
                 "Selects every <p> element that is the second child of its parent"
+              }
+            </td>
+          </tr>
+            <tr>
+            <td>
+            <a onClick={() => onClickLink(element6)}>:nth-of-type(n)</a>
+            </td>
+            <td>p:nth-child(2)</td>
+            <td>
+              {
+                "Selects elements based on their position among siblings of the same type (pharagraph)"
               }
             </td>
           </tr>
@@ -191,7 +213,7 @@ const Selectors = () => {
         </tbody>
       </table>
 
-      <h4 id="element>element">element > element</h4>
+      <h4 ref={element1} id="element>element">element > element</h4>
       <div className="examples">
         <Text.Orange> {"div > p {"} </Text.Orange>
         <Text.Purple>backround-color:</Text.Purple>
@@ -232,7 +254,7 @@ const Selectors = () => {
         </div>
       </div>
 
-      <h4 id="element~element">element ~ element</h4>
+      <h4 ref={element2} id="element~element">element ~ element</h4>
 
       <div className="examples">
         <Text.Orange> {"div ~ p {"} </Text.Orange>
@@ -266,7 +288,7 @@ const Selectors = () => {
         <p> Fritas </p>
       </div>
 
-      <h4 id="element+element">element + element</h4>
+      <h4 ref={element3} id="element+element">element + element</h4>
 
       <div className="examples">
         <Text.Orange> {"div + p {"} </Text.Orange>
@@ -300,7 +322,7 @@ const Selectors = () => {
         <p> Fritas </p>
       </div>
 
-      <h4 id="[atribute]">[atribute]</h4>
+      <h4 ref={element4} id="[atribute]">[atribute]</h4>
 
       <div className="examples">
         <Text.Orange> {"a[target] {"} </Text.Orange>
@@ -338,7 +360,7 @@ const Selectors = () => {
         <br></br>
       </div>
 
-      <h4 id="beforeafter">::before & ::after </h4>
+      <h4 ref={element5} id="beforeafter">::before & ::after </h4>
 
       <div className="examples">
         <Text.Orange> {"p::"} </Text.Orange>
@@ -361,20 +383,25 @@ const Selectors = () => {
         <p>Batatas</p>
       </div>
 
-      <h4 id="firstlastnth">:first-child & :last-child & :nth-child </h4>
+      <h4 ref={element6} id="firstlastnth">:first-child & :last-child & :nth-child </h4>
 
       <div className="examples">
-        <Text.Orange> {"div p::first-child"} </Text.Orange> {"{"}
+        <Text.Orange> {"div p::first-child {"} </Text.Orange>
         <Text.Purple>background-color:</Text.Purple>
         <Text.Green>yellow</Text.Green>
         <Text.Orange> {"}"} </Text.Orange>
         <br></br>
-        <Text.Orange> {"div p::last-child"} </Text.Orange> {"{"}
+        <Text.Orange> {"div p::last-child {"} </Text.Orange>
         <Text.Purple>background-color:</Text.Purple>
         <Text.Green>red</Text.Green>
         <Text.Orange> {"}"} </Text.Orange>
         <br></br>
-        <Text.Orange> {"div p::nth-child(4n)"} </Text.Orange> {"{"}
+        <Text.Orange> {"div p::nth-of-type(3n) {"} </Text.Orange>
+        <Text.Purple>background-color:</Text.Purple>
+        <Text.Green>blue</Text.Green>
+        <Text.Orange> {"}"} </Text.Orange>
+        <br></br>
+        <Text.Orange> {"div p::nth-child(4n) {"} </Text.Orange>
         <Text.Purple>background-color:</Text.Purple>
         <Text.Green>orange</Text.Green>
         <Text.Orange> {"}"} </Text.Orange>
@@ -397,6 +424,9 @@ const Selectors = () => {
         <br></br>
         <Text.Blue nr_idents={1}>{"<p>"} </Text.Blue> é{" "}
         <Text.Blue>{"</p>"} </Text.Blue>
+        <br></br>
+        <Text.Blue nr_idents={1}>{"<div>"} </Text.Blue> UPS...
+        <Text.Blue>{"</div>"} </Text.Blue>
         <br></br>
         <Text.Blue nr_idents={1}>{"<p>"} </Text.Blue> uma
         <Text.Blue>{"</p>"} </Text.Blue>
@@ -421,6 +451,7 @@ const Selectors = () => {
           <p>-</p>
           <p>Pala</p>
           <p>é</p>
+          <div> UPS ... </div>
           <p>uma</p>
           <p>tara</p>
           <p>de</p>

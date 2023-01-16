@@ -1,5 +1,5 @@
 import classOrder from "../classes/classOrder";
-import React from "react";
+import React , {useRef} from "react";
 import { Link } from "react-router-dom";
 import minder from "../styles/images/minder.svg";
 
@@ -10,12 +10,14 @@ const navigation = ({ currentPage }) => {
     classOrder[currentPage + 1].status &&
     classOrder[currentPage + 1];
 
+    const nav = useRef(null)
+
   return (
     <>
       <div className="pageHeader">
         <h1>{`${currentPage + 1}. ${classOrder[currentPage].title}`}</h1>
       </div>{" "}
-      <div className="navigation">
+      <div ref={nav} className="navigation">
         {previousPage ? (
           <div className="previous-container">
             <Link to={previousPage.path} className="previous">
@@ -58,7 +60,7 @@ const navigation = ({ currentPage }) => {
           </div>
         )}
       </div>
-      <a href="#" id="mindera-icon">
+      <a onClick={() => nav.current.scrollIntoView({ behavior: 'smooth', block: 'center'})} id="mindera-icon">
         {" "}
         <img src={minder} />
       </a>
