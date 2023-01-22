@@ -20,6 +20,7 @@ import Prototype from "./prototype";
 import Natives from "./natives";
 import ReactRouter from "./reactRouter";
 import Setup from "./Setup";
+import Storage from "./storage";
 
 const classOrder = [
   {
@@ -76,6 +77,12 @@ const classOrder = [
     path: "/scopes",
     title: "Scope & Closures",
     component: Scope,
+    status: true
+  },
+  {
+    path: "/storage",
+    title: "Web Storage and Cookies",
+    component: Storage,
     status: true
   },
   { path: "/this", title: "Binding (This)", component: This, status: true },
