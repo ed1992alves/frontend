@@ -20,6 +20,8 @@ import Prototype from "./prototype";
 import Natives from "./natives";
 import ReactRouter from "./reactRouter";
 import Setup from "./Setup";
+import Storage from "./storage";
+import EventLoop from "./eventLoop";
 
 const classOrder = [
   {
@@ -78,6 +80,12 @@ const classOrder = [
     component: Scope,
     status: true
   },
+  {
+    path: "/storage",
+    title: "Web Storage and Cookies",
+    component: Storage,
+    status: true
+  },
   { path: "/this", title: "Binding (This)", component: This, status: true },
   {
     path: "/prototype",
@@ -92,6 +100,12 @@ const classOrder = [
     status: true
   },
   { path: "/fetch", title: "Fetch API", component: FetchApi, status: true },
+  {
+    path: "/eventloop",
+    title: "Event Loop",
+    component: EventLoop,
+    status: true
+  },
   {
     path: "/setup",
     title: "Setup React with Webpack",
