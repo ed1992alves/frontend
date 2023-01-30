@@ -297,11 +297,12 @@ const inputs = () => {
           </div>
           <div className="row">
             <label htmlFor="tel">Cell Phone:</label>
+            <span>+351</span>
             <input
               name="tel"
               type="tel"
+              maxlength="9"
               pattern="^(\+351)?\s?9[2|6|1][0-9]{7}"
-              placeholder="+351"
               required
             ></input>
           </div>
