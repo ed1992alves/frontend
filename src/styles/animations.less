@@ -204,18 +204,19 @@ div:not(#root).loader {
   text-align: center;
 
   input:not([type="radio"]) {
+    background-color: var(--bg-color); 
     height: 24px;
     width: 300px;
     outline: none;
     border: 0px;
-    border-bottom: 1px solid rgba(@text-grey, 0.3);
+    border-bottom: 2px solid rgba(@text-grey, 0.5);
     transition: border-bottom 2s;
     font-size: 16px;
     cursor: pointer;
   }
 
   input:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid orange;
   }
 
   input[type="radio"] {
