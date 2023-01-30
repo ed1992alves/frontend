@@ -141,8 +141,6 @@ const classOrder = [
   }
 ];
 
-// classes em falta:  event loop
-
 export default classOrder;
 
 Array.prototype.sum = () => {
