@@ -159,6 +159,7 @@ const This = () => {
         <br></br>
         <Text.Blue nr_idents={1}>foo</Text.Blue>: foo
         <br></br>
+        {"}"} <p></p>
         <p></p>
         <Text.Red>var</Text.Red> obj1 <Text.Blue> = </Text.Blue> {"{"} <br></br>
         <Text.Blue nr_idents={1}>a</Text.Blue>: <Text.Blue>2</Text.Blue>,{" "}
@@ -377,7 +378,7 @@ const This = () => {
         The apply method allows you to pass in the arguments as an array:
       </div>
       <div className="examples">
-        printNameAgain.<Text.Purple>aplly</Text.Purple>(company,[
+        printNameAgain.<Text.Purple>apply</Text.Purple>(company,[
         <Text.Green>'Hi '</Text.Green>, <Text.Green>'!!'</Text.Green>]);
       </div>
       <div>
@@ -468,7 +469,7 @@ const This = () => {
         obj1.foo.<Text.Purple>call</Text.Purple>( obj2, <Text.Blue>3</Text.Blue>
         ); <br></br>
         <Text.Black className="hover">
-          console.log(obj2.<Text.Blue>a</Text.Blue>);
+          console.<Text.Purple>log</Text.Purple>(obj2.<Text.Blue>a</Text.Blue>);
         </Text.Black>{" "}
         <Text.Grey> // 3</Text.Grey>
         <p></p>
@@ -557,7 +558,7 @@ const This = () => {
       <div>
         The browser needs to give some contextual information about the event.
         It does this by binding to the this in the function. So you could get
-        details about the event from the keyword:
+        details about the event from the keyword.
       </div>
       <h2>Lexical this</h2>
       <div>
