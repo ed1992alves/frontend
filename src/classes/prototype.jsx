@@ -8,6 +8,10 @@ String.prototype.sheldonize = function(ntimes) {
   console.log(`${"knock ".repeat(ntimes)}${this} \n`.repeat(ntimes));
 };
 
+String.prototype.printSheldonize = function(ntimes) {
+  return `${"knock ".repeat(ntimes)}${this}; \n`.repeat(ntimes);
+};
+
 Array.prototype.sumNumbersOrStrings = function() {
   const type = typeof this[0];
 
@@ -281,8 +285,8 @@ const Prototype = () => {
       </figure>
       <div className="info">
         Create a function called sheldonize like the following example:
-        "batatas".sheldonize(4){" "}
-        <Text.Grey>// {"batatas".sheldonize(4)}</Text.Grey>
+        "batatas".sheldonize(2){" "}
+        <Text.Grey>// {"batatas".printSheldonize(2)}</Text.Grey>
       </div>
 
       <div className="info">
