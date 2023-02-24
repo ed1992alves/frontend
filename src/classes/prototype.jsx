@@ -227,7 +227,7 @@ const Prototype = () => {
           console.log(person1.gender) <Text.Grey>//male</Text.Grey> <br></br>
           <Text.Purple>const</Text.Purple> person2 ={" "}
           <Text.Purple>new</Text.Purple> Person(); <br></br>
-          console.log(person1.gender) <Text.Grey>//male </Text.Grey> <p></p>
+          console.log(person2.gender) <Text.Grey>//male </Text.Grey> <p></p>
           Person.prototype = {"{ "}gender : <Text.Green>'M'</Text.Green> {"} "};
           <p></p>
           <Text.Purple>const</Text.Purple> person3 ={" "}
@@ -253,7 +253,7 @@ const Prototype = () => {
         <Text.Green>"John"</Text.Green>, <br></br>
         <Text.Purple className="nr_idents1">this</Text.Purple>.age ={" "}
         <Text.Orange>23</Text.Orange> <br></br>} <p></p>
-        Student.prototype.sayHi = <Text.Purple>function</Text.Purple>(){"{"}{" "}
+        Person.prototype.sayHi = <Text.Purple>function</Text.Purple>(){"{"}{" "}
         <br></br>
         <Text.Black className="nr_idents1">
           alert(<Text.Green>"Hi"</Text.Green>);
@@ -264,24 +264,24 @@ const Prototype = () => {
         person.toString();
       </div>
       <div>
-        In the above example, toString() method is not defined in Student, so
+        In the above example, toString() method is not defined in Person, so
         how and from where it finds toString()? Here, prototype comes into
         picture.
         <p></p>First of all, JavaScript engine checks whether toString() method
-        is attached to studObj? If it does not find there then it uses studObj's
-        __proto__ link which points to the prototype object of Student function.
+        is attached to person? If it does not find there then it uses person's
+        __proto__ link which points to the prototype object of Person function.
         If it still cannot find it there then it goes up in the heirarchy and
         check prototype object of Object function because all the objects are
         derived from Object in JavaScript, and look for toString() method. Thus,
         it finds toString() method in the prototype object of Object function
-        and so we can call studObj.toString().
+        and so we can call person.toString().
       </div>
       <figure>
         <img className="w100" src={prototype2}></img>
       </figure>
       <div className="info">
         Create a function called sheldonize like the following example:
-        "batatas".sheldonize(){" "}
+        "batatas".sheldonize(4){" "}
         <Text.Grey>// {"batatas".sheldonize()}</Text.Grey>
       </div>
 
