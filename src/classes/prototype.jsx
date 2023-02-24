@@ -282,7 +282,7 @@ const Prototype = () => {
       <div className="info">
         Create a function called sheldonize like the following example:
         "batatas".sheldonize(4){" "}
-        <Text.Grey>// {"batatas".sheldonize()}</Text.Grey>
+        <Text.Grey>// {"batatas".sheldonize(4)}</Text.Grey>
       </div>
 
       <div className="info">
