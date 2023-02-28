@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../styles/react.less";
 import "../styles/main.less";
 import * as Text from "../Utils/Text";
-import ReactDOM from "react-dom";
-import { render } from "@testing-library/react";
 
 const Tick = props => (
   <>
@@ -325,7 +323,7 @@ const ReactClass = () => {
         <Text.Pink nr_idents={2}>{"<div>"}</Text.Pink> <br></br>
         <Text.Pink nr_idents={3}>{"<h1>"}</Text.Pink> Hello, world!{" "}
         <Text.Pink>{"</h1>"}</Text.Pink> <br></br>
-        <Text.Pink nr_idents={3}>{"<h2>"}</Text.Pink>It is {"{"}{" "}
+        <Text.Pink nr_idents={3}>{"<h2>"}</Text.Pink>It is {"{"}
         <Text.Purple>{"new"}</Text.Purple> <Text.Yellow>{"Date"}</Text.Yellow>
         ().toLocaleTimeString(){"}"}.<Text.Pink>{"</h2>"}</Text.Pink> <br></br>
         <Text.Pink nr_idents={2}>{"</div>"}</Text.Pink> <br></br>{" "}
@@ -368,7 +366,7 @@ const ReactClass = () => {
         You can also use an ES6 class to define a component:
       </div>
       <div className="examples">
-        <Text.Purple>class</Text.Purple> <Text.Orange>Welcome></Text.Orange>{" "}
+        <Text.Purple>class</Text.Purple> <Text.Orange>Welcome</Text.Orange>{" "}
         <Text.Purple>extends</Text.Purple>
         <Text.Orange>React.Component</Text.Orange> {"{"} <br></br>
         <Text.Blue nr_idents={1}>render</Text.Blue>() {"{"} <br></br>

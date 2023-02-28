@@ -12,8 +12,11 @@
   "scripts": {
     "test": "jest",
     "test:update:snapshot": "jest --updateSnapshot",
+    "copy:zip-exercicio": "cp src/zip/exercicio.zip dist/exercicio.zip",
+    "copy:zip-setup": "cp src/zip/setup.zip dist/setup.zip",
+    "copy:zip": "npm run copy:zip-exercicio && npm run copy:zip-setup",
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && npm run copy:zip-setup"
   },
   "author": "Edgar",
   "license": "ISC",

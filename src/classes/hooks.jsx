@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import "../styles/reactHooks.less";
 import "../styles/main.less";
 import * as Text from "../Utils/Text";
-import { render } from "@testing-library/react";
 import { Dropdown } from "../components/dropdown";
 import { Avatar } from "../components/avatar";
 import { TabExample } from "../components/tabExample";
 
 const options = ["option1", "option2", "option3"];
-let pokemonSelected;
 
 const ReactHooks = () => {
   const [optionSelected, setOptionSelected] = useState(options[0]);
@@ -167,7 +165,7 @@ const ReactHooks = () => {
         <Text.Orange>onButtonClick</Text.Orange> {"= () => {"}
         <br></br>
         <Text.Black nr_idents={2}> </Text.Black>
-        inputEl.current.<Text.Orange>focus</Text.Orange>();>
+        inputEl.current.<Text.Orange>focus</Text.Orange>();
         <br></br>
         <Text.Black nr_idents={1}>{"};"}</Text.Black>
         <br></br>
