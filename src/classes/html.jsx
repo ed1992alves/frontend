@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
+import Highlight from "react-highlight";
 import "../styles/html.less";
-import * as Text from "../Utils/Text";
-import paidTraffic from "../styles/images/star_wars_traffic.png";
 import facebookAdds from "../styles/images/facebook_adds.png";
-import minderaTags from "../styles/images/mindera_tags.png";
 import minderaHeaders from "../styles/images/mindera_headers.png";
 import minderaImages from "../styles/images/mindera_images.png";
+import minderaTags from "../styles/images/mindera_tags.png";
+import paidTraffic from "../styles/images/star_wars_traffic.png";
 import zip from "../styles/images/zip.svg";
+import * as Text from "../Utils/Text";
 
 const HTML = () => {
   return (
@@ -343,41 +344,24 @@ const HTML = () => {
         </ol>
       </div>
 
-      <div className="examples">
-        <Text.Purple>{"<section>"}</Text.Purple> <br></br>
-        <Text.Yellow nr_idents={1}>{"<p>Top Stories</p>"}</Text.Yellow>{" "}
-        <br></br>
-        <Text.Purple nr_idents={1}>{"<section>"}</Text.Purple> <br></br>
-        <Text.Yellow nr_idents={2}>{"<p>News</p>"}</Text.Yellow> <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 1</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 2</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 3</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Purple nr_idents={1}>{"</section>"}</Text.Purple> <br></br>
-        <Text.Purple nr_idents={1}>{"<section>"}</Text.Purple> <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 1</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 2</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<article>Story 3</article>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Purple nr_idents={1}>{"</section>"}</Text.Purple> <br></br>
-        <Text.Purple>{"</section>"}</Text.Purple> <br></br>
-      </div>
+      <Highlight language="html">
+        {`
+<section>
+  <p>Top Stories</p>
+  <section>
+    <p>News</p>
+    <article>Story 1</article>
+    <article>Story 2</article>
+    <article>Story 3</article>
+  </section>
+  <section>
+    <article>Story 1</article>
+    <article>Story 2</article>
+    <article>Story 3</article>
+  </section>
+</section>
+`}
+      </Highlight>
 
       <div>
         <b>{"<header> and <hgroup>"}</b>
@@ -391,34 +375,28 @@ const HTML = () => {
         }
       </div>
 
-      <div className="infoWithExample info">
-        <div className="greenBackground">
-          <div>
-            <Text.Green>{"<header>"}</Text.Green>
-            <Text.Blue nr_idents={1}>{"<h1>Company A</h1>"}</Text.Blue>
-            <Text.Red nr_idents={1}>{"<ul>"}</Text.Red>
-            <Text.Orange nr_idents={2}>
-              {"<li><a href='/home'>Home</a></li>"}
-            </Text.Orange>
-            <Text.Orange nr_idents={2}>
-              {"<li><a href='/about'>About</a></li>"}
-            </Text.Orange>
-            <Text.Orange nr_idents={2}>
-              {"<li><a href='/contact'>Contact us</a></li>"}
-            </Text.Orange>
-            <Text.Red nr_idents={1}>{"</ul>"}</Text.Red>
-            <Text.Green>{"</header>"}</Text.Green>
-          </div>
-        </div>
-        <div className="greenBackground">
-          <div>
-            <Text.Green>{"<hgroup>"}</Text.Green>
-            <Text.Orange nr_idents={1}>{"<h1>Heading 1</h1>"}</Text.Orange>
-            <Text.Orange nr_idents={1}>{"<h2>Heading 2</h2>"}</Text.Orange>
-            <Text.Orange nr_idents={1}>{"<h3>Heading 3</h3>"}</Text.Orange>
-            <Text.Green>{"</hgroup>"}</Text.Green>
-          </div>
-        </div>
+      <div>
+        <Highlight language="html">
+          {`
+<header>
+  <h1>Company A</h1>
+  <ul>
+    <li><a href='/home'>Home</a></li>
+    <li><a href='/about'>About</a></li>
+    <li><a href='/contact'>Contact us</a></li>
+  </ul>
+</header>
+`}
+        </Highlight>
+        <Highlight language="html">
+          {`
+<hgroup>
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+</hgroup>
+`}
+        </Highlight>
       </div>
       <p></p>
       <div>
@@ -441,24 +419,17 @@ const HTML = () => {
           "Before HTML5, our menus were created with <ul>’s and <li>’s. Now, together with these, we can separate our menu items with a <nav>, for navigation between your pages. "
         }
       </div>
-      <div className="examples">
-        <Text.Purple>{"<nav>"}</Text.Purple> <br></br>
-        <Text.Red nr_idents={1}>{"<ul>"}</Text.Red> <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<li><a href='/home'>Home</a></li>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<li><a href='/about'>About</a></li>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Orange nr_idents={2}>
-          {"<li><a href='/contact'>Contact us</a></li>"}
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Red nr_idents={1}>{"</ul>"}</Text.Red> <br></br>
-        <Text.Purple>{"</nav>"}</Text.Purple> <br></br>
-      </div>
+      <Highlight language="html">
+        {`
+<nav>
+  <ul>
+    <li><a href='/home'>Home</a></li>
+    <li><a href='/about'>About</a></li>
+    <li><a href='/contact'>Contact us</a></li>
+  </ul>
+</nav>
+`}
+      </Highlight>
       <div>
         <b>{"<footer>"}</b>
         <p></p>
@@ -474,22 +445,14 @@ const HTML = () => {
         }
       </div>
 
-      <div className="examples">
-        <Text.Blue>{"<figure>"}</Text.Blue> <br></br>
-        <Text.Orange nr_idents={1}>
-          {
-            '<img src="https://en.wikipedia.org/wiki/File:Shadow_of_Mordor_cover_art.jpg" alt="Shadow of Mordor" />'
-          }
-        </Text.Orange>{" "}
-        <br></br>
-        <Text.Purple nr_idents={1}>
-          {
-            "<figcaption>Cover art for Middle-earth: Shadow of Mordor</figcaption>"
-          }
-        </Text.Purple>{" "}
-        <br></br>
-        <Text.Blue>{"</figure>"}</Text.Blue>
-      </div>
+      <Highlight language="html">
+        {`
+<figure>
+  <img src="https://en.wikipedia.org/wiki/File:Shadow_of_Mordor_cover_art.jpg" alt="Shadow of Mordor" />
+  <figcaption>Cover art for Middle-earth: Shadow of Mordor</figcaption>
+</figure>
+`}
+      </Highlight>
       <a href="./exercicio.zip" download>
         <span className="zip">
           <h3>Exercise</h3>

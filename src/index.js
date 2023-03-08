@@ -1,9 +1,9 @@
+import "highlight.js/styles/atom-one-dark.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.js";
 import { Provider } from "react-redux";
+import App from "./App.js";
 import store from "./redux/store";
-import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <Provider store={store}>
