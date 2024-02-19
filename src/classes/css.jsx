@@ -686,7 +686,7 @@ const Css = () => {
           <div id="blue_child">
             {" "}
             SECOND CHILD: {position.toUpperCase()} <br></br>TOP:{" "}
-            {top && position !== "static" ? "100px" : "0px"}
+            {top && position !== "static" ? "120px" : "0px"}
             <br></br>LEFT: {left && position !== "static" ? "60px" : "0px"}
           </div>
         </div>

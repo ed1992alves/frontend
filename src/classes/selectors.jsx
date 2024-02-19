@@ -93,7 +93,7 @@ const Selectors = () => {
           </tr>
           <tr>
             <td>
-              <a onClick={() => onClickLink(element3)}>>element+element</a>
+              <a onClick={() => onClickLink(element3)}>element+element</a>
             </td>
             <td>div + p</td>
             <td>
