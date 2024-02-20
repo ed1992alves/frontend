@@ -1,8 +1,8 @@
-# frontend
+# Frontend
 
 Mindera School project that includes frontend lessons. Check the online project here: <https://ed1992alves.github.io/frontend/>
 
-## install
+## Install
 
 1. Install node https://nodejs.org/en/
 2. Clone repo: `https://github.com/ed1992alves/frontend.git`
