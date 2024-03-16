@@ -17,7 +17,7 @@ export const TabExample = () => {
       case "restartState":
         return { ...state, nr_clicks: 0 };
       case "changeState":
-        return { nr_clicks: state.nr_clicks++, selectedOption: action.value };
+        return { nr_clicks: state.nr_clicks + 1, selectedOption: action.value };
       default:
         throw new Error();
     }
@@ -55,6 +55,6 @@ export const TabExample = () => {
       ></Tab>
       <div className="cliques">Numero de cliques: {state.nr_clicks}</div>
       <img src={changeBackground()}></img>
-    </div>
+    </div >
   );
 };
