@@ -28,123 +28,123 @@ const classOrder = [
     path: "/html",
     title: "HTML Semantic and SEO",
     component: HTML,
-    status: true
+    status: true,
   },
   { path: "/css", title: "CSS basics", component: css, status: true },
   {
     path: "/selectors",
     title: "Selectors And Specificity",
     component: Selectors,
-    status: true
+    status: true,
   },
   {
     path: "/dom",
     title: "Document Object Model (DOM)",
     component: DomObject,
-    status: true
+    status: true,
   },
   {
     path: "/inputs",
     title: "HTML Forms",
     component: Inputs,
-    status: true
+    status: false,
   },
   {
     path: "/animations",
     title: "Animations",
     component: Animations,
-    status: true
+    status: false,
   },
   {
     path: "/sass",
     title: "Css Preprocessors: Sass",
     component: Sass,
-    status: true
+    status: false,
   },
   {
     path: "/types",
     title: "Javascript Types",
     component: Types,
-    status: true
+    status: false,
   },
   {
     path: "/operators",
     title: "Javascript Operators",
     component: Operators,
-    status: true
+    status: false,
   },
 
   {
     path: "/scopes",
     title: "Scope & Closures",
     component: Scope,
-    status: true
+    status: false,
   },
   {
     path: "/storage",
     title: "Web Storage and Cookies",
     component: Storage,
-    status: true
+    status: false,
   },
-  { path: "/this", title: "Binding (This)", component: This, status: true },
+  { path: "/this", title: "Binding (This)", component: This, status: false },
   {
     path: "/prototype",
     title: "Prototype",
     component: Prototype,
-    status: true
+    status: false,
   },
   {
     path: "/natives",
     title: "Built-in / Natives Objects",
     component: Natives,
-    status: true
+    status: false,
   },
-  { path: "/fetch", title: "Fetch API", component: FetchApi, status: true },
+  { path: "/fetch", title: "Fetch API", component: FetchApi, status: false },
   {
     path: "/eventloop",
     title: "Event Loop",
     component: EventLoop,
-    status: true
+    status: false,
   },
   {
     path: "/setup",
     title: "Setup React with Webpack",
     component: Setup,
-    status: true
+    status: false,
   },
-  { path: "/react", title: "React", component: ReactClass, status: true },
+  { path: "/react", title: "React", component: ReactClass, status: false },
   {
     path: "/hooks",
     title: "React Hooks",
     component: ReactHooks,
-    status: true
+    status: false,
   },
   {
     path: "/typescript",
     title: "Typescript",
     component: Typescript,
-    status: true
+    status: false,
   },
   {
     path: "/reactRouter",
     title: "React Router",
     component: ReactRouter,
-    status: true
+    status: false,
   },
-  { path: "/context", title: "Context API", component: Context, status: true },
-  { path: "/redux", title: "Redux", component: Redux, status: true },
+  { path: "/context", title: "Context API", component: Context, status: false },
+  { path: "/redux", title: "Redux", component: Redux, status: false },
   {
     path: "/testing",
     title: "Unit Testing",
     component: UnitTest,
-    status: true
-  }
+    status: false,
+  },
 ];
 
 export default classOrder;
 
 Array.prototype.sum = () => {
   let total;
-  this.forEach(element => (total = total + element));
+  this.forEach((element) => (total = total + element));
   return total;
 };
