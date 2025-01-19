@@ -295,19 +295,22 @@ div:not(#root).gridWithCells{
     grid-template-columns: [one] 1fr [two] 50px [three] 2fr [four] 75px [five];
     grid-template-rows: [row-1-start] 1fr [row-2-start]  1fr [row-3-start] 1fr [last-line];
     gap:10px;
+    
+    .item-a,  .item-b,  .item-c,  .item-d {
+        align-items:center; 
+        display: flex;
+        justify-content: center;
+        border: 1px solid var(--text-color);
+        opacity: 100%; 
+        height: 100%; 
+    }
 
     .item-a {
         grid-column-start: 2;
         grid-column-end: five;
         grid-row-start: row-1-start;
         grid-row-end: 3;
-        height: 100%; 
         background-color: @warmblue;
-        align-items:center; 
-        display: flex;
-        justify-content: center;
-        border: 1px solid var(--text-color);
-        opacity: 100%; 
     }
 
     .item-b {
@@ -315,36 +318,18 @@ div:not(#root).gridWithCells{
         grid-column-end: span four;
         grid-row-start: 2;
         grid-row-end: span 2;
-        height: 100%; 
         background-color: @warmblue;
-        align-items:center; 
-        display: flex;
-        justify-content: center;
-        border: 1px solid var(--text-color);
-        opacity: 100%; 
     }
 
     .item-c{
         grid-column:2 / span 2;
         grid-row:row-1-start / 4;
-        height: 100%; 
         background-color: @text-purple;
-        align-items:center; 
-        display: flex;
-        justify-content: center;
-        border: 1px solid var(--text-color);
-        opacity: 100%; 
     }
 
     .item-d{
         grid-area:1 / four / last-line / 5;
-        height: 100%; 
         background-color: @text-orange;
-        align-items:center; 
-        display: flex;
-        justify-content: center;
-        border: 1px solid var(--text-color);
-        opacity: 100%; 
     }
 
     >div{
