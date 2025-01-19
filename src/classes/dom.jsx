@@ -68,7 +68,51 @@ const DomObject = () => {
         The HTML DOM is basically a standard for how to get, change, add, or
         delete HTML elements.
       </div>
-      <h2>JavaScript HTML DOM Elements</h2>
+      <h2>THE WINDOW OBJECT</h2>
+      <div>
+        On the top of the DOM tree it's the Window node. This object represents
+        a browser containing a DOM. The document property points to the DOM
+        loaded in that window.
+      </div>
+      <div class="examples">
+        window.<Text.Red>onload</Text.Red> = {"() => {"}
+        <br></br>
+        <Text.Blue nr_idents={1}>let</Text.Blue>{" "}
+        <Text.Purple>heading</Text.Purple> = document.
+        <Text.Red>createElement</Text.Red>(<Text.Green>'h1'</Text.Green>);{" "}
+        <br></br>
+        <Text.Blue nr_idents={1}>let</Text.Blue> <Text.Purple>text</Text.Purple>{" "}
+        = document.
+        <Text.Red>createTextNode</Text.Red>(
+        <Text.Green>'Friday, Friday, Gotta get down on Friday. ♫'</Text.Green>);
+        <br></br>
+        <Text.Black nr_idents={1}> </Text.Black>heading.
+        <Text.Red>appendChild</Text.Red>(text);
+        <br></br> <Text.Black nr_idents={1}> </Text.Black>
+        document.body.<Text.Red>appendChild</Text.Red>(heading); <br></br>
+        {"}"}
+      </div>
+      <div>document.body is the object representing the {"<body>"} tag.</div>
+      <h2>MANIPULATING THE DOM </h2>
+      <div>
+        The document node provides methods for creating new nodes and accessing
+        pre-existent ones.
+      </div>
+      <h3>Creating a new element</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Javascript</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>document.createElement('p');</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>JavaScript HTML DOM Elements</h3>
       <table>
         <thead>
           <tr>
