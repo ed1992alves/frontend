@@ -131,7 +131,7 @@ const Grid = () => {
         <Text.Grey nr_idents={2}>100px 1fr max-content </Text.Grey>
         <br></br> <Text.Grey nr_idents={2}>*/</Text.Grey> <br></br> {"}"}
       </div>
-      <div className={"grid1"}>
+      <div className={"grid grid1"}>
         <div class="el1">1</div>
         <div class="el2">2</div>
         <div class="el3">3</div>
