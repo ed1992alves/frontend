@@ -22,6 +22,7 @@ import ReactRouter from "./reactRouter";
 import Setup from "./Setup";
 import Storage from "./storage";
 import EventLoop from "./eventLoop";
+import Grid from "./grid";
 
 const classOrder = [
   {
@@ -31,6 +32,12 @@ const classOrder = [
     status: true,
   },
   { path: "/css", title: "CSS basics", component: css, status: true },
+  {
+    path: "/grid",
+    title: "CSS Grid",
+    component: Grid,
+    status: true,
+  },
   {
     path: "/selectors",
     title: "Selectors And Specificity",
@@ -47,7 +54,7 @@ const classOrder = [
     path: "/inputs",
     title: "HTML Forms",
     component: Inputs,
-    status: false,
+    status: true,
   },
   {
     path: "/animations",
