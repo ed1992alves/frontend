@@ -89,7 +89,7 @@ const Grid = () => {
           {" "}
           <input
             type="radio"
-            onClick={() => setGrid("inline")}
+            onClick={() => setGrid("inlinegrid")}
             name="display"
             value="inline"
           ></input>
