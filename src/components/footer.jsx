@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Footer = () => {
-  const [theme, setTheme] = useState(parseInt(localStorage.getItem("theme") || 0));
-  const themes = ["White", "Dark"];
+  const [theme, setTheme] = useState(
+    parseInt(localStorage.getItem("theme") || 0)
+  );
+  const themes = ["Light", "Dark"];
 
   var r = document.querySelector(":root");
 
@@ -28,7 +30,7 @@ const Footer = () => {
         <input
           type="checkbox"
           defaultChecked={theme}
-          onChange={e => {
+          onChange={(e) => {
             localStorage.setItem("theme", theme ? 0 : 1);
             setTheme(parseInt(theme ? 0 : 1));
           }}
