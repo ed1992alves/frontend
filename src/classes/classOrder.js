@@ -60,7 +60,7 @@ const classOrder = [
     path: "/animations",
     title: "Animations",
     component: Animations,
-    status: false,
+    status: true,
   },
   {
     path: "/sass",
