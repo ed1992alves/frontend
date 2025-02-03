@@ -479,14 +479,23 @@ const Grid = () => {
       </div>
       <div class="examples">
         <Text.Orange>.item</Text.Orange> {"{"} <br></br>
-        <Text.Blue nr_idents={1}>grid-column:</Text.Blue>
+        <Text.Blue nr_idents={1}>grid-area:</Text.Blue>
         {"<row-start> / <column-start> / <row-end> / <column-end>"};<br></br>
         {"}"}
       </div>
       <div class="examples">
+        <Text.Orange>.container</Text.Orange> {"{"} <br></br>
+        <Text.Blue nr_idents={1}>grid-template-columns:</Text.Blue> [one] 1fr
+        [two] 50px [three] 2fr [four] 75px [five]; <br></br>
+        <Text.Blue nr_idents={1}>grid-template-rows:</Text.Blue> [row-1-start]
+        1fr [row-2-start] 1fr [row-3-start] 1fr [last-line]; <br></br>
+        <Text.Blue nr_idents={1}> gap:10px;</Text.Blue>
+        <br></br>
+        {"}"} <br></br>
+        <br></br>
         <Text.Orange>.item-d</Text.Orange> {"{"} <br></br>
-        <Text.Blue nr_idents={1}>grid-column:</Text.Blue>
-        {"1 / col4-start / last-line / 6"};<br></br>
+        <Text.Blue nr_idents={1}>grid-area: </Text.Blue>
+        {"1 / col4-start / last-line / 5"};<br></br>
         {"}"}
       </div>
       <div className={`grid gridWithCells `}>
