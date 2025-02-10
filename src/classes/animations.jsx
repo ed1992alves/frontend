@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/animations.less";
 import * as Text from "../Utils/Text";
 
-const getSpeedText = speed =>
+const getSpeedText = (speed) =>
   speed === "cubic" ? "cubic-bezier(0.05, 1.81, 1, -1.05)" : speed;
 
 const Animations = () => {
@@ -142,6 +142,7 @@ const Animations = () => {
           - lets you define your own values in a cubic-bezier function
         </p>
       </div>
+
       <div className="examples with-example">
         <div className="content">
           <Text.Yellow>selector </Text.Yellow>
@@ -226,6 +227,17 @@ const Animations = () => {
         can set different stages that alter the behavior of the element multiple
         times in its duration. This gives you more control over the property
         values in animations.
+      </div>
+      <div className="info">
+        <Text.Yellow>Animation</Text.Yellow>: [Name] [Time] [Behaviour] [Delay]
+        [Repetions] [Direction]
+        <br></br>
+        <br></br>
+        <b>Example: </b>
+        <br></br>
+        <Text.Blue>animation: </Text.Blue>{" "}
+        <Text.Orange>batatas 5s ease 1s infinite normal;</Text.Orange>
+        <br></br>
       </div>
       <h3> From To </h3>
       <div className="examples with-example">
