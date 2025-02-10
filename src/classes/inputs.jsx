@@ -12,7 +12,7 @@ const inputs = () => {
 
   const defaultHobbies = ["music", "cinema", "dance"];
 
-  const beforeSubmit = event => {
+  const beforeSubmit = (event) => {
     let userHobbies = "";
     event.preventDefault();
     document.getElementById("data").classList.remove("hidden");
@@ -22,7 +22,7 @@ const inputs = () => {
     setEmail(document.querySelector('input[name="email"]').value);
     setSex(document.querySelector('input[name="sexo"]').value);
 
-    defaultHobbies.forEach(hobbie => {
+    defaultHobbies.forEach((hobbie) => {
       userHobbies = document.getElementById(hobbie).checked
         ? `${userHobbies} / ${hobbie}`
         : userHobbies;
@@ -31,9 +31,8 @@ const inputs = () => {
     setHobbies(userHobbies);
   };
   const updateTextInput = () =>
-    (document.getElementById("userAge").innerHTML = document.getElementById(
-      "age"
-    ).value);
+    (document.getElementById("userAge").innerHTML =
+      document.getElementById("age").value);
 
   return (
     <>
@@ -71,7 +70,7 @@ const inputs = () => {
         <br></br>
         <Text.Black className="nr_idents1"></Text.Black>
         <Text.Orange>{"<"}input </Text.Orange>
-        <Text.Red>type</Text.Red>="text" <Text.Red>id</Text.Red>="lname"
+        <Text.Red>type</Text.Red>="text" <Text.Red>id</Text.Red>="lname"{" "}
         <Text.Red>name</Text.Red>="lname"<Text.Orange>{">"}</Text.Orange>{" "}
         <br></br>
         <Text.Orange>
