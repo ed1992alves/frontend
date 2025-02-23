@@ -93,12 +93,12 @@ const classOrder = [
     component: Storage,
     status: true,
   },
-  { path: "/this", title: "Binding (This)", component: This, status: false },
+  { path: "/this", title: "Binding (This)", component: This, status: true },
   {
     path: "/prototype",
     title: "Prototype",
     component: Prototype,
-    status: false,
+    status: true,
   },
   {
     path: "/natives",
