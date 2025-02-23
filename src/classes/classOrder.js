@@ -66,32 +66,32 @@ const classOrder = [
     path: "/sass",
     title: "Css Preprocessors: Sass",
     component: Sass,
-    status: false,
+    status: true,
   },
   {
     path: "/types",
     title: "Javascript Types",
     component: Types,
-    status: false,
+    status: true,
   },
   {
     path: "/operators",
     title: "Javascript Operators",
     component: Operators,
-    status: false,
+    status: true,
   },
 
   {
     path: "/scopes",
     title: "Scope & Closures",
     component: Scope,
-    status: false,
+    status: true,
   },
   {
     path: "/storage",
     title: "Web Storage and Cookies",
     component: Storage,
-    status: false,
+    status: true,
   },
   { path: "/this", title: "Binding (This)", component: This, status: false },
   {
