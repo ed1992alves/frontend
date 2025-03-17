@@ -168,7 +168,7 @@ const FetchApi = () => {
         </Text.Black>
         <br></br>
         <Text.Black>
-          {"}"}.<Text.Orange>then</Text.Orange>(<Text.Blue>function</Text.Blue>
+          {"}"}).<Text.Orange>then</Text.Orange>(<Text.Blue>function</Text.Blue>
           (value){"{"}{" "}
         </Text.Black>{" "}
         <br></br>
