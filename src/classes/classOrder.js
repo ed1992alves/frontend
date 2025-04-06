@@ -119,12 +119,12 @@ const classOrder = [
     component: Setup,
     status: true,
   },
-  { path: "/react", title: "React", component: ReactClass, status: false },
+  { path: "/react", title: "React", component: ReactClass, status: true },
   {
     path: "/hooks",
     title: "React Hooks",
     component: ReactHooks,
-    status: false,
+    status: true,
   },
   {
     path: "/typescript",
