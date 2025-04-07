@@ -3,7 +3,7 @@ import "../styles/react.less";
 import "../styles/main.less";
 import * as Text from "../Utils/Text";
 
-const Tick = props => (
+const Tick = (props) => (
   <>
     <h3>{props.title}</h3>
     <h4>It is {props.date}.</h4>
@@ -206,7 +206,7 @@ const ReactClass = () => {
         <Text.Pink nr_idents={1}>{"<h1>"}</Text.Pink>
         <br></br>
         <Text.Black nr_idents={2}></Text.Black>Hello, {"{"}
-        <Text.Blue>formatName</Text.Blue>(user){"}"}! <br></br>
+        <Text.Blue>formatName</Text.Blue>(user){"}"} <br></br>
         <Text.Pink nr_idents={1}>{"</h1>"}</Text.Pink> <br></br>
         ); <p></p>
         ReactDOM.<Text.Blue>render</Text.Blue>( <br></br>
@@ -368,7 +368,7 @@ const ReactClass = () => {
       <div className="examples">
         <Text.Purple>class</Text.Purple> <Text.Orange>Welcome</Text.Orange>{" "}
         <Text.Purple>extends</Text.Purple>
-        <Text.Orange>React.Component</Text.Orange> {"{"} <br></br>
+        <Text.Orange> React.Component</Text.Orange> {"{"} <br></br>
         <Text.Blue nr_idents={1}>render</Text.Blue>() {"{"} <br></br>
         <Text.Purple nr_idents={2}>return</Text.Purple>{" "}
         <Text.Pink>{"<h1>"}</Text.Pink>Hello, {"{"}
