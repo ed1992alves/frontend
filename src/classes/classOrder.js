@@ -130,15 +130,15 @@ const classOrder = [
     path: "/typescript",
     title: "Typescript",
     component: Typescript,
-    status: false,
+    status: true,
   },
   {
     path: "/reactRouter",
     title: "React Router",
     component: ReactRouter,
-    status: false,
+    status: true,
   },
-  { path: "/context", title: "Context API", component: Context, status: false },
+  { path: "/context", title: "Context API", component: Context, status: true },
   { path: "/redux", title: "Redux", component: Redux, status: false },
   {
     path: "/testing",
