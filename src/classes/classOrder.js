@@ -19,6 +19,7 @@ import Sass from "./sass";
 import Prototype from "./prototype";
 import Natives from "./natives";
 import ReactRouter from "./reactRouter";
+import NewReactRouter from "./newReactRouter";
 import Setup from "./Setup";
 import Storage from "./storage";
 import EventLoop from "./eventLoop";
@@ -136,6 +137,12 @@ const classOrder = [
     path: "/reactRouter",
     title: "React Router",
     component: ReactRouter,
+    status: true,
+  },
+  {
+    path: "/newReactRouter",
+    title: "New React Router",
+    component: NewReactRouter,
     status: true,
   },
   { path: "/context", title: "Context API", component: Context, status: true },
