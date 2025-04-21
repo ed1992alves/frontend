@@ -137,11 +137,11 @@ const classOrder = [
     path: "/reactRouter",
     title: "React Router",
     component: ReactRouter,
-    status: true,
+    status: false,
   },
   {
     path: "/newReactRouter",
-    title: "New React Router",
+    title: "React Router",
     component: NewReactRouter,
     status: true,
   },
