@@ -146,12 +146,12 @@ const classOrder = [
     status: true,
   },
   { path: "/context", title: "Context API", component: Context, status: true },
-  { path: "/redux", title: "Redux", component: Redux, status: false },
+  { path: "/redux", title: "Redux", component: Redux, status: true },
   {
     path: "/testing",
     title: "Unit Testing",
     component: UnitTest,
-    status: false,
+    status: true,
   },
 ];
 
