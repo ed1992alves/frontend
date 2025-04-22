@@ -140,12 +140,13 @@ const classOrder = [
     component: StyledComponents,
     status: true,
   },
+  /*
   {
     path: "/reactRouter",
     title: "React Router",
     component: ReactRouter,
     status: false,
-  },
+  },*/
   {
     path: "/newReactRouter",
     title: "React Router",
