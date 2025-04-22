@@ -24,6 +24,7 @@ import Setup from "./Setup";
 import Storage from "./storage";
 import EventLoop from "./eventLoop";
 import Grid from "./grid";
+import StyledComponents from "./styledComponents";
 
 const classOrder = [
   {
@@ -131,6 +132,12 @@ const classOrder = [
     path: "/typescript",
     title: "Typescript",
     component: Typescript,
+    status: true,
+  },
+  {
+    path: "/styledComponents",
+    title: "Styled Components",
+    component: StyledComponents,
     status: true,
   },
   {
